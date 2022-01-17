@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>keywor option</title>
+  </head>
+  <body> <span style="color: rgb(204, 0, 0);"><a name="Job"></a>Job –Select the
+      simulation or refinement mode and the type of the radiation </span><br>
+    &nbsp;<span style="font-weight: bold;">= 0</span> X-ray case <br>
+    <span style="font-weight: bold;">= 1</span> Neutron case (constant
+    wavelength, nuclear and magnetic) <br>
+    <span style="font-weight: bold;">= 2 </span>Pattern calculation (X-ray) <br>
+    <span style="font-weight: bold;">= 3</span> Pattern calculation (Neutron,
+    constant wavelength) <br>
+    <span style="font-weight: bold;">=-1 </span>Neutron case (T.O.F., nuclear
+    and magnetic) <br>
+    <span style="font-weight: bold;">=-3</span> Pattern calculation (Neutron,
+    T.O.F.) <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="color: rgb(204, 0, 0);"><a name="Res"></a>Res – Resolution
+      function type </span><br>
+    <span style="font-weight: bold;">=0</span> Resolution function of the
+    instrument is not given <br>
+    <span style="font-weight: bold;">&#8800;0</span> The next line contains the name
+    of the file where the instrumental resolution function is <br>
+    &nbsp;&nbsp;&nbsp; given for an instrument using as scattering variable 2&#952;.
+    <br>
+    &nbsp;&nbsp;&nbsp; This options works, at present, only for constant
+    wavelength type of data. The profile is <br>
+    &nbsp;&nbsp;&nbsp; assumed to be a Voigt function (Npr=7). 12 parameters or
+    a table determine the <br>
+    &nbsp;&nbsp;&nbsp; resolution function. Ui ,Vi ,Wi , Xi ,Yi , Zi (i=1,2 for
+    &#955;1 and &#955;2) <br>
+    &nbsp;&nbsp;&nbsp; The different types of functions are:<br>
+    &nbsp; &nbsp;
+    <math>
+      <mrow><mtext mathvariant="bold">Res = 1&nbsp; </mtext>
+        <mspace width="100px"></mspace>
+        <msubsup><mi>H</mi><mi>G</mi>
+          <mn>2</mn> </msubsup><mo>=</mo>
+        <mtext mathvariant="italic">(Ui tan&#952; +Vi ) tan&#952; +W<sub>i</sub></mtext></mrow></math><sub>
+    </sub><sub> </sub><br>
+    <math>
+      <mspace width="180px"></mspace><mrow><msub><mi>H</mi><mi>L</mi></msub><mo>=</mo>
+        <mi>Xi tan&#952; +</mi>
+        <mfrac>
+          <mrow><msub><mi>Y</mi><mi>i</mi></msub></mrow>
+          <mrow><mi>cos</mi><mo>&#8289;</mo>
+            <mi>&#952;</mi></mrow> </mfrac>
+        <mo>+</mo><msub>
+          <mi>Z</mi>
+          <mi>i<br>
+          </mi></msub> </mrow> </math><br>
+    <br>
+    &nbsp; &nbsp;<math>&nbsp;
+      <mrow><mtext mathvariant="bold">Res = 2&nbsp; </mtext>
+        <mspace width="100px"></mspace>
+        <msubsup><mi>H</mi><mi>G</mi>
+          <mn>2</mn> </msubsup><mo>=</mo>
+        <mtext mathvariant="italic">(Ui tan&#952; +Vi ) tan&#952; +W<sub>i</sub></mtext></mrow></math><sub>
+    </sub><sub> </sub><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+      <span style="font-style: italic;"><big>H<sub>L</sub> = (X<sub>i</sub> 2&#952;
+          +Y<sub>i</sub> )2&#952; + Z</big> </span><br>
+      <br>
+      &nbsp; &nbsp;<math>&nbsp;
+        <mrow><mtext mathvariant="bold">Res = 2&nbsp; </mtext>
+          <mspace width="100px"></mspace>
+          <msubsup><mi>H</mi><mi>G</mi>
+            <mn>2</mn> </msubsup><mo>=</mo>
+          <mtext mathvariant="italic">(U<small><sub>i</sub></small>2&#952; +V<sub>i</sub>
+            ) 2&#952; +W<em><sub>i</sub></em></mtext></mrow></math><em><sub> </sub></em><em><sub>
+        </sub></em><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span style="font-style: italic;"><big><a>H<sub>L</sub> = (Xi 2&#952; +Yi )2&#952; +
+            Zi</a> </big></span><big><br>
+        <br>
+        <span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp; Res =4</span></big></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    List of values 2&#952; , H<small><sub>G</sub></small> (2&#952; ) , H<small><sub>L</sub></small>
+    (2&#952; ) <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    (a linear interpolation is applied for intermediate 2&#952;)<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="color: rgb(204, 0, 0);"><a name="Nba"></a>Nba – Background type
+      <br>
+      <span style="color: black;">=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Refine background with a polynomial function. </span><br style="color: black;">
+      <span style="color: black;">=1 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; Read background from file CODFIL.bac. <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        The format of this file is explained in </span><span style="color: black;">this
+        appendix. </span><br style="color: black;">
+      <span style="color: black;">=2,3,...,N&nbsp; Linear interpolation between
+        the N given points. If Nba&lt;0 but&nbsp; ABS(Nba)&gt;4 </span><br style="color: black;">
+      <span style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        the interpolation is performed using cubic splines </span><br style="color: black;">
+      <span style="color: black;">=-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Refine
+        background with Debye-like + polynomial function. =-2 <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Background treated iteratively by using a Fourier filtering technique.
+        An extra </span><br style="color: black;">
+      <span style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        parameter is read below. The starting background is read from file
+        FILE.bac as </span><span style="color: black;">for Nba=1. </span><br style="color: black;">
+      <span style="color: black;">=-3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Read 6 additional polynomial background coefficients </span></span><br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><br>
+      <a name="Iwg"></a>Iwg- Refinement weighting scheme </span><br>
+    =0 Standard least squares refinement <br>
+    =1 Maximum likelihood refinement&nbsp; For low counting statistics<br>
+    =2 Unit weights <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><a name="Ilo"></a>Ilo – Lorentz and
+      polarization corrections </span><br>
+    = 0 Standard Debye-Scherrer geometry, or Bragg-Brentano if the illuminated
+    area does not <br>
+    &nbsp;&nbsp;&nbsp; exceed the sample surface. If Bragg-Brentano geometry is
+    used but the above condition <br>
+    &nbsp;&nbsp;&nbsp; is not fulfilled, the intensity data must be corrected
+    for the geometric effect before <br>
+    &nbsp;&nbsp;&nbsp; attempting any refinement. A partial correction can be
+    performed by using the <br>
+    &nbsp;&nbsp;&nbsp; parameter Sent0. <br>
+    = 1 Flat plate PSD geometry <br>
+    =-1 The Lorentz-Polarisation correction is not performed. It is supposed
+    that the profile has <br>
+    &nbsp;&nbsp;&nbsp; been previously corrected for Lorentz-Polarisation. <br>
+    =2 Transmission geometry. Flat plate with the scattering vector within the
+    plate (Stoe <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; geometry for X-rays)<br> =3 Special polarisation
+    correction is applied even <br>
+    &nbsp;&nbsp;&nbsp; if the format of the DAT-file does not correspond to one
+    of the synchrotron<br>
+    &nbsp; &nbsp; explicitly given formats (see below). This must be used for
+    synchrotron data<br>
+    &nbsp; &nbsp; given in a (X, Y, Sigma) format (Ins=10). <br>
+
+    
+    <br>
+    <br>
+    <span style="color: #cc0000;"><br>
+      <a name="Cry"></a>Cry – Single crystal job and refinement algorythm type </span><br>
+    &#8800;0 Only integrated intensity data will be given. No profile parameters are
+    needed. <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; The format of the file changes slightly in the
+    following. <br>
+    =1 Refinement of single crystal data or integrated intensity powder data. <br>
+    =2 No least-squares algorithm is applied. Instead a Montecarlo search of the
+    starting<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; configuration is performed. A selected number of
+    parameters Nre are moved within<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; box defined by the Nre relations fixing the allowed
+    values of the parameters. The best<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; (lowest R-factor) NSOLU solutions are printed and
+    the CODFIL.pcr file is updated with<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; the best solution. This option is only efficient
+    for a small number of parameters (3-4).<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; The use of the next option is recommended for large
+    number of parameters. <br>
+    =3 The Simulated Annealing optimisation method is chosen. A selected number<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parameters Nre are moved within a box defined
+    by the Nre relations fixing the allowed<br>
+    &nbsp;&nbsp;&nbsp;&nbsp; values of the parameters. Different boundary
+    conditions may be used. See below. <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><a name="Uni"></a>Uni - Scattering variable
+      unit </span><br>
+    =0 2&#952; in degrees <br>
+    =1 T.O.F. in micro-seconds <br>
+    =2 Energy in keV. <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><a name="Cor"></a>Cor – Intensity correction </span><br>
+    =0 No correction is applied <br>
+    =1 A file with intensity corrections is read. <br>
+    =2 A similar file is read but the coefficients of an empirical<br>
+    &nbsp; deviations are read instead of directly the corrections. <br>
+    &nbsp; The format of this file is described in this appendix. <br>
+    <span style="color: #cc0000;"><br>
+      <br>
+      <br>
+      <br>
+      <a name="Dum"></a>Dum – Control of the divergence for specific jobs, ex:
+      profile matching </span><br>
+    =1 If equal to 1 and some of the phases are treated with Profile Matching
+    modes, the <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; criterion of convergence when shifts are lower than
+    a fraction of standard deviations is <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; not applied. <br>
+    =2 If equal to 2, the program is stopped in case of local divergence:
+    chi2(icycle+1)&gt; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; chi2(icycle) <br>
+    =3 If equal to 3 the reflections near excluded regions (Tlim±Wdt*FWHM) are
+    not taken <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; into account to calculate the Bragg R-factor. These
+    reflections are omitted in the output <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; files with hkl's.&nbsp; <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; If ABS(Job(n_pat))&gt;1 (pattern calculation mode,
+    see below) and Dum is different of <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; zero a file CODFIL.sim is generated <br>
+    <br>
+  </body>
+</html>

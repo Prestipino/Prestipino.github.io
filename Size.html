@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Size moldel</title>
+  </head>
+  <body>
+    <p>POWDER DATA III: ADDITIONAL ANISOTROPIC SIZE PARAMETERS <br>
+      (Optional LINE 36 is read if Size-Model &#8800;0 on LINE 27) <br>
+      This specific optional sub-block of the block of lines 26 to 38 (see, loop
+      over phases) should be given for <br>
+      each pattern to which the phase contributes (controlled by JCONTR(n_pat)
+      in line 19. These lines may be <br>
+      grouped as: <br>
+      <br>
+      &nbsp;<br>
+    </p>
+    <h2>Size models: </h2>
+    <p><br>
+      <span style="color: red;">(1) Cylindrical (platelet) shaped crystallites </span><br>
+      [If Size-Model =±1] <br>
+      Comment line:! Platelet-Needle vector (Size) <br>
+      LINE 36: <span style="color: #33ff33;">Sz1, Sz2, Sz3</span> (3 reals) <br>
+      <br>
+      &nbsp;<br>
+      <span style="color: #990000;"><br>
+        <span style="color: red;">(2) User defined selective (hkl) size
+          broadening due to defects </span></span><br>
+      [If Size-Model&lt;-1] <br>
+      LINE 36: <span style="color: #33ff33;">n1, n2, n3, n4, n5, SZ, CSZ</span>
+      (5 integers, 2 reals) <br>
+      Comment line:! Size-Broadening (n1.h + n2.k + n3.l=n n4 +/- n5) Size-par
+      Code <br>
+      <br>
+      &nbsp;<br>
+      <br>
+      <span style="color: #cc0000;">(3) Spherical harmonics expansion of the
+        cystallites shape </span><span style="font-weight: bold;"><br>
+      </span></p>
+    <p><span style="font-weight: bold;">[Size-Model=15] Laue class: 2/m </span><br>
+      LINE 36: <span style="color: #33ff33;">Y00, Y22+, Y22-, Y20, Y44+, Y44-</span>
+      (6 reals) <br>
+      LINE 36-1: CY00, CY22+, CY22-, CY20, CY44+, CY44- (Codewords 6 reals) <br>
+      LINE 36-2: <span style="color: #33ff33;">Y42+, Y42-, Y40</span> (3 reals)
+      <br>
+      LINE 36-3: CY42+, CY42-, CY40 (Codewords 3 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=16] Laue class: -3 m H </span><br>
+      LINE 36: <span style="color: #33ff33;">Y00, Y20, Y40, Y43-, Y60, Y63- </span>(6
+      reals) <br>
+      LINE 36-1: CY00, CY20, CY40, CY43-, CY60, CY63- (Codewords 6 reals) <br>
+      LINE 36-2: <span style="color: #33ff33;">Y66+</span> (1 real) <br>
+      LINE 36-3: CY66+ (Codewords 1 real) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=17] Laue classes: m3, m3m.
+        Cubic harmonics, for m3m K62=0. </span><br>
+      LINE 36:<span style="color: #33ff33;"> K00, K41, K61, K62, K81</span> (5
+      reals) <br>
+      LINE 36-1: CK00, CK41, CK61, CK62, CK81 (Codewords 5 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=18] Laue class: mmm </span><br>
+      LINE 36: <span style="color: #33ff33;">Y00, Y20, Y22+, Y40, Y42+, Y44+</span>
+      (6 reals) <br>
+      LINE 36-1: CY00, CY20, CY22+, CY40, CY42+, CY44+ (Codewords 6 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=19] Laue classes: 6/m, 6/mmm.
+        For 6/mmm Y66-=0. </span><br>
+      LINE 36:<span style="color: #33ff33;"> Y00, Y20, Y40, Y60, Y66+, Y66-</span>
+      (6 reals) <br>
+      LINE 36-1: CY00, CY20, CY40, CY60, CY66+, CY66- (Codewords 6 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=20] Laue class: -3 H. </span><br>
+      LINE 36: <span style="color: #33ff33;">Y00, Y20, Y40, Y43-, Y43+</span>
+      (5 reals) <br>
+      LINE 36-1: CY00, CY20, CY40, CY43-, CY43+ (Codewords 5 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=21] Laue classes: 4/m, 4/mmm.
+        For 4/mmm Y44-=0 and Y64=0. </span><br>
+      LINE 36: <span style="color: #33ff33;">Y00, Y20, Y40, Y44+, Y44-, Y60</span>
+      (6 reals) <br>
+      LINE 36-1: CY00, CY20, CY40, CY44+, CY44-, CY60 (Codewords 6 reals) <br>
+      LINE 36-2:<span style="color: #33ff33;"> Y64+, Y64</span>- (2 reals) <br>
+      LINE 36-3: CY64+, CY64- (Codewords 2 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+      <span style="font-weight: bold;">[Size-Model=22] Laue class: -1. </span><br>
+      LINE 36: <span style="color: #33ff33;">Y00, Y20, Y21+, Y21-, Y22+, Y22-</span>
+      (6 reals) <br>
+      LINE 36-1: CY00, CY20, CY21+, CY21-, CY22+, CY22- (Codewords 6 reals) <br>
+      Comment lines are directly the names of the variables as given below. <br>
+      <br>
+    </p>
+    <h2>Variables </h2>
+    <p><span style="color: #33ff33;">[Sz1, Sz2, Sz3] - Vector defining the
+        platelets </span><br>
+      Is the vector defining the platelets. Must be the same for all patterns. </p>
+    <p><br>
+      &nbsp;<br>
+      <br>
+      <span style="color: #33ff33;">n1, n2, n3, n4, n5, SZ – User-defined rules
+        for selective hkl size-broadening </span><br>
+      Set of ABS(Size-Model) (&#8804;9) lines, defining rules to be satisfied by
+      reflections undergoing <br>
+      selective “size-like” broadening due to some kind of defects (anti-phase
+      domains, … ). <br>
+      Are set of integers that should be the same for all patterns. If the
+      Miller indices of the reflection <br>
+      satisfy the relation: </p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+        style="color: #33ff33;"> n1</span><span style="font-style: italic;">H</span>
+      + <span style="color: #33ff33;">n2</span><span style="font-style: italic;">K</span>
+      + <span style="color: #33ff33;">n3</span><span style="font-style: italic;">L</span>
+      = <span style="color: #33ff33;">n4</span> <span style="font-style: italic;">n</span>
+      + <span style="color: #33ff33;">n5</span> </p>
+    <p>The Lorentzian broadening of the reflection is given by the expressions:
+      <br>
+      H<sub>L</sub> = 0.360 <span style="color: #33ff33;">SZ</span> <span style="font-style: italic;">&#955;</span>/<span
+        style="font-style: italic;">cos&#952;</span> /&#960;<sup>2</sup> (2&#952; space) <br>
+      H<sub>L</sub> =(2/&#960;) <span style="color: #33ff33;">SZ</span> d<sup>5</sup>
+      <span style="color: #33ff33;">Dtt1</span> × 10<sup>-3</sup> (T.O.F. space)
+      <br>
+      H<sub>L</sub> = <span style="color: #33ff33;">SZ</span>/(2d) <span style="color: #33ff33;">Dtt1</span>
+      × 10<sup>-3</sup> (Energy space) <br>
+      <br>
+      <span style="color: #33ff33;">Clm±, Klm - SH coefficients </span><br>
+      The Lorentzian broadening is calculated as previously, but for each
+      refexion (hkl) with spherical <br>
+      coordinates (h, &#952;, &#981;) in the reciprocal space, SZ is calculatesd by the
+      developement onto the <br>
+      Spherical Harmonics basis functions as: <br>
+      <math display="block">
+        <mrow>
+          <mi>SZ</mi>
+          <mfenced open="(" close=")" separators=",">
+            <mi>&#952;</mi>
+            <mi>&#966;</mi> </mfenced>
+          <mo>=</mo>
+          <munder>
+            <mo>&#8721;</mo>
+            <mrow>
+              <mi mathvariant="italic">lm</mi><mo>&#8289;</mo>
+              <mo>±</mo> </mrow> </munder>
+          <msub>
+            <mi>C</mi>
+            <mrow><mi>lm</mi>
+              <mo>±</mo> </mrow> </msub>
+          <msubsup>
+            <mi>Y</mi>
+            <mrow>
+              <mi>lm</mi><mo>&#8289;</mo>
+              <mo>±</mo> </mrow>
+            <mo>±</mo> </msubsup>
+          <mfenced open="(" close=")" separators=",">
+            <mi>&#952;</mi>
+            <mi>&#966;</mi></mfenced> </mrow></math></p>
+  </body>
+</html>

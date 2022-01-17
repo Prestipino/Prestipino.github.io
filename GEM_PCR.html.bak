@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title></title>
+  </head>
+  <body>
+    <pre style="color: rgb(0, 0, 0); orphans: auto; text-align: start; text-indent: 0px; ; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-wrap: break-word; white-space: pre-wrap;">COMM  PrMn7O12 Xpress-RT                                                        
+! Current global Chi2 (Bragg contrib.) =      22.56    
+NPATT      6       0 0 1 1 1 0 &lt;- Flags for patterns (1:refined, 0: excluded)
+W_PAT   0.333 0.333 0.333 0.333 0.333 0.333</pre>
+    <table style="width: 242px; height: 28px;font-style: normal; font-variant: normal; font-weight: normal; "
+      border="0" cellpadding="0" cellspacing="0">
+      <tbody style="text-align: center;">
+        <tr>
+          <td title="Number of phases ">Nph</td>
+          <td><a target="_parent" title="Dum Control of the divergence for specific jobs"
+              href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Dum"
+              onclick="return popup(this, 'notes')">Dum</a></td>
+          <td title="Reordering of reflections ">Ias</td>
+          <td title="Number of constrained parameters">Nre</td>
+          <td><a target="_parent" title=" Resolution function type" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Cry"
+              onclick="return popup(this, 'notes')">Cry</a></td>
+          <td title="Calculation optimisations (Yes 1, No 0)">Opt</td>
+          <td title="Automatic mode (Yes 1, No 0)">Aut</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>4</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="width: 436px; height: 26px;" border="0" cellpadding="0" cellspacing="0">
+      <tbody style="text-align: center;">
+        <tr>
+          <td><a target="_parent" title="Type of Job and rad" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Job"
+              onclick="return popup(this, 'notes')">!Job</a></td>
+          <td><a target="_parent" title="Profile to be used" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Npr.html"
+              onclick="return popup(this, 'notes')">Npr</a></td>
+          <td><a target="_parent" title="Number of background points" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Nba"
+              onclick="return popup(this, 'notes')">Nba</a></td>
+          <td title="Number of regions to exclude in powder data">Nex</td>
+          <td title="Number of user defined scattering factors ">Nsc</td>
+          <td title="Preferred orientation function type 0 or 1">Nor</td>
+          <td><a target="_parent" title=" Refinement weighting scheme" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Iwg"
+              onclick="return popup(this, 'notes')">Iwg</a></td>
+          <td><a target="_parent" title=" Refinement weighting scheme" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Ilo"
+              onclick="return popup(this, 'notes')">Ilo</a></td>
+          <td><a target="_parent" title=" Resolution function type" href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Res"
+              onclick="return popup(this, 'notes')">Res</a></td>
+          <td title="Number of data points reduction factor in powder data
+If Ste&gt;1 the number of data points is reduced by a factor of Ste">Ste</td>
+          <td><a target="_parent" title=" Scattering variable unit " href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Uni"
+              onclick="return popup(this, 'notes')">Uni</a></td>
+          <td><a target="_parent" title=" Intensity correction " href="file:///D:/home/cprestip/mes%20documents/documentation/html-fullprof-jana/docfullprof/Job.html#Cor"
+              onclick="return popup(this, 'notes')">Cor</a></td>
+          <td title="Calculation optimisations (Yes 1, No 0)">Anm</td>
+          <td title="Automatic mode (Yes 1, No 0)">Int</td>
+        </tr>
+      </tbody>
+    </table>
+    -1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 13 &nbsp;&nbsp; &nbsp; 0&nbsp;&nbsp;
+    &nbsp;&nbsp; 2 &nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
+    1&nbsp;&nbsp; &nbsp; 0 &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 5
+    &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp;
+    &nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 0 !-&gt; Patt#: 1<br>
+    -1 &nbsp; &nbsp;&nbsp; 13&nbsp;&nbsp; &nbsp;&nbsp; 0 &nbsp;&nbsp; &nbsp; 2
+    &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp;&nbsp; &nbsp; 0
+    &nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; &nbsp; 5&nbsp; &nbsp;&nbsp; 0
+    &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp;&nbsp;&nbsp; 0 &nbsp; &nbsp;&nbsp; 0
+    &nbsp;&nbsp;&nbsp; 0 !-&gt; Patt#: 2<br>
+    -1 &nbsp;&nbsp;&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp; &nbsp; 2
+    &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp;&nbsp; &nbsp;
+    0&nbsp;&nbsp; &nbsp; 0 &nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; &nbsp; 0
+    &nbsp;&nbsp;&nbsp; 1 &nbsp;&nbsp; &nbsp; 0 &nbsp; &nbsp;&nbsp; 0
+    &nbsp;&nbsp;&nbsp; 0 !-&gt; Patt#: 3<br>
+    -1&nbsp;&nbsp; &nbsp;&nbsp; 13 &nbsp;&nbsp; 13 &nbsp;&nbsp; &nbsp; 2
+    &nbsp;&nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp;&nbsp; &nbsp;
+    0&nbsp;&nbsp; &nbsp; 0 &nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;
+    &nbsp; 1 &nbsp;&nbsp; &nbsp; 0 &nbsp; &nbsp;&nbsp; 0 &nbsp;&nbsp;&nbsp; 0
+    !-&gt; Patt#: 4<br>
+    -1&nbsp;&nbsp; &nbsp;&nbsp; 13 &nbsp;&nbsp;&nbsp;&nbsp; 9 &nbsp;&nbsp;
+    &nbsp; 2&nbsp;&nbsp; &nbsp; 0 &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp;&nbsp;
+    &nbsp; 0&nbsp;&nbsp; &nbsp; 0 &nbsp;&nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;
+    0&nbsp;&nbsp; &nbsp; 1 &nbsp;&nbsp; &nbsp; 0 &nbsp; &nbsp;&nbsp; 0
+    &nbsp;&nbsp;&nbsp; 0 !-&gt; Patt#: 5<br>
+    -1 &nbsp;&nbsp;&nbsp;&nbsp; 13 &nbsp;&nbsp;&nbsp;&nbsp; 8 &nbsp;&nbsp;
+    &nbsp; 2&nbsp;&nbsp; &nbsp; 0 &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 1&nbsp;&nbsp;
+    &nbsp; 0&nbsp;&nbsp; &nbsp; 0&nbsp; &nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp;
+    0&nbsp;&nbsp; &nbsp; 1 &nbsp;&nbsp; &nbsp; 0 &nbsp; &nbsp;&nbsp; 0
+    &nbsp;&nbsp;&nbsp; 0 !-&gt; Patt#: 6<br>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-wrap: break-word; white-space: pre-wrap;">!File names of data(patterns) files
+gem36149.gss
+gem36149.gss
+gem36149.gss
+gem36149.gss
+gem36149.gss
+gem36149.gss
+!
+!  Resolution file for Pattern#   1
+gem_cycle061_modified.irf
+!  Resolution file for Pattern#   2
+gem_cycle061_modified.irf
+!  Resolution file for Pattern#   3
+gem_cycle061_modified.irf
+!  Resolution file for Pattern#   4
+gem_cycle061_modified.irf
+!  Resolution file for Pattern#   5
+gem_cycle061_modified.irf
+!  Resolution file for Pattern#   6
+gem_cycle061_modified.irf</pre>
+  </body>
+</html>

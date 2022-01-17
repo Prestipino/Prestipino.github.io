@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Keyword option</title>
+  </head>
+  <body>This specific optional sub-block of the block of lines 26 to 38 (see,
+    loop over phases) should be given for <br>
+    some specific strain models (controlled trhough Str (LINE 19) and
+    Strain-Model (LINE 26)), and for each <br>
+    pattern to which the phase contributes (controlled by JCONTR(n_pat) in line
+    19. These lines may be <br>
+    grouped as: <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <h2><span style="font-weight: bold;">Size/strain models:</span> </h2>
+    <span style="color: #cc0000;">(1) Axial vector Microstrain </span><br>
+    [If Strain-Model=7] <br>
+    Comment line:! Axial vector Microstrain <br>
+    LINE 37:<span style="color: #33cc00;"> St1, St2, St3 </span>(3 reals) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <span style="color: #cc0000;">(2) Other microstrain models </span><br>
+    [If Strain-Model&gt;8 and Str=0] <br>
+    Comment line:! 5 additional strain parameters (IstrainModel&gt;8) <br>
+    LINE 37:<span style="color: #33cc00;">STR4, STR5, STR6, STR7, STR8</span> (5
+    reals) <br>
+    LINE 37-1: CSTR4, CSTR5, CSTR6, CSTR7, CSTR8 (Codewords 5 reals) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <span style="color: #cc0000;">(3) Generalized size model </span><br>
+    [If Str=-1, 2, 3] <br>
+    Comment line! Generalised size parameters (quadratic form): <br>
+    LINE 37: <span style="color: #33cc00;">SZ1, SZ2, SZ3, SZ4, SZ5, SZ6</span>
+    (6 reals) <br>
+    LINE 37-1: CSZ1, CSZ2, CSZ3, CSZ4, CSZ5, CSZ6 (Codewords 6 reals) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <span style="color: #cc0000;">(4) Anisotropic strain broadening </span><br>
+    modelled using a quartic form in reciprocal space <br>
+    [If ABS(Str)=1 and Strain-Model&#8800; 0] <br>
+    <br>
+    <span style="font-weight: bold;">Strain-Model =1 Laue class: -1 </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_040, S_004, S_220, S_202</span>
+    (5 reals) <br>
+    LINE 37-1: CS_400, CS_040, CS_004, CS_220, CS_202 (Codewords 5 reals) <br>
+    LINE 37-2:<span style="color: #33cc00;"> S_022, S_211, S_121, S_112, S_301 </span>(5
+    reals) <br>
+    LINE 37-3: CS_022, CS_211, CS_121, CS_112, CS_301 (Codewords 5 reals) <br>
+    LINE 37-4: <span style="color: #33cc00;">S_301, S_130, S_103, S_013, S_031</span>
+    (5 reals) <br>
+    LINE 37-5: CS_301, CS_130, CS_103, CS_013, CS_031 (Codewords 5 reals) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    S<span style="font-weight: bold;">train-Model=2 Laue class: 1 2/m 1 </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_040, S_004, S_220, S_202</span>
+    (5 reals) <br>
+    LINE 37-1: CS_400, CS_040, CS_004, CS_220, CS_202 (Codewords 5 reals) <br>
+    LINE 37-2: <span style="color: #33cc00;">S_022, S_121, S_301, S_103</span>
+    (4 reals) <br>
+    LINE 37-3: CS_022, CS_121, CS_301, CS_103 (Codewords 4 reals) <br>
+    <br>
+    <br>
+    &nbsp;<br>
+    <span style="font-weight: bold;"><br>
+      Strain-Model=-2 Laue class: 1 1 2/m </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_040, S_004, S_220, S_202</span>
+    (5 reals) <br>
+    LINE 37-1: CS_400, CS_040, CS_004, CS_220, CS_202 (Codewords 5 reals) <br>
+    LINE 37-2:<span style="color: #33cc00;"> S_022, S_112, S_310, S_130 </span>(4
+    reals) <br>
+    LINE 37-3: CS_022, CS_112, CS_310, CS_130 (Codewords 4 reals) <br>
+    <br>
+    &nbsp;<br>
+    <span style="font-weight: bold;"><br>
+      Strain-Model = 3 Laue class: mmm </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_040, S_004, S_220, S_202,
+      S_022 </span>(6 reals) <br>
+    LINE 37-1: CS_400, CS_040, CS_004, CS_220, CS_202, CS_022 (Codewords 6
+    reals) <br>
+    <br>
+    &nbsp;<br>
+    <span style="font-weight: bold;"><br>
+      Strain-Model= 4, 5 Laue classes: 4/m, 4/mmm </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_004, S_220, S_202</span> (4
+    reals) <br>
+    LINE 37-1: CS_400, CS_004, CS_220, CS_202 (Codewords 4 reals) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <span style="font-weight: bold;">Strain-Model= 6, 7 Laue classes: -3 R, -3m
+      R </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_004, S_112, S_211</span> (4
+    reals) <br>
+    LINE 37-1: CS_400, CS_004, CS_112, CS_211 (Codewords 4 reals) <br>
+    <br>
+    &nbsp;<br>
+    <span style="font-weight: bold;"><br>
+      Strain-Model= 8, 9, 10, 11, 12 Laue classes: -3, -3m1, -31m, 6/m, 6/mmm </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">S_400, S_004, S_112</span> (3 reals)
+    <br>
+    LINE 37-1: CS_400, CS_004, CS_112 (Codewords 3 reals) <br>
+    <br>
+    &nbsp;<br>
+    <span style="font-weight: bold;"><br>
+      Strain-Model= 13, 14 Laue classes: m3, m3m </span><br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37:<span style="color: #33cc00;"> S_400, S_220</span> (2 reals) <br>
+    LINE 37-1: CS_400, CS_220 (Codewords 2 reals) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <span style="font-weight: bold;">(5) Generalized strain model </span><br>
+    [Str=1 and Strain-Model=0, or Str=3] <br>
+    Comment lines are directly the names of the variables as given below. <br>
+    LINE 37: <span style="color: #33cc00;">STR4, STR5, STR6, STR7, STR8, STR9</span>
+    (6 reals) <br>
+    LINE 37-1:CSTR4, CSTR5, CSTR6, CSTR7, CSTR8, CSTR9 (Codewords 6 reals) <br>
+    LINE 37-2: <span style="color: #33cc00;">STR10, STR11, STR12, STR13, STR14,
+      STR15 </span>(6 reals) <br>
+    LINE 37-3:CSTR10, CSTR11, CSTR12, CSTR13, CSTR14, CSTR15 (Codewords 6 reals)
+    <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <h2><span style="font-weight: bold;">Lorentzian strain broadening </span></h2>
+    (if Npr &#8805; 7 and Strain-Model&#8800;0 or. Str=1 or Str=3.) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    Comment line: ! Lorentzian strain coeff.+ code <br>
+    LINE 38:<span style="color: #33cc00;"> XI, CXI</span> (2 reals, one
+    parameter and codeword) <br>
+    <br>
+    <br>
+    &nbsp;<br>
+    <h2> Variable</h2>
+    <span style="color: #33cc00;">[St1, St2, St3] - Axial microstrain vector </span><br>
+    Is the vector defining the axial microstrain. <br>
+    <span style="color: #33cc00;"><br>
+      STR4, STR5, STR6, STR7, STR8 <br>
+      STR9, STR10, STR11, STR12, STR13</span> – Additional strain parameters <br>
+    Additional strain parameters. If Str=0 Their meaning depend on the
+    particular value of and <br>
+    Strain-Model. If Str =1 and Strain-Model = 0, or Str = 3, the STR4 to STR15
+    parameters <br>
+    correspond to another (generalized) formulation of the strain parameters.
+    See Mathematical <br>
+    section for explanation. <br>
+    <br>
+    <br style="color: #33cc00;">
+    <span style="color: #33cc00;"> SZ1, SZ2, SZ3, SZ4, SZ5, SZ6 </span>–
+    Generalized size parameters <br>
+    Coefficients of the quadratic form: <br>
+    DSIZ= k<sub>s</sub> × d<sup>2</sup> ×( SZ1 <span style="font-style: italic;">h</span><sup>2</sup>
+    + SZ2 <span style="font-style: italic;">k</span><sup>2</sup> + SZ3 <span style="font-style: italic;">l</span><sup><span>2</span></sup>
+    + SZ4 <span style="font-style: italic;">kl</span> + SZ5 <span style="font-style: italic;">hl</span>
+    + SZ6 <span style="font-style: italic;">hk</span>) <br>
+    &nbsp; <br>
+    Where k<sub>s</sub> is defined as: <br>
+    k<sub>s</sub>=360/&#960;<sup><span>2</span></sup> × &#955; 10<sup>-3</sup> (2&#952; space)
+    <br>
+    k<sub>s</sub>=2/&#960; × Dtt1 10<sup>-3</sup> (TOF and Energy space) <br>
+    <br>
+    The FWHM of the Lorentzian size broadening is given by the expression: <br>
+    H<sub>L</sub> =DSIZ/cos&#952; (2&#952; space) <br>
+    H<sub>L</sub> =DSIZ d<sup>2</sup> (TOF space) <br>
+    <br>
+    &nbsp;<br>
+    <br>
+    <span style="color: #33cc00;">S_HKL– Coefficient of the quartic form for
+      strains</span> <br>
+    Codewords of the size parameters (quadratic form). <br>
+    The following items correspond to anisotropic strain broadening modelled
+    using a quartic form <br>
+    in reciprocal space. This correspond to an interpretation of the strains as
+    due to static fluctuations <br>
+    and correlations between metric parameters [see J. Rodríguez-Carvajal, M.T.
+    Fernandez-Díaz <br>
+    and J.L. Martínez, J. Phys: Condensed Matter 3, 3215 (1991) ]. The notation
+    used is that of P. <br>
+    Stephens [Peter W. Stephens, J. Appl. Cryst. 32, 281 (1999)]. <br>
+    <br>
+    &nbsp;
+    <math>
+      <mrow><mi mathvariant="italic">SDT</mi>
+        <mo>=</mo>
+        <munder>
+          <mo>&#931;</mo>
+          <mfenced open="{" close="}" separators=",">
+            <mrow>
+              <mtext mathvariant="italic">H+K+L=4</mtext> </mrow> </mfenced> </munder>
+        <msub>
+          <mi>S</mi>
+          <mi mathvariant="italic">HKL</mi> </msub>
+        <msup>
+          <mi>h</mi>
+          <mi>H</mi> </msup>
+        <msup>
+          <mi>k</mi>
+          <mi>K</mi> </msup>
+        <msup>
+          <mi>l</mi>
+          <mi>L</mi> </msup> </mrow> </math><br>
+    <br>
+    &nbsp;<br>
+    A maximum of 15 parameters can be given. The input format is different for
+    the different Laue <br>
+    classes. <br>
+    &nbsp; <br>
+    <br>
+    <span style="color: #33cc00;">XI – Lorentzian anisotropic strain parameter </span><br>
+    Lorentzian wheigh of the straind broadened profile, if modelized by a pseudo
+    Voigt function <br>
+    (Npr&gt;7) <br>
+  </body>
+</html>

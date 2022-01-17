@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Keyword option</title>
+  </head>
+  <body>
+    <p><span style="color: red; font-weight: bold;"><a id="Jbt" name="Jbt"></a>Jbt
+        –Structure factor model and refinement method for the phase</span> <br>
+      <span style="color: red;">= 0</span> The phase is treated with the
+      Rietveld Method, then refining a given structural model. <br>
+      <span style="color: red;">= 1</span> The phase is treated with the
+      Rietveld Method and it is considered as pure magnetic. <br>
+      &nbsp;&nbsp;&nbsp; Only magnetic atoms are required. In order to obtain
+      the correct values of the magnetic <br>
+      &nbsp;&nbsp;&nbsp; moments the scale factor and structural parameters must
+      be constrained to have the <br>
+      &nbsp;&nbsp;&nbsp; same values (except a multiplying factor defined by the
+      user) that their crystallographic <br>
+      &nbsp;&nbsp;&nbsp; counterpart. See note on magnetic refinements. The
+      three extra parameters <br>
+      &nbsp;&nbsp;&nbsp; characterising the atomic magnetic moments corresponds
+      to components (in Bohr <br>
+      &nbsp;&nbsp; magnetons) along the crystallographic axes. <br>
+      <span style="color: red;">=-1</span> As 1 but the three extra parameters
+      characterising the atomic magnetic moments <br>
+      &nbsp;&nbsp;&nbsp; corresponds to the value of M (in Bohr magnetons) the
+      spherical &#934; angle with X axis <br>
+      &nbsp;&nbsp;&nbsp; and the spherical &#920; angle with Z axis. This mode works
+      only if the Z axis is <br>
+      &nbsp;&nbsp;&nbsp; perpendicular to the XY plane. (for monoclinic space
+      groups the Laue Class 1 1 2/m is <br>
+      &nbsp;&nbsp;&nbsp; required). <br>
+      <span style="color: red;">= 2</span> Profile Matching mode with constant
+      scale factor. <br>
+      <span style="color: red;">=-2</span> As 2 but instead of intensity the
+      modulus of the structure factor is given in the <br>
+      &nbsp;&nbsp;&nbsp; CODFILn.hkl file <br>
+      <span style="color: red;">= 3</span> Profile Matching mode with constant
+      relative intensities for the current phase. The scale <br>
+      &nbsp;&nbsp;&nbsp; factor can be refined. In this case Irf(n_pat) must be
+      equal to 2, see below. <br>
+      <span style="color: red;">=-3</span> As 3 but instead of intensity the
+      modulus of the structure factor in absolute units <br>
+      &nbsp;&nbsp;&nbsp; (effective number of electrons for X-rays/ units of
+      10-12 cm for neutrons) is given in the <br>
+      &nbsp;&nbsp;&nbsp; CODFILn.hkl file. This structure factor is given for
+      the non-centrosymmetric part of the <br>
+      &nbsp;&nbsp;&nbsp; primitive cell, so for a centrosymmetric space group
+      with a centred lattice the structure factor to be read is: <br>
+      &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Freduced =
+      Fconventional /(Nlat &#8901; Icen) <br>
+      &nbsp;&nbsp;&nbsp; where Nlat is the multiplicity of the conventional cell
+      and Icen=1 for non-<br>
+      &nbsp;&nbsp;&nbsp; centrosymmetric space groups and Icen=2 for
+      centrosymmetric space groups. <br>
+      <span style="color: red;">= 4</span> The intensities of nuclear
+      reflections are calculated from a routine handling Rigid body <br>
+      &nbsp;&nbsp;&nbsp; groups. <br>
+      <span style="color: red;">= 5</span> The intensities of magnetic
+      reflections are calculated from a routine handling conical <br>
+      &nbsp;&nbsp;&nbsp; magnetic structures in real space. <br>
+      <span style="color: red;">=+10/-10</span> The phase can contain nuclear
+      and magnetic contributions STFAC is called for <br>
+      &nbsp;&nbsp;&nbsp; reflections with no propagation vector associated and
+      CALMAG is called for satellite <br>
+      &nbsp;&nbsp;&nbsp; reflections. CALMAG is also called for fundamental
+      reflections if there is no <br>
+      &nbsp;&nbsp;&nbsp; propagation vector given but the number of magnetic
+      symmetry matrices (MagMat, see <br>
+      &nbsp;&nbsp;&nbsp; below) is greater than 0. The negative value indicates
+      spherical components for <br>
+      &nbsp;&nbsp;&nbsp; magnetic parameters. For this case the atom parameters
+      are input in a slightly different <br>
+      &nbsp;&nbsp;&nbsp; format. <br>
+      <span style="color: red;">=+15/-15</span> The phase is treated as a
+      commensurate modulated crystal structure. All the input <br>
+      &nbsp;&nbsp;&nbsp; propagation vectors and also k=(0,0,0) are identified
+      to be magnetic and/or structural by <br>
+      &nbsp;&nbsp;&nbsp; the reading subroutine. All nuclear contributions at
+      reflections without propagation <br>
+      &nbsp;&nbsp;&nbsp; vectors (fundamental reflections of the basic
+      structure) and all the reflections associated <br>
+      &nbsp;&nbsp;&nbsp; to a modulation propagation vector (superstructure
+      reflections), are calculated by <br>
+      &nbsp;&nbsp;&nbsp; MOD_STFAC. Magnetic contributions are added, if
+      necessary, calling the subroutine <br>
+      &nbsp;&nbsp;&nbsp; CALMAG as in the case of Jbt=+10/-10. The negative
+      value indicates spherical <br>
+      &nbsp;&nbsp;&nbsp; components for magnetic parameters. This value of Jbt
+      implies the use of a specific <br>
+      &nbsp;&nbsp;&nbsp; format for atom parameters. </p>
+    <p><br>
+    </p>
+    <p><br>
+    </p>
+    <p><span style="color: #cc0000;"><a id="Irf" name="Irf"></a>Irf –Control the
+        reflexion generation or the use of a reflexion file </span><br>
+      = 0 The list of reflections for this phase is automatically generated from
+      the space group <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; symbol <br>
+      = 1 The list h, k , l, Mult is read from file CODFILn.hkl (where n is the
+      ordinal number of <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the current phase) <br>
+      =-1 The satellite reflections are generated automatically from the given
+      space group symbol <br>
+      = 2 The list h, k, l, Mult, Intensity (or Structure Factor if Jbt=-3) is
+      read from file <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CODFILn.hkl. <br>
+      = 3 The list h, k, l, Mult, Freal, Fimag is read from file CODFILn.hkl. In
+      this case, the <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; structure factor read is added to that
+      calculated from the supplied atoms. This is useful <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; for simplifying the calculation of structure
+      factors for intercalated compounds (rigid host). <br>
+      =4,-4 A list of integrated intensities is given as observations for the
+      current phase (In the case <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of Cry&#8800;0 this is mandatory)&nbsp;</p>
+    <p><br>
+    </p>
+    <p><br>
+    </p>
+    <p><span style="color: #cc0000;"><a id="Isy" name="Isy"></a>Isy –Symmetry
+        operators reading control code </span><br>
+      =0 The symmetry operators are generated automatically from the space group
+      symbol. <br>
+      =+/-1 The symmetry operators are read below. In the case of a pure
+      magnetic phase Isy must <br>
+      be always equal to 1 or 2. <br>
+      =2 The basis functions of the irreducible representations of the
+      propagation vector group <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; are read instead of symmetry operators. At
+      present this works only for a pure magnetic <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; phase.&nbsp; <br>
+      For Jbt=10 with magnetic contribution Isy could be 0 but a comment
+      starting with <br>
+      “Mag” should be given after the space group symbol.&nbsp;</p>
+    <p><br>
+    </p>
+    <p><br>
+    </p>
+    <p><span style="color: #cc0000;"><a id="Str" name="Str"></a>Str –
+        Size-strain reading control code </span><br>
+      =0 If strain or/and size parameters are used, they are those corresponding
+      to selected <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; models <br>
+      =1 The generalised formulation of strains parameters will be used for this
+      phase. <br>
+      &nbsp;&nbsp;&nbsp; &nbsp; If Strain-Model&#8800;0 a quartic form in reciprocal
+      space is used (see below) <br>
+      =-1 Options 1 and 2 simultaneously. The size parameters of the quadratic
+      form are read <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; before the strain parameters. <br>
+      =2 The generalised formulation of size parameters will be used for this
+      phase. <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quadratic form in reciprocal space. Only
+      special options of strains with Strain-<br>
+      &nbsp;&nbsp;&nbsp; &nbsp; Model&#8800;0 can be used together with this size
+      option. <br>
+      =3 The generalised formulation of strain and size parameters will be used
+      for this phase. </p>
+    <p><br>
+    </p>
+    <p><span style="color: #cc0000;"><a id="Npr" name="Npr"></a>&nbsp;&nbsp;&nbsp;
+        Npr – Defaut profile to be used </span><br>
+      Default value for selection of a normalised peak shape function.
+      Particular values can<br>
+      for each phase, in that case the local value is used. <br>
+      =0 Gaussian. <br>
+      =1 Cauchy (Lorentzian). <br>
+      =2 Modified 1 Lorentzian. <br>
+      =3 Modified 2 Lorentzian. <br>
+      =4 Tripled pseudo-Voigt. <br>
+      =5 pseudo-Voigt. <br>
+      =6 Pearson VII. <br>
+      =7 Thompson-Cox-Hastings pseudo-Voigt convoluted with axial divergence<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; function (Finger, Cox &amp; Jephcoat, J. Appl.
+      Cryst. 27, 892, 1994). <br>
+      =8 Numerical profile given in CODFIL.shp or in GLOBAL.shp. <br>
+      =9 T.O.F. Convolution pseudo-Voigt with back-to-back exponential
+      functions.<br>
+      =10 T.O.F. Same as 9 but a different dependence of TOF versus d-spacing. <br>
+      =11 Split pseudo-Voigt function. <br>
+      =12 Pseudo-Voigt function convoluted with axial divergence asymmetry
+      function.<br>
+      =13 T.O.F. Pseudo-Voigt function convoluted with Ikeda-Carpenter function.
+    </p>
+    <p><br>
+    </p>
+    <p><br>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Keyword option</title>
+  </head>
+  <body><span style="color: #cc0000;"><a id="Ipr" name="Ipr"></a>Ipr – Profile
+      integrated intensities output or generation of .sub files </span><br>
+    =0 No action <br>
+    =1 Observed and calculated profile intensities written in CODFIL.out <br>
+    =2 The files CODFILn.sub with the calculated profile of each phase are
+    generated. <br>
+    =3 As 2 but the background is added to each profile. <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><a id="Ppl" name="Ppl"></a>Ppl – Various types
+      of calculated output -I </span><br>
+    =0 No action <br>
+    =1 Line printer plot in CODFIL.out <br>
+    =2 Generates the background-file FILE.bac <br>
+    =3 Puts difference pattern in file FILE.bac <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><a id="Ioc" name="Ioc"></a>Ioc – Various types
+      of calculated output -II </span><br>
+    =0 No action <br>
+    =1 List of observed and calculated integrated intensities in CODFIL.out <br>
+    =2 The reflections corresponding to the second wavelength are also written
+    if different <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; from the first one. <br>
+    <br>
+    <span style="color: #cc0000;"><a id="Mat" name="Mat"></a>Mat – Correlation
+      matrix output </span><br>
+    =0 No action <br>
+    =1 The correlation matrix is written in the file CODFIL.out <br>
+    =2 The diagonal of Least Squares matrix is printed before inversion at every
+    cycle. <br>
+    <br>
+    <br>
+    <span style="color: rgb(204, 0, 0);"><a id="Prf" name="Prf"></a>Prf - Output
+      format of the rietveld plot file CODFIL.prf </span><br>
+    Generates the file CODFIL.prf containing the information to plot the
+    observed versus calculated <br>
+    diffraction pattern as well as the reflection positions, etc. The output
+    forma <br>
+    =0 <br>
+    =1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Format suitable for
+    WinPLOTR, and other plotting programs. <br>
+    =2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Format suitable for
+    IGOR (MacOS, Windows software) <br>
+    =3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Format suitable for
+    KaleidaGraph (MacOS, Windows software) andWinPLOTR. <br>
+    =4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Format suitable for
+    Picsure, Xvgr (Sun-Unix Software) <br>
+    =-3 &nbsp; &nbsp; &nbsp; &nbsp;Format suitable for WinPLOTR, and other
+    plotting programs. coluoured ticks<br>
+    <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><br>
+      <a id="Ins" name="Ins"></a>Ins – Data file format </span><br>
+    =0&nbsp; Data supplied in free format. Up to seven comment lines are
+    accepted. The first three <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; real numbers found at the beginning of a line
+    are interpreted as Ti, step and Tf and. The following <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lines after Ti, step and Tf must contain
+    NPTS=(Tf–Ti)/step+1 values of the intensity profile. Data <br>
+    &nbsp;&nbsp;&nbsp; &nbsp; format of TOF raw data from Argonne are also
+    interpreted by this value of Ins. <br>
+    =1 D1A/D2B format (original Rietveld-Hewat format: the first line must be
+    Ti, step and Tf <br>
+    =2 D1B old format (DEC-10) <br>
+    =3 Format corresponding to the ILL instruments D1B and D20. <br>
+    =±4 Brookhaven synchrotron data. <br>
+    &nbsp;&nbsp;&nbsp; 4:&nbsp;&nbsp;&nbsp; First line: 2&#952;i, step, 2&#952;f (free
+    format). Rest of file: pairs of lines with 10 items like <br>
+    &nbsp; -4: Format given by DBWS program for synchrotron data. (Version
+    DBW3.2S-8711) <br>
+    =5 Data from GENERAL FORMAT for TWO AXIS instrument. Three lines of text <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; followed by two lines with the items: <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; NPTS, TSample, Tregul, Ivari, Rmon1, Rmon2 Ti,
+    step, Tf <br>
+    =6 D1A/D2B standard format prepared by D1A(D2B)SUM (ILL), ADDET(LLB), <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; MPDSUM (LLB) or equivalent programs. <br>
+    =7 Files from D4 or D20L <br>
+    =8 Data from DMC at Paul Scherrer Institute. <br>
+    =10 X, Y, Sigma format with header lines. In all cases the first six lines
+    are considered as comments. <br>
+    =11 Data from variable time X-ray data collection. The first four lines are
+    considered as <br>
+    &nbsp;&nbsp; comments. The following lines are: 2Thetai, step, 2Thetaf
+    Comment (Time, Intensity) in format 5(F6, I10). <br>
+    =12 The input data file conforms to GSAS standard data file. <br>
+    <br>
+    <span style="color: #cc0000;"><br>
+      <a id="Rpa" name="Rpa"></a>Rpa – Output .rpa/.sav file <br>
+      <span style="color: black;">=0 <br>
+        =1 Prepares the output file CODFIL.rpa. If the file exists before<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new data are APPENDED. <br>
+        =2 Prepares file CODFIL.sav (sequential refinements) " </span><br>
+      <span style="color: black;">=-1 Prepare a CIF file</span><br>
+      <br>
+      <br>
+      <a id="Hkl" name="Hkl"></a>Hkl – Output of reflection list in CODEFIL.hkl
+    </span><br>
+    =0 No action <br>
+    =1 Outputs: Code, h, k,l , mult, dhkl , 2&#952; , FWHM, Iobs , Icalc , Iobs &#8722;
+    Icalc<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or if ABS(Job)&gt;1 : h, k,l , mult, Icalc ,
+    2&#952; , dhkl <br>
+    =2 Output for SIRPOW.92: h, k,l , mult,sin&#952; / &#955;, 2&#952; , FWHM , F 2,&#963; (F 2 ) <br>
+    =±3 Output of Real and Imaginary parts of Structure Factors: ,&nbsp; h, k,l<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mult, Freal , Fimag ,2&#952; ,
+    Intensity<br>
+    =4 Output of: h, k,l, F 2,&#963; (F 2 ) . <br>
+    =5 Output of: h, k,l, mult, Fcalc ,Thkl , dhkl ,Qhkl <br>
+    <br>
+    <br>
+    <span style="color: #cc0000;"><br>
+      <a id="Fou" name="Fou"></a>Fou- Output of CODEFIL.fou files </span><br>
+    =0 No action <br>
+    =1 Cambridge format <br>
+    =2 SHELXS format are also in (Prepares also the file CODFILn.ins) <br>
+    =3 FOURIER format (Prepares also the file CODFILn.inp) <br>
+    =4 GFOURIER format (Prepares also the file CODFILn.inp) <br>
+  </body>
+</html>
