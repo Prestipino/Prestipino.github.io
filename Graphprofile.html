@@ -2,7 +2,9 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Graph showing the effects on FWHM of profile functions </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Begin Jekyll SEO tag v2.7.1 --><title>link to the graph of U V W X Y for fullprof |
+Prestipino.github.io</title>
 
 <meta name="generator" content="Jekyll v3.9.0">
 <meta property="og:title" content="link to the graph of U V W X Y for fullprof">
@@ -16,46 +18,117 @@
 <meta property="twitter:title" content="link to the graph of U V W X Y for fullprof">
 <script type="application/ld+json">
 {"description":"my page to dump few stuff","url":"https://prestipino.github.io/","@type":"WebSite","headline":"link to the graph of U V W X Y for fullprof","name":"Prestipino.github.io","@context":"https://schema.org"}</script><!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="stylefiles/style.css">
-<script src="stylefiles/scale.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<style data-emotion="css"></style>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-</head><body data-new-gr-c-s-check-loaded="8.895.0" data-gr-ext-installed="">
-<div class="wrapper"> <header> </header>
-<h1>Profile function with physical meaning the number 7 in Full
-prof</h1>
-<p>Thompson, Cox and Hastings, </p>
-<section> </section>
-<div class="wrapper"> <header> </header>
-<h1>Profile function with physical meaning the number 7 in Full
-prof</h1>
-<p>Thompson, Cox and Hastings, </p>
-<section> </section>
+
+
+    <link rel="stylesheet" href="stylefiles/style.css">
+    <script src="stylefiles/scale.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  <style data-emotion="css"></style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  </head>
+  <body data-new-gr-c-s-check-loaded="8.895.0" data-gr-ext-installed="">
+    <div class="wrapper">
+      <header>
+        <h1>Prestipino.github.io</h1>
+        
+          <p>my page to dump few stuff</p>
+        
+        <p class="view"><a href="https://github.com/Prestipino/Prestipino.github.io">View the Project on GitHub <small></small></a></p>
+        <ul>
+        
+          <li><a href="https://github.com/Prestipino/Prestipino.github.io">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+
+<h1> Profile function with physical meaning the number 7 in
+Fullprof </h1>
+Thompson, Cox and Hastings
 <h2>Instrumental contribution</h2>
-<p> The instrumental contribution in accordance with the paper of
+The instrumental contribution in accordance with the paper of
 Caglioti Pauletti and Ricci is gaussian (they worked with neutron ;-))
 and it is controlle by the famous formula
 \[\Gamma^2 = U tan^2(\theta) + V tan(\theta) + W\]
 The three terms account for basic broadening by slits(collimator),
 wavelenght dispersion, monochromator mosaicity
-influence of monochromator as described by Cagliotti</p>
-<p><img style="width: 1093px; height: 608px;" alt="shape of the resolution function for instrumentals parameters" title="UVW" src="immagini/UVW.png"></p>
-</div>
+influence of monochromator as described by Cagliotti
+<section>for instance for energy dispersion
+(resolution) \(\partial \lambda \over \lambda \) by derivation of the
+Bragg formula
+\(2d sin(\theta) = n\lambda\)
+\[ \partial \theta = n \frac{\partial(\lambda)}{2 d cos(\theta)} \]
+\[ \partial \theta = tan(\theta) \frac{\partial \lambda}{\lambda}\]
+</section>
+<p><img style="width: 1093px; height: 508px;" alt="shape of the resolution function for instrumentals parameters" title="UVW" src="immagini/UVW.png"></p>
+<!-- Strain contribution -->
 <h2>Strain contribution</h2>
+<section>
 <p> If Strain is defined as \(\delta d \over d\) it is very easy
 to derive the enlargment of the peaks as function of \(\theta \)
 by derivation of the Bragg formula
-\[d_{hkl} = \frac{n\lambda}{2sin(\theta)}\]
-\[ \partial d = - \frac{\lambda}{2 tan(\theta)sin(\theta)} \partial \theta} \]</p>
-\[\epsilon_{hkl} = \frac{\partial d_{hkl}}{d_{hkl}} = -\frac{1}{tan(\theta)} \partial \theta\]
+\[d_{hkl} = \frac{n\lambda}{2sin(\theta)}\] \[ \partial d = -
+\frac{\lambda}{2 tan(\theta)sin(\theta)} \partial\theta \]
+\[\epsilon_{hkl} = \frac{\partial d_{hkl}}{d_{hkl}} =
+-\frac{1}{tan(\theta)} \partial \theta\]
 \[\partial theta = -\epsilon_{hkl} tan(\theta) \]
+</p>
+</section>
+<h2>Size contribution</h2>
+<section>
+<p> This size broadening is described by the Scherrer equation. We
+now reproduce the simple derivation following Klug and Alexander (1974) or 
+Bilinge & Dinebier (2008). The derivation is build considering that for a crystal
+for small deviation from Bragg angle \(\theta + \epsilon \) there will be a plane for which 
+the difference of path lenght \(\Delta \) will be \(\lambda \over 2\) producing
+destructive interference. If the crystal is too small such plane will never arrive and intensity will be present.
+</p>
+<p><img style="width: 1093px; height: 508px;" alt="path length difference of the scattered ray versus the depth of the lattice plane in the crystal" title="UVW" src="immagini/Scherrer.png"></p>
+<p>
+The additional beam path between consecutive lattice planes at  is: 
+\[\Delta = 2 d sin(\theta + \epsilon)  = 2 d (sin(\theta) cos(\epsilon) + cos(\theta) sin(\epsilon) \]
+\[\Delta \approx  2 d n \lambda + 2 d cos(\theta) \epsilon \]
+The corresponding phase difference is then:
+\[\delta \phi = 2 \pi \frac{\Delta}{\lambda} = 4 \frac{4 \pi \epsilon d cos(\theta)}{\lambda}        \]
+
+The phase difference between the top and the bottom layer, p is then:
+\[\delta \varphi  = 4 p \frac{4 \pi \epsilon d cos(\theta)}{\lambda} = 4 \frac{4 \pi \epsilon L_{hkl} cos(\theta)}{\lambda}\]
+\[\epsilon = \frac{\lambda \delta \varphi}{4 \pi L_{hkl} cos(\theta)} \]
+
+using a 2 \theta scale and the concept of integral breath:
+\[\beta_{hkl}=4 \epsilon =  \frac{\lambda}{L_{hkl} cos(\theta)} \]
+generalizing for a spherical particle we obtain the Scherrer equation (K is function of grain shape, 0.89 for spheres) :
+\[\beta=\frac{K \lambda}{L cos(\theta)} \]
+</section>
+</p>
+
+<h2>Sample contributions</h2>
+<section>
+<p><img style="width: 1093px; height: 508px;" alt="shape of the resolution function for sample parameters" title="XY" src="immagini/XY.png"> the XY are considered for FullProf for Gsas it is the opposite </p>
+
+
 </div>
 <footer> </footer>
-<p>Hosted on GitHub Pages &#8212; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+<p>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
 <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 <div id="891e4d5f-5780-4bac-b81c-28d040244c65-quickmenu"></div>
 <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</div>
 </body></html>
