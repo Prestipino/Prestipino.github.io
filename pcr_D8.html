@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <script type="text/javascript">
+<meta content="text/html; charset=windows-1252" http-equiv="content-type">
+<script type="text/javascript">
 <!--
 function popup(mylink, windowname)
 {
@@ -15,639 +15,739 @@ window.open(href, windowname, 'width=800,height=200,scrollbars=yes');
 return false;
 }
 //-->
-</script><title>new_pcr</title></head>
+</script><title>new_pcr</title>
 
-  <body> Cr2Sn3S7 synthese 825Â°C<br>
-    <a>NPATT 1 </a>1 &lt;- Flags for patterns (1:refined, 0: excluded)<br>
-    <a title="patterns weighting">W_PAT 1.000</a>
-    <table style="width: 369px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
-      <tbody style="text-align: center;">
-        <tr>
-          <td style="text-align: center;" title="Number of phases ">!Nph</td>
-          <td><a target="_parent" title="Dum Control of the divergence for specific jobs" href="Job.html#Dum" onclick="return popup(this, 'notes')">Dum</a></td>
-          <td title="Reordering of reflections ">Ias</td>
-          <td title="Number of constrained parameters">Nre</td>
-          <td><a target="_parent" title=" Resolution function type" href="Job.html#Cry" onclick="return popup(this, 'notes')">Cry</a></td>
-          <td title="Calculation optimisations (Yes 1, No 0)">Opt</td>
-          <td title="Automatic mode (Yes 1, No 0)">Aut</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>1</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>1</td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 850px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
-      <tbody style="text-align: center;">
-        <tr>
-          <td><a target="_parent" title="Type of Job and rad" href="Job.html#Job" onclick="return popup(this, 'notes')">!Job</a></td>
-          <td><a target="_parent" title="Profile to be used" href="Npr.html" onclick="return popup(this, 'notes')">Npr</a></td>
-          <td><a target="_parent" title="Number of background points" href="Job.html#Nba" onclick="return popup(this, 'notes')">Nba</a></td>
-          <td title="Number of regions to exclude in powder data">Nex</td>
-          <td title="Number of user defined scattering factors ">Nsc</td>
-          <td title="Preferred orientation function type 0 or 1">Nor</td>
-          <td><a target="_parent" title=" Refinement weighting scheme" href="Job.html#Iwg" onclick="return popup(this, 'notes')">Iwg</a></td>
-          <td><a target="_parent" title=" Lorentz and polarization corrections" href="Job.html#Ilo" onclick="return popup(this, 'notes')">Ilo</a></td>
-          <td><a target="_parent" title=" Resolution function type" href="Job.html#Res" onclick="return popup(this, 'notes')">Res</a></td>
-          <td title="Number of data points reduction factor in powder data
-            If Ste&gt;1 the number of data points is reduced by a factor of Ste">Ste</td>
-          <td><a target="_parent" title=" Scattering variable unit " href="Job.html#Uni" onclick="return popup(this, 'notes')">Uni</a></td>
-          <td><a target="_parent" title=" Intensity correction " href="Job.html#Cor" onclick="return popup(this, 'notes')">Cor</a></td>
-          <td title="anomalous scattering plots">Anm</td>
-          <td title="Integrated intensity, 0 for powder if 1 Irf=4 ">Int</td>
-          <td> <br>
-          </td>
-        </tr>
-        <tr>
-          <td>0</td>
-          <td>5</td>
-          <td>25</td>
-          <td>0</td>
-          <td>0</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>!-&gt; Patt#: 1</td>
-        </tr>
-      </tbody>
-    </table>
-    !<br>
-    !File names of data(patterns) files<br>
-    ch5908_Colusite_600_up_001.xy<br>
-    !<br>
-    ! Resolution file for Pattern# 1 <br>
-    <a target="_parent" title=" Resolution function type" href="Irf.html" onclick="return popup(this, 'notes')">id21.irf</a><br>
-    !
-    <table style="width: 291px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td><a target="_parent" title="Correlation matrix output " href="Ipr.html#Mat" onclick="return popup(this, 'notes')">!Mat</a></td>
-          <td title="Update .pcr
-            1 owerwrite 2 write .new">Pcr</td>
-          <td><a target="_parent" title="Output of the symmetry operators  " href="Syo.html#Syo" onclick="return popup(this, 'notes')">NLI</a></td>
-          <td><a title="Output .rpa/.sav file" onclick="return popup(this, 'notes')" target="_parent" href="Ipr.html#Rpa">Rpa</a></td>
-          <td title=" Output .sym file Yes 1, No 0 ">Sym</td>
-          <td title="Reduced output during the refinement yes no">Sho</td>
-        </tr>
-        <tr style="text-align: center;">
-          <td>0</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 725px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td>!<a target="_parent" title="Profile int. intensities output" href="ipr.html#ipr%20" onclick="return popup(this, 'notes')">Ipr</a></td>
-          <td><a target="_parent" title="Various types of calculated output -I " href="Ipr.html#Ppl" onclick="return popup(this, 'notes')">Ppl</a></td>
-          <td><a target="_parent" title="Various types of calculated output -II " onclick="return popup(this, 'notes')" href="Ipr.html#Ioc">Ioc</a></td>
-          <td title="1 Refl. list before starting cycles in CODFIL.out ">Ls1</td>
-          <td title="1 Corrected data list 
-                     2 diff. pattern is displayed every cycle">Ls2</td>
-          <td title="=1 Merged reflection list written in CODFIL.out ">Ls3</td>
-          <td><a title=" Output .rpa/.sav/cif file 1rpa 2 sav -1 cif " onclick="return popup(this, 'notes')" href="Ipr.html#Prf">Prf </a></td>
-          <td><a target="_parent" title="Ins – Data file format
+</head>
+<body>
+Cr2Sn3S7 synthese 825Â°C<br>
+<a>NPATT 1 </a>1 &lt;- Flags for patterns (1:refined,
+0: excluded)<br>
+<a title="patterns weighting">W_PAT 1.000</a>
+<table style="width: 369px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
+<tbody style="text-align: center;">
+<tr>
+<td style="text-align: center;" title="Number of phases ">!Nph</td>
+<td><a target="_parent" title="Dum Control of the divergence for specific jobs" href="Job.html#Dum" onclick="return popup(this, 'notes')">Dum</a></td>
+<td title="Reordering of reflections ">Ias</td>
+<td title="Number of constrained parameters">Nre</td>
+<td><a target="_parent" title=" Resolution function type" href="Job.html#Cry" onclick="return popup(this, 'notes')">Cry</a></td>
+<td title="Calculation optimisations (Yes 1, No 0)">Opt</td>
+<td title="Automatic mode (Yes 1, No 0)">Aut</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 850px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
+<tbody style="text-align: center;">
+<tr>
+<td><a target="_parent" title="Type of Job and rad" href="Job.html#Job" onclick="return popup(this, 'notes')">!Job</a></td>
+<td><a target="_parent" title="Profile to be used" href="Npr.html" onclick="return popup(this, 'notes')">Npr</a></td>
+<td><a target="_parent" title="Number of background points" href="Job.html#Nba" onclick="return popup(this, 'notes')">Nba</a></td>
+<td title="Number of regions to exclude in powder data">Nex</td>
+<td title="Number of user defined scattering factors ">Nsc</td>
+<td title="Preferred orientation function type 0 or 1">Nor</td>
+<td><a target="_parent" title=" Refinement weighting scheme" href="Job.html#Iwg" onclick="return popup(this, 'notes')">Iwg</a></td>
+<td><a target="_parent" title=" Lorentz and polarization corrections" href="Job.html#Ilo" onclick="return popup(this, 'notes')">Ilo</a></td>
+<td><a target="_parent" title=" Resolution function type" href="Job.html#Res" onclick="return popup(this, 'notes')">Res</a></td>
+<td title="Number of data points reduction factor in powder data
+If Ste&gt;1 the number of data points is reduced by a factor of Ste">Ste</td>
+<td><a target="_parent" title=" Scattering variable unit " href="Job.html#Uni" onclick="return popup(this, 'notes')">Uni</a></td>
+<td><a target="_parent" title=" Intensity correction " href="Job.html#Cor" onclick="return popup(this, 'notes')">Cor</a></td>
+<td title="anomalous scattering plots">Anm</td>
+<td title="Integrated intensity, 0 for powder if 1 Irf=4 ">Int</td>
+<td> <br>
+</td>
+</tr>
+<tr>
+<td>0</td>
+<td>5</td>
+<td>25</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>!-&gt; Patt#: 1</td>
+</tr>
+</tbody>
+</table>
+!<br>
+!File names of data(patterns) files<br>
+ch5908_Colusite_600_up_001.xy<br>
+!<br>
+! Resolution file for Pattern# 1 <br>
+<a target="_parent" title=" Resolution function type" href="Irf.html" onclick="return popup(this, 'notes')">id21.irf</a><br>
+!
+<table style="width: 291px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td><a target="_parent" title="Correlation matrix output " href="Ipr.html#Mat" onclick="return popup(this, 'notes')">!Mat</a></td>
+<td title="Update .pcr
+1 owerwrite 2 write .new">Pcr</td>
+<td><a target="_parent" title="Output of the symmetry operators " href="Syo.html#Syo" onclick="return popup(this, 'notes')">NLI</a></td>
+<td><a title="Output .rpa/.sav file" onclick="return popup(this, 'notes')" target="_parent" href="Ipr.html#Rpa">Rpa</a></td>
+<td title=" Output .sym file Yes 1, No 0 ">Sym</td>
+<td title="Reduced output during the refinement yes no">Sho</td>
+</tr>
+<tr style="text-align: center;">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 725px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td>!<a target="_parent" title="Profile int. intensities output" href="ipr.html#ipr%20" onclick="return popup(this, 'notes')">Ipr</a></td>
+<td><a target="_parent" title="Various types of calculated output -I " href="Ipr.html#Ppl" onclick="return popup(this, 'notes')">Ppl</a></td>
+<td><a target="_parent" title="Various types of calculated output -II " onclick="return popup(this, 'notes')" href="Ipr.html#Ioc">Ioc</a></td>
+<td title="1 Refl. list before starting cycles in CODFIL.out ">Ls1</td>
+<td title="1 Corrected data list 2 diff. pattern is displayed every cycle">Ls2</td>
+<td title="=1 Merged reflection list written in CODFIL.out ">Ls3</td>
+<td><a title=" Output .rpa/.sav/cif file 1rpa 2 sav -1 cif " onclick="return popup(this, 'notes')" href="Ipr.html#Prf">Prf
+</a></td>
+<td><a target="_parent" title="Ins – Data file format
 0 Free format10 X, Y, Sigma format" onclick="return popup(this, 'notes')" href="Ipr.html#Ins">Ins</a></td>
-          <td><a target="_parent" onclick="return popup(this, 'notes')" href="Ipr.html#Hkl">Hkl</a></td>
-          <td><a target="_parent" onclick="return popup(this, 'notes')" href="Ipr.html#Fou">Fou</a></td>
-          <td title="Reliability analysis on CODFIL.sum. Yes No">Ana</td>
-          <td><br>
-          </td>
-        </tr>
-        <tr>
-          <td>0</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>1</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>!-&gt; Patt#: 1</td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
-    <table style="width: 750px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
-      <tbody style="text-align: center;">
-        <tr>
-          <td>!Lambda1</td>
-          <td>Lambda2</td>
-          <td title="1 if monochromatic">Ratio</td>
-          <td title="Origin of the polynomial-bckg 2theta">Bkpos</td>
-          <td title="Cut-off of the peak profile tails FHWM unit">Wdt</td>
-          <td title="Monochromator polarization correction">Cthm</td>
-          <td title="Absorption correction coefficient µR">muR</td>
-          <td title="Limit angle for asymmetry correction ">AsyLim</td>
-          <td title="Polarization factor (synchrotron, Ilo=3)
-                     Fraction of mosaic-crystal (transmission geometry, Ilo=2) ">Rpolarz</td>
-          <td>2nd-muR</td>
-        </tr>
-        <tr>
-          <td>0.503681</td>
-          <td>0.503681</td>
-          <td>1.00000</td>
-          <td>40.000</td>
-          <td>42.0000</td>
-          <td>0.0000</td>
-          <td>0.0000</td>
-          <td>3.90</td>
-          <td>0.0000</td>
-          <td>0.0000</td>
-          <td>!-&gt; Patt# 1</td>
-        </tr>
-      </tbody>
-    </table>
-    !<br>
-    !<br>
-    <table style="width: 313px; height: 50px;" border="0">
-      <tbody>
-        <tr>
-          <td title="Number of refinement cycles">!NCY</td>
-          <td title="Control of the convergence precision"> Eps </td>
-          <td title="relaxation factors Atom. param." style="width: 64.0667px;">R_at</td>
-          <td title="relaxation factors Anis. disp. param." style="width: 64.0667px;">R_an</td>
-          <td title="relaxation factors Profile parameters"> R_pr</td>
-          <td title="relaxation factors Global  parameters"> R_gl&nbsp; </td>
-        </tr>
-        <tr>
-          <td><a>155</a></td>
-          <td><a>0.10</a></td>
-          <td><a> 0.30</a></td>
-          <td><a>0.30</a></td>
-          <td><a> 0.30</a></td>
-          <td><a>0.30</a></td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 668px; height: 50px;" border="0">
-      <tbody style="text-align: center;">
-        <tr>
-          <td title=" Starting scattering variable">!Thmin</td>
-          <td title="Step of the scattering variable">&nbsp;Step </td>
-          <td title=" End scattering variable">Thmax&nbsp; </td>
-          <td title="Incident beam angle"> PSD&nbsp;&nbsp; </td>
-          <td title="Max angle to where the primary beam contribute">Sent0<br>
-          </td>
-        </tr>
-        <tr>
-          <td><a>0.9025</a></td>
-          <td><a>0.002502 <br>
-            </a></td>
-          <td><a>29.2975 <br>
-            </a></td>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>!-&gt; Patt# 1</td>
-        </tr>
-      </tbody>
-    </table>
-    !<br>
-    !2Theta/TOF/E(Kev)&nbsp;&nbsp; Background&nbsp; for Pattern#&nbsp; 1<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.5320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    346.2187&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.7460&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    539.5665&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    1.2040&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    704.1001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    1.4680&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    478.4053&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    1.6580&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    473.9192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    1.8940&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    429.1152&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    2.1300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    420.1685&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    2.3180&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    415.8386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    2.5980&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    410.7263&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    2.7600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    414.6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    2.9420&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    427.9450&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    3.1900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    451.1159&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    3.4600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    466.0178&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    3.6900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    488.0145&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    4.1060&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    633.5769&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    4.3480&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    634.2810&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    4.4220&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    644.2795&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    4.7260&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    622.1424&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    4.8940&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    602.5784&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    5.2160&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    606.7883&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    5.4100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    597.6050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    5.7000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    591.7344&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    6.0960&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    709.8677&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    6.1280&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    725.1663&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    6.3640&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    569.3751&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    !<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 19&nbsp;&nbsp;&nbsp; !Number of refined
-    parameters<br>
-    !<br>
-    <table style="width: 652px; height: 54px;" border="0">
-      <tbody>
-        <tr>
-          <td><a title="Systematic shift">!&nbsp; Zero</a></td>
-          <td><a>Code</a></td>
-          <td><a title="Systematic shift
-            BB displacement            DS perp eccentricity, absorbtion)"> SyCos</a></td>
-          <td><a> Code&nbsp;&nbsp; <br>
-            </a></td>
-          <td><a title="systematic shift(
-            BB trasparency            DS paral eccentricity">SySin</a></td>
-          <td><a>Code</a></td>
-          <td><a>Lambda</a></td>
-          <td><a>Code <br>
-            </a></td>
-          <td title="more parameter">MORE</td>
-        </tr>
-        <tr>
-          <td>-0.09890</td>
-          <td>0.0</td>
-          <td>0.00000</td>
-          <td>0.0</td>
-          <td>0.00000</td>
-          <td>0.0</td>
-          <td>0.000000</td>
-          <td>0.00</td>
-          <td>0</td>
-          <td>!-&gt;Patt# 1</td>
-        </tr>
-      </tbody>
-    </table>
+<td><a target="_parent" onclick="return popup(this, 'notes')" href="Ipr.html#Hkl">Hkl</a></td>
+<td><a target="_parent" onclick="return popup(this, 'notes')" href="Ipr.html#Fou">Fou</a></td>
+<td title="Reliability analysis on CODFIL.sum. Yes No">Ana</td>
+<td><br>
+</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>!-&gt; Patt#: 1</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table style="width: 750px; height: 50px;" border="0" cellpadding="0" cellspacing="0">
+<tbody style="text-align: center;">
+<tr>
+<td>!Lambda1</td>
+<td>Lambda2</td>
+<td title="1 if monochromatic">Ratio</td>
+<td title="Origin of the polynomial-bckg 2theta">Bkpos</td>
+<td title="Cut-off of the peak profile tails FHWM unit">Wdt</td>
+<td title="Monochromator polarization correction">Cthm</td>
+<td title="Absorption correction coefficient µR">muR</td>
+<td title="Limit angle for asymmetry correction ">AsyLim</td>
+<td title="Polarization factor (synchrotron, Ilo=3)
+Fraction of mosaic-crystal (transmission geometry, Ilo=2) ">Rpolarz</td>
+<td>2nd-muR</td>
+</tr>
+<tr>
+<td>0.503681</td>
+<td>0.503681</td>
+<td>1.00000</td>
+<td>40.000</td>
+<td>42.0000</td>
+<td>0.0000</td>
+<td>0.0000</td>
+<td>3.90</td>
+<td>0.0000</td>
+<td>0.0000</td>
+<td>!-&gt; Patt# 1</td>
+</tr>
+</tbody>
+</table>
+!<br>
+!<br>
+<table style="width: 313px; height: 50px;" border="0">
+<tbody>
+<tr>
+<td title="Number of refinement cycles">!NCY</td>
+<td title="Control of the convergence precision">
+Eps </td>
+<td title="relaxation factors Atom. param." style="width: 64.0667px;">R_at</td>
+<td title="relaxation factors Anis. disp. param." style="width: 64.0667px;">R_an</td>
+<td title="relaxation factors Profile parameters">
+R_pr</td>
+<td title="relaxation factors Global parameters">
+R_gl&nbsp; </td>
+</tr>
+<tr>
+<td><a>155</a></td>
+<td><a>0.10</a></td>
+<td><a> 0.30</a></td>
+<td><a>0.30</a></td>
+<td><a> 0.30</a></td>
+<td><a>0.30</a></td>
+</tr>
+</tbody>
+</table>
+<table style="width: 668px; height: 50px;" border="0">
+<tbody style="text-align: center;">
+<tr>
+<td title=" Starting scattering variable">!Thmin</td>
+<td title="Step of the scattering variable">&nbsp;Step
+</td>
+<td title=" End scattering variable">Thmax&nbsp;
+</td>
+<td title="Incident beam angle">
+PSD&nbsp;&nbsp; </td>
+<td title="Max angle to where the primary beam contribute">Sent0<br>
+</td>
+</tr>
+<tr>
+<td><a>0.9025</a></td>
+<td><a>0.002502 <br>
+</a></td>
+<td><a>29.2975 <br>
+</a></td>
+<td>0.0</td>
+<td>0.0</td>
+<td>!-&gt; Patt# 1</td>
+</tr>
+</tbody>
+</table>
+!<br>
+!2Theta/TOF/E(Kev)&nbsp;&nbsp; Background&nbsp; for
+Pattern#&nbsp; 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.5320&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+346.2187&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.7460&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+539.5665&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.2040&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+704.1001&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.4680&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+478.4053&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.6580&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+473.9192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.8940&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+429.1152&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.1300&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+420.1685&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.3180&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+415.8386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.5980&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+410.7263&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.7600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+414.6676&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.9420&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+427.9450&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.1900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+451.1159&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.4600&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+466.0178&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.6900&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+488.0145&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.1060&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+633.5769&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.3480&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+634.2810&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.4220&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+644.2795&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.7260&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+622.1424&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.8940&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+602.5784&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5.2160&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+606.7883&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5.4100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+597.6050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5.7000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+591.7344&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6.0960&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+709.8677&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6.1280&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+725.1663&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6.3640&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+569.3751&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+!<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+19&nbsp;&nbsp;&nbsp; !Number of refined parameters<br>
+!<br>
+<table style="width: 652px; height: 54px;" border="0">
+<tbody>
+<tr>
+<td><a title="Systematic shift">!&nbsp;
+Zero</a></td>
+<td><a>Code</a></td>
+<td><a title="Systematic shift
+BB displacement DS perp eccentricity, absorbtion)">
+SyCos</a></td>
+<td><a> Code&nbsp;&nbsp; <br>
+</a></td>
+<td><a title="systematic shift(
+BB trasparency DS paral eccentricity">SySin</a></td>
+<td><a>Code</a></td>
+<td><a>Lambda</a></td>
+<td><a>Code <br>
+</a></td>
+<td title="more parameter">MORE</td>
+</tr>
+<tr>
+<td>-0.09890</td>
+<td>0.0</td>
+<td>0.00000</td>
+<td>0.0</td>
+<td>0.00000</td>
+<td>0.0</td>
+<td>0.000000</td>
+<td>0.00</td>
+<td>0</td>
+<td>!-&gt;Patt# 1</td>
+</tr>
+</tbody>
+</table>
 !-------------------------------------------------------------------------------<br>
-    !&nbsp; Data for PHASE number:&nbsp;&nbsp; 1&nbsp; ==&gt; Current R_Bragg
-    for Pattern#&nbsp; 1:&nbsp;&nbsp; 0.0000<br>
+!&nbsp; Data for PHASE number:&nbsp;&nbsp; 1&nbsp;
+==&gt; Current R_Bragg for Pattern#&nbsp;
+1:&nbsp;&nbsp; 0.0000<br>
 !-------------------------------------------------------------------------------<br>
-    &nbsp;Cu26V2Sn6S32<br>
-    COMMANDS<br>
-    END COMMANDS<br>
-    !<br>
-    <table style="width: 395px; height: 54px;" border="0">
-      <tbody>
-        <tr>
-          <td title="N atoms">!Nat</td>
-          <td title="Number of distance constraints">Dis</td>
-          <td title="Number of angle constraints or Moment">Ang</td>
-          <td> <a target="_parent" title="Structure factor model and refinement method for the phase" href="Nat.html#Jbt" onclick="return popup(this, 'notes')">Jbt</a></td>
-          <td><a target="_parent" href="Nat.html#Isy">Isy</a></td>
-          <td><a target="_parent" title="Size-strain reading" onclick="return popup(this, 'notes')" href="Nat.html#Str">Str</a></td>
-          <td title="Number of user defined paramters 
-               TLS for rigid body groups">Furth</td>
-          <td title="Coefficient to calc. wt% of the phase. ">&nbsp;&nbsp; ATZ</td>
-          <td title="N of modulation vector">Nvk</td>
-          <td title="more option">More</td>
-        </tr>
-        <tr style="text-align: center;">
-          <td>7</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>03491.5</td>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-      </tbody>
-    </table>
-    !Contributions (0/1) of this phase to the 1 patterns<br>
-    &nbsp; 1<br>
-    Jbt Isy Str Furth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    ATZ&nbsp;&nbsp;&nbsp;&nbsp; Nvk More<br>
-    &nbsp;&nbsp; 7&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp;&nbsp;
-    0&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    3491.9873&nbsp;&nbsp; 0&nbsp;&nbsp; 0<br>
-    !Contributions (0/1) of this phase to the&nbsp; 1 patterns<br>
-    <table style="width: 358px; height: 54px;" border="0">
-      <tbody>
-        <tr style="height: 24px;">
-          <td><a title="reflexion generation 0 reflexion file 2 for profile matching" target="_parent" onclick="return popup(this, 'notes')" href="Nat.html#Irf">!Irf</a></td>
-          <td><a target="_parent" title="Defaut profile to be used " onclick="return popup(this, 'notes')" href="Nat.html#Npr">Npr</a></td>
-          <td title="Job type for the current phase
-						for heterogeneus data same code of job only for Irf=4">Jtyp</td>
-          <td title="N special reflexion (relaxed)"> Nsp_Ref </td>
-          <td title="additional shifts see upd: 7 April 2004">Ph_Shift </td>
-        </tr>
-        <tr style="text-align: center;">
-          <td>7</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>!-&gt;Patt# 1</td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 451px; height: 54px;" border="0">
-      <tbody>
-        <tr style="height: 24px;">
-          <td title="Preferred orientation direction ">Pr1</td>
-          <td title="Preferred orientation direction ">Pr2</td>
-          <td title="Preferred orientation direction ">Pr3</td>
-          <td title="Brindley coefficient (MICROABSORPTION) ">Brind</td>
-          <td title="Weight of integrated intensity data sets ">&nbsp;&nbsp;
-            RMua</td>
-          <td title="Exclusion of low statistic reflexions 
-                     accepted Int: Gobs&gt;= Rmub x sigma(Gobs)">RMub</td>
-          <td title="Chi2 dependent weighting of integrated intensity data sets ">&nbsp;RMuc</td>
-        </tr>
-        <tr style="text-align: center;">
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>1.0</td>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>!-&gt;Patt# 1</td>
-        </tr>
-      </tbody>
-    </table>
-    !<br>
-    !<br>
-    P -4 3 n &lt;--Space group symbol<br>
-    !Atom Typ X Y Z Biso Occ In Fin N_t Spc /Codes
-    <table style="width: 608px; height: 54px;" border="0">
-      <tbody>
-        <tr style="height: 24px;">
-          <td><a title="Label">!Atom</a></td>
-          <td><a title="Link to scattering data ">Type</a></td>
-          <td style="text-align: center; width: 62px;">X</td>
-          <td style="text-align: center; width: 62px;">Y </td>
-          <td style="text-align: center; width: 62px;">Z</td>
-          <td style="text-align: center; width: 62px;"> Biso </td>
-          <td style="text-align: center; width: 62px;" chem="" occ="" ×="" (site="" (general="" mult="" ="">Occ</td>
-          <td title="Subset of symmetry operator ">In</td>
-          <td title="Subset of symmetry operator ">Fin</td>
-          <td><a title="Atom type" onclick="return popup(this, 'notes')" target="_parent" href="Syo.html#N_t">N_t</a></td>
-          <td>Spc /Codes</td>
-        </tr>
-      </tbody>
-    </table>
-    V2a&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; V&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp; 0.00000&nbsp; 0.00000 &nbsp; &nbsp; 0.00000 &nbsp;&nbsp;
-    0.47468&nbsp;&nbsp;&nbsp; 0.08333&nbsp;&nbsp; 0&nbsp; &nbsp; 0&nbsp; &nbsp;
-    &nbsp; 0&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0&nbsp; <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 0.00&nbsp;&nbsp;&nbsp;
-    &nbsp; &nbsp; 0.00&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; 0.00&nbsp; &nbsp; &nbsp;
-    &nbsp; &nbsp; &nbsp; 111.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    Sn6c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.25000
-    &nbsp;&nbsp; 0.50000&nbsp; &nbsp; 0.00000 &nbsp;&nbsp; 1.19549 &nbsp;&nbsp;
-    0.25000&nbsp;&nbsp; 0&nbsp; &nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0&nbsp; <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0.00&nbsp;&nbsp;&nbsp; &nbsp;
-    &nbsp; 0.00&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
-    0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    81.00&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 0.00<br>
-    Cu6d&nbsp; &nbsp;&nbsp; CU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.25000&nbsp;&nbsp;&nbsp;&nbsp; 0.00000 &nbsp; 0.50000 &nbsp; &nbsp;
-    1.56126&nbsp; &nbsp; 0.25000&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp; &nbsp;
-    &nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;
-    <br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00&nbsp;&nbsp;&nbsp; &nbsp;
-    &nbsp;&nbsp;
-    0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    141.00&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 0.00<br>
-    Cu8e&nbsp;&nbsp; &nbsp; CU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.24755&nbsp;&nbsp;&nbsp;&nbsp; 0.24755&nbsp;&nbsp;
-    0.24755&nbsp;&nbsp;&nbsp;&nbsp; 1.56126&nbsp; &nbsp; 0.33333&nbsp;&nbsp;
-    0&nbsp;&nbsp;&nbsp; 0&nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp; &nbsp;&nbsp;
-    &nbsp;&nbsp; 0&nbsp; <br>
+&nbsp;Cu26V2Sn6S32<br>
+COMMANDS<br>
+END COMMANDS<br>
+!<br>
+<table style="width: 395px; height: 54px;" border="0">
+<tbody>
+<tr>
+<td title="N atoms">!Nat</td>
+<td title="Number of distance constraints">Dis</td>
+<td title="Number of angle constraints or Moment">Ang</td>
+<td> <a target="_parent" title="Structure factor model and refinement method for the phase" href="Nat.html#Jbt" onclick="return popup(this, 'notes')">Jbt</a></td>
+<td><a target="_parent" href="Nat.html#Isy">Isy</a></td>
+<td><a target="_parent" title="Size-strain reading" onclick="return popup(this, 'notes')" href="Nat.html#Str">Str</a></td>
+<td title="Number of user defined paramters TLS for rigid body groups">Furth</td>
+<td title="Coefficient to calc. wt% of the phase. ">&nbsp;&nbsp;
+ATZ</td>
+<td title="N of modulation vector">Nvk</td>
+<td title="more option">More</td>
+</tr>
+<tr style="text-align: center;">
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>03491.5</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="text-align: center;">
+<td title="Optional outputs 1 file SCHAKAL
+2 file STRUPLO
+5 file microstruture
+11 CODFILn.int overlapped peak clusters">!Jvi</td>
+<td title="Optional crystallographic output ">&nbsp;<a target="_parent" title="Optional crystallographic output " onclick="return popup(this, 'notes')" href="Jvi.html#Jdi">Jdi</a></td>
+<td title="Number of angle constraints or Moment">Hel
+</td>
+<td>Sol </td>
+<td>Mom</td>
+<td>Ter</td>
+</tr>
+<tr style="text-align: center;">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+!Contributions (0/1) of this phase to the 1 patterns<br>
+&nbsp; 1<br>
+Jbt Isy Str
+Furth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ATZ&nbsp;&nbsp;&nbsp;&nbsp; Nvk More<br>
+&nbsp;&nbsp; 7&nbsp;&nbsp; 0&nbsp;&nbsp;
+0&nbsp;&nbsp; 0&nbsp;&nbsp; 0&nbsp;&nbsp;
+0&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3491.9873&nbsp;&nbsp; 0&nbsp;&nbsp; 0<br>
+!Contributions (0/1) of this phase to the&nbsp; 1 patterns<br>
+<table style="width: 358px; height: 54px;" border="0">
+<tbody>
+<tr style="height: 24px;">
+<td><a title="reflexion generation 0 reflexion file 2 for profile matching" target="_parent" onclick="return popup(this, 'notes')" href="Nat.html#Irf">!Irf</a></td>
+<td><a target="_parent" title="Defaut profile to be used " onclick="return popup(this, 'notes')" href="Nat.html#Npr">Npr</a></td>
+<td title="Job type for the current phase
+for heterogeneus data same code of job only for Irf=4">Jtyp</td>
+<td title="N special reflexion (relaxed)"> Nsp_Ref </td>
+<td title="additional shifts see upd: 7 April 2004">Ph_Shift
+</td>
+</tr>
+<tr style="text-align: center;">
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>!-&gt;Patt# 1</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 451px; height: 54px;" border="0">
+<tbody>
+<tr style="height: 24px;">
+<td title="Preferred orientation direction ">Pr1</td>
+<td title="Preferred orientation direction ">Pr2</td>
+<td title="Preferred orientation direction ">Pr3</td>
+<td title="Brindley coefficient (MICROABSORPTION) ">Brind</td>
+<td title="Weight of integrated intensity data sets ">&nbsp;&nbsp;
+RMua</td>
+<td title="Exclusion of low statistic reflexions accepted Int: Gobs&gt;= Rmub x sigma(Gobs)">RMub</td>
+<td title="Chi2 dependent weighting of integrated intensity data sets ">&nbsp;RMuc</td>
+</tr>
+<tr style="text-align: center;">
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>!-&gt;Patt# 1</td>
+</tr>
+</tbody>
+</table>
+!<br>
+!<br>
+P -4 3 n &lt;--Space group symbol<br>
+!Atom Typ X Y Z Biso Occ In Fin N_t Spc /Codes
+<table style="width: 608px; height: 54px;" border="0">
+<tbody>
+<tr style="height: 24px;">
+<td><a title="Label">!Atom</a></td>
+<td><a title="Link to scattering data ">Type</a></td>
+<td style="text-align: center; width: 62px;">X</td>
+<td style="text-align: center; width: 62px;">Y </td>
+<td style="text-align: center; width: 62px;">Z</td>
+<td style="text-align: center; width: 62px;"> Biso </td>
+<td style="text-align: center; width: 62px;" chem="" occ="" ×="" (site="" (general="" mult="" ="">Occ</td>
+<td title="Subset of symmetry operator ">In</td>
+<td title="Subset of symmetry operator ">Fin</td>
+<td><a title="Atom type" onclick="return popup(this, 'notes')" target="_parent" href="Syo.html#N_t">N_t</a></td>
+<td>Spc /Codes</td>
+</tr>
+</tbody>
+</table>
+V2a&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+V&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 0.00000&nbsp;
+0.00000 &nbsp; &nbsp; 0.00000 &nbsp;&nbsp;
+0.47468&nbsp;&nbsp;&nbsp; 0.08333&nbsp;&nbsp;
+0&nbsp; &nbsp; 0&nbsp; &nbsp; &nbsp;
+0&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+0&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp; 0.00&nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp; 0.00&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+0.00&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+111.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00<br>
+Sn6c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.25000
+&nbsp;&nbsp; 0.50000&nbsp; &nbsp; 0.00000
+&nbsp;&nbsp; 1.19549 &nbsp;&nbsp;
+0.25000&nbsp;&nbsp; 0&nbsp; &nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+0&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+0.00&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+0.00&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+81.00&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 0.00<br>
+Cu6d&nbsp; &nbsp;&nbsp;
+CU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.25000&nbsp;&nbsp;&nbsp;&nbsp; 0.00000 &nbsp;
+0.50000 &nbsp; &nbsp; 1.56126&nbsp; &nbsp;
+0.25000&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp;
+&nbsp; &nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+141.00&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 0.00<br>
+Cu8e&nbsp;&nbsp; &nbsp;
+CU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.24755&nbsp;&nbsp;&nbsp;&nbsp;
+0.24755&nbsp;&nbsp;
+0.24755&nbsp;&nbsp;&nbsp;&nbsp; 1.56126&nbsp;
+&nbsp; 0.33333&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;
+0&nbsp; &nbsp; &nbsp; 0 &nbsp; &nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; 0&nbsp; <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-151.00&nbsp; &nbsp; &nbsp; 151.00 &nbsp; &nbsp;&nbsp; 151.00 &nbsp;
-&nbsp; &nbsp; 141.00&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 0.00<br>
-    Cu12f &nbsp;&nbsp; CU&nbsp;&nbsp;&nbsp;&nbsp; 0.25310 &nbsp; &nbsp;
-    0.00000&nbsp; &nbsp; 0.00000&nbsp;&nbsp;&nbsp; 1.56126&nbsp;&nbsp;
-    0.50000&nbsp; &nbsp; 0&nbsp;&nbsp; &nbsp; 0&nbsp; &nbsp;&nbsp;
-    0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; <br>
+151.00&nbsp; &nbsp; &nbsp; 151.00 &nbsp;
+&nbsp;&nbsp; 151.00 &nbsp;
+&nbsp; &nbsp; 141.00&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; 0.00<br>
+Cu12f &nbsp;&nbsp; CU&nbsp;&nbsp;&nbsp;&nbsp;
+0.25310 &nbsp; &nbsp; 0.00000&nbsp; &nbsp;
+0.00000&nbsp;&nbsp;&nbsp; 1.56126&nbsp;&nbsp;
+0.50000&nbsp; &nbsp; 0&nbsp;&nbsp; &nbsp;
+0&nbsp; &nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-171.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00&nbsp;&nbsp;&nbsp;
-&nbsp; &nbsp; &nbsp; 0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+171.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.00&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp;
+0.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 141.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    S8e&nbsp; &nbsp; &nbsp; &nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.12395&nbsp; &nbsp; 0.12395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.12395&nbsp;&nbsp;&nbsp;&nbsp; 0.97373&nbsp;&nbsp; 0.33333&nbsp;&nbsp;
-    0&nbsp; &nbsp;&nbsp; 0&nbsp; &nbsp;&nbsp;
-    0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp; <br>
+S8e&nbsp; &nbsp; &nbsp; &nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.12395&nbsp; &nbsp;
+0.12395&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.12395&nbsp;&nbsp;&nbsp;&nbsp;
+0.97373&nbsp;&nbsp; 0.33333&nbsp;&nbsp; 0&nbsp;
+&nbsp;&nbsp; 0&nbsp; &nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp; <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-181.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 181.00&nbsp;&nbsp;&nbsp;&nbsp;
+181.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+181.00&nbsp;&nbsp;&nbsp;&nbsp;
 181.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 101.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00<br>
-    S24i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.37875 &nbsp;&nbsp;
-    0.36764&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.12711&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    0.97373&nbsp;&nbsp; 1.00000&nbsp;&nbsp; 0&nbsp; &nbsp; &nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
-    0 <br>
+S24i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.37875
+&nbsp;&nbsp;
+0.36764&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.12711&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.97373&nbsp;&nbsp; 1.00000&nbsp;&nbsp; 0&nbsp;
+&nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+&nbsp;&nbsp; 0 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-161.00&nbsp; &nbsp;&nbsp; 121.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+161.00&nbsp; &nbsp;&nbsp;
+121.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 91.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 101.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00 <br>
-    !-------&gt; Profile Parameters for Pattern # 1 ----&gt; Phase # 1<br>
-    <table style="width: 659px; height: 74px;" border="0">
-      <tbody>
-        <tr>
-          <td title="Scale factor">!&nbsp; Scale</td>
-          <td title="Profile shape parameter 
-                     Npr=4,5  ?0                     Npr=6     m0                     Npr=7   not used">&nbsp;Shape1</td>
-          <td title="Overall isotropic displacement ">&nbsp; Bov</td>
-          <td title="Strain parameters
-                     If Str=1 set these values to 0.0">&nbsp;&nbsp; Str1</td>
-          <td title="Strain parameters
-                     If Str=1 set these values to 0.0">&nbsp; Str2</td>
-          <td title="Strain parameters
-                     If Str=1 set these values to 0.0">&nbsp; Str3</td>
-          <td><a target="_parent" title="Strain model selector " onclick="return popup(this, 'notes')" href="Strain.html">Strain-Model</a></td>
-        </tr>
-        <tr>
-          <td>&nbsp;0.14194E-06</td>
-          <td> 1.15248</td>
-          <td>0.00000</td>
-          <td>0.00000</td>
-          <td>0.00000</td>
-          <td>0.00000</td>
-          <td>&nbsp;&nbsp;&nbsp;&nbsp; 0</td>
-        </tr>
-        <tr>
-          <td> 11.00000</td>
-          <td>&nbsp;0.000</td>
-          <td>&nbsp;0.000</td>
-          <td>&nbsp; 0.000</td>
-          <td>0.000</td>
-          <td>&nbsp;0.000</td>
-          <td>&nbsp;&nbsp; 0.000</td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 719px; height: 74px;" border="0">
-      <tbody>
-        <tr>
-          <td>!U</td>
-          <td>V</td>
-          <td>W</td>
-          <td title="Lorentzian isotropic strain  Npr=7">X</td>
-          <td title="Lorentzian isotropic size Npr=7">Y</td>
-          <td title="Isotropic size  of Gaussian character"> GauSiz</td>
-          <td title="Anisotropic Lorentzian contribution of particle size ">LorSiz</td>
-          <td> <a target="_parent" title="Size model selector" onclick="return popup(this, 'notes')" href="size.html">Size-Model</a></td>
-        </tr>
-        <tr>
-          <td>0.110017</td>
-          <td>0.000000 </td>
-          <td>0.000000&nbsp; </td>
-          <td>0.007515</td>
-          <td>0.000000 </td>
-          <td>0.000008 </td>
-          <td>0.000000&nbsp; </td>
-          <td>&nbsp;&nbsp;&nbsp;&nbsp; 0</td>
-        </tr>
-        <tr>
-          <td>0.0</td>
-          <td>0.000000 </td>
-          <td>0.000000&nbsp; </td>
-          <td>0.0</td>
-          <td>0.0 </td>
-          <td>0.0 </td>
-          <td>0.00</td>
-          <td><br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 783px; height: 74px;" border="0">
-      <tbody>
-        <tr>
-          <td>! a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>alpha</td>
-          <td>beta</td>
-          <td>gamma</td>
-          <td>#Cell Info</td>
-        </tr>
-        <tr>
-          <td>0.110017</td>
-          <td>0.000000 </td>
-          <td>0.000000&nbsp; </td>
-          <td>0.007515</td>
-          <td>0.000000 </td>
-          <td>0.000008 </td>
-          <td>0.000000</td>
-        </tr>
-        <tr>
-          <td>0.0</td>
-          <td>0.0</td>
-          <td>0.00</td>
-          <td>0.0</td>
-          <td>0.0 </td>
-          <td>0.0 </td>
-          <td>0.00</td>
-          <td><br>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <table style="width: 729px; height: 74px;" border="0">
-      <tbody>
-        <tr>
-          <td><a title="Preferred orientation parameters  
-• when Nor = 0, G1 = 0 means no preferred orientation  • when Nor = 1, G1 = 1 means no preferred orientation ">!&nbsp;
-              Pref1 </a></td>
-          <td><a title="Preferred orientation parameters  
-• when Nor = 0, G1 = 0 means no preferred orientation  • when Nor = 1, G1 = 1 means no preferred orientation ">&nbsp;
-              Pref2</a></td>
-          <td>&nbsp; <a title="Asymmetry parameters 
-Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">Asy1</a></td>
-          <td>&nbsp;&nbsp;<a title="Asymmetry parameters 
-Asymmetry parameters applied to angles below AsymLim (given on LINE 8)"> Asy2</a></td>
-          <td>&nbsp;&nbsp; <a title="Asymmetry parameters 
-Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">Asy3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </a></td>
-          <td>&nbsp; <a title="Asymmetry parameters 
-Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">Asy4</a></td>
-        </tr>
-        <tr>
-          <td>1.00000</td>
-          <td>0.00000</td>
-          <td>0.00000</td>
-          <td style="width: 141.15px;"> 0.00000</td>
-          <td style="width: 105.783px;">0.00000</td>
-          <td style="width: 118.1px;"> 0.00000</td>
-        </tr>
-        <tr>
-          <td>&nbsp;&nbsp; 0.00</td>
-          <td>&nbsp;&nbsp; 0.00</td>
-          <td>&nbsp;&nbsp; 0.00</td>
-          <td>&nbsp;&nbsp; 0.00</td>
-          <td>&nbsp;&nbsp; 0.00</td>
-          <td>&nbsp; 0.00</td>
-        </tr>
-      </tbody>
-    </table>
-    !&nbsp; 2Th1/TOF1&nbsp;&nbsp;&nbsp; 2Th2/TOF2&nbsp; Pattern # 1<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.902&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    20.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1   
-  </body></html>
+!-------&gt; Profile Parameters for Pattern # 1 ----&gt; Phase
+# 1<br>
+<table style="width: 659px; height: 74px;" border="0">
+<tbody>
+<tr>
+<td title="Scale factor">!&nbsp; Scale</td>
+<td title="Profile shape parameter Npr=4,5 ?0 Npr=6 m0 Npr=7 not used">&nbsp;Shape1</td>
+<td title="Overall isotropic displacement ">&nbsp;
+Bov</td>
+<td title="Strain parameters
+If Str=1 set these values to 0.0">&nbsp;&nbsp;
+Str1</td>
+<td title="Strain parameters
+If Str=1 set these values to 0.0">&nbsp;
+Str2</td>
+<td title="Strain parameters
+If Str=1 set these values to 0.0">&nbsp;
+Str3</td>
+<td><a target="_parent" title="Strain model selector " onclick="return popup(this, 'notes')" href="Strain.html">Strain-Model</a></td>
+</tr>
+<tr>
+<td>&nbsp;0.14194E-06</td>
+<td> 1.15248</td>
+<td>0.00000</td>
+<td>0.00000</td>
+<td>0.00000</td>
+<td>0.00000</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp; 0</td>
+</tr>
+<tr>
+<td> 11.00000</td>
+<td>&nbsp;0.000</td>
+<td>&nbsp;0.000</td>
+<td>&nbsp; 0.000</td>
+<td>0.000</td>
+<td>&nbsp;0.000</td>
+<td>&nbsp;&nbsp; 0.000</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 719px; height: 74px;" border="0">
+<tbody>
+<tr>
+<td>!U</td>
+<td>V</td>
+<td>W</td>
+<td title="Lorentzian isotropic strain Npr=7">X</td>
+<td title="Lorentzian isotropic size Npr=7">Y</td>
+<td title="Isotropic size of Gaussian character">
+GauSiz</td>
+<td title="Anisotropic Lorentzian contribution of particle size ">LorSiz</td>
+<td> <a target="_parent" title="Size model selector" onclick="return popup(this, 'notes')" href="size.html">Size-Model</a></td>
+</tr>
+<tr>
+<td>0.110017</td>
+<td>0.000000 </td>
+<td>0.000000&nbsp; </td>
+<td>0.007515</td>
+<td>0.000000 </td>
+<td>0.000008 </td>
+<td>0.000000&nbsp; </td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp; 0</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>0.000000 </td>
+<td>0.000000&nbsp; </td>
+<td>0.0</td>
+<td>0.0 </td>
+<td>0.0 </td>
+<td>0.00</td>
+<td><br>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 783px; height: 74px;" border="0">
+<tbody>
+<tr>
+<td>! a</td>
+<td>b</td>
+<td>c</td>
+<td>alpha</td>
+<td>beta</td>
+<td>gamma</td>
+<td>#Cell Info</td>
+</tr>
+<tr>
+<td>0.110017</td>
+<td>0.000000 </td>
+<td>0.000000&nbsp; </td>
+<td>0.007515</td>
+<td>0.000000 </td>
+<td>0.000008 </td>
+<td>0.000000</td>
+</tr>
+<tr>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.00</td>
+<td>0.0</td>
+<td>0.0 </td>
+<td>0.0 </td>
+<td>0.00</td>
+<td><br>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 729px; height: 74px;" border="0">
+<tbody>
+<tr>
+<td><a title="Preferred orientation parameters • when Nor = 0, G1 = 0 means no preferred orientation • when Nor = 1, G1 = 1 means no preferred orientation ">!&nbsp;
+Pref1 </a></td>
+<td><a title="Preferred orientation parameters • when Nor = 0, G1 = 0 means no preferred orientation • when Nor = 1, G1 = 1 means no preferred orientation ">&nbsp;
+Pref2</a></td>
+<td>&nbsp; <a title="Asymmetry parameters Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">Asy1</a></td>
+<td>&nbsp;&nbsp;<a title="Asymmetry parameters Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">
+Asy2</a></td>
+<td>&nbsp;&nbsp; <a title="Asymmetry parameters Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">Asy3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</a></td>
+<td>&nbsp; <a title="Asymmetry parameters Asymmetry parameters applied to angles below AsymLim (given on LINE 8)">Asy4</a></td>
+</tr>
+<tr>
+<td>1.00000</td>
+<td>0.00000</td>
+<td>0.00000</td>
+<td style="width: 141.15px;"> 0.00000</td>
+<td style="width: 105.783px;">0.00000</td>
+<td style="width: 118.1px;"> 0.00000</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp; 0.00</td>
+<td>&nbsp;&nbsp; 0.00</td>
+<td>&nbsp;&nbsp; 0.00</td>
+<td>&nbsp;&nbsp; 0.00</td>
+<td>&nbsp;&nbsp; 0.00</td>
+<td>&nbsp; 0.00</td>
+</tr>
+</tbody>
+</table>
+!&nbsp; 2Th1/TOF1&nbsp;&nbsp;&nbsp; 2Th2/TOF2&nbsp;
+Pattern # 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.902&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+20.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1
+</body></html>
