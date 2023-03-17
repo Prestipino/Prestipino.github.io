@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>COMMANDS block for fullprof | Prestipino.github.io</title>
+    <meta name="generator" content="Jekyll v3.9.0">
+    <meta property="og:title" content="COMMANDS block for fullprof">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="my page to dump few stuff">
+    <meta property="og:description" content="my page to dump few stuff">
+    <link rel="canonical" href="https://prestipino.github.io/">
+    <meta property="og:url" content="https://prestipino.github.io/">
+    <meta property="og:site_name" content="Prestipino.github.io">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="COMMANDS block for fullprof">
+    <script type="application/ld+json">
+{"description":"my page to dump few stuff","url":"https://prestipino.github.io/","@type":"WebSite","headline":"COMMANDS block","name":"Prestipino.github.io","@context":"https://schema.org"}</script><!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="stylefiles/style.css">
+    <script src="stylefiles/scale.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+    <!-- Setup Google Analytics -->
+    <!-- You can set your favicon here -->
+    <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+    <!-- end custom head snippets -->
+    <style data-emotion="css"></style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  </head>
+  <body data-new-gr-c-s-check-loaded="8.895.0" data-gr-ext-installed="">
+    <div class="wrapper">
+      <header>
+        <h1>Prestipino.github.io</h1>
+        <p>my page to dump few stuff</p>
+        <p class="view"><a href="https://github.com/Prestipino/Prestipino.github.io">View
+            the Project on GitHub </a></p>
+        <ul>
+          <li><a href="https://github.com/Prestipino/Prestipino.github.io">View
+              On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <h1>COMMANDS Block Fullprof </h1>
+      Particular keywords can be included in the COMMANDS/END_COMMANDS section
+      of a PCR file, after the line given the name of the current phase. The
+      number of these commands is limited to 20 per phase. There are two type of
+      COMMAND block <br>
+      <br>
+      <b>Local</b><br>
+      Placed after the line given the name of the current phase. The commands (
+      limited to 20) modifies only the current phase<br>
+      <br>
+      <b>Global</b><br>
+      Two lines starting with VARY and FIX&nbsp;&nbsp; for controlling the
+      refinement of global parameters of each pattern should be in the PCR file
+      just after&nbsp; following items: Lambda1, Lambda2, ... (CW) or Bkpos,
+      Wdt, Iabscor (TOF).Moreover using this method one can refine the ratio of
+      the intensity of the two wavelength&nbsp;&nbsp;&nbsp; components in a
+      constant wavelength (CW) pattern.<br>
+      &nbsp;The first line should be the VARY line and the second one the FIX
+      line. After this two&nbsp; master keywords, other keywords may be give for
+      refining or fixing different parameters.&nbsp;&nbsp; The presently
+      available keywords are the following (notice that they are case sensitive)<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; Global keywords:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; backgd&nbsp;&nbsp; : all
+      linear interpolation background parameters outside excluded regions<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add_back : all additional
+      parameters of the linear combinations of external profiles<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; back_nn&nbsp; :
+      Background parameters from 1 to nn are varied or fixed<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Microabs :
+      Microabsorption parameters (P0, Cp, Tau -&gt; only with FIX)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Scale_Factors&nbsp;&nbsp; -&gt; Produces the refinement of all scale
+      factors<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Cells&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt;
+      Produces the refinement of all cell parameters (only for automatic mode)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Boveralls&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; Produces the
+      refinement of all overall temperature factors Bov<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Ysize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt;
+      Produces the refinement of Y (isotropic Lorentzian size) for all phases<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Gsize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt;
+      Produces the refinement of G (isotropic Gaussian size) for all phases<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Xstrain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; Produces the
+      refinement of X (isotropic Lorentzian strain) for all phases<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Ustrain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; Produces the
+      refinement of U (isotropic Gaussian strain) for all phases<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; CW:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; zero, sycos, sysin, P0,
+      Cp, Tau<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ratio -&gt; Ratio of the
+      intensity of the two wavelength components<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; TOF:<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; zero, dtt1, dtt2, Zt,
+      dtt1t, dtt2t, xcross, width<br>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp; All this can be combined with the traditional
+      method of putting manually the codes<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; (or just a 1.0) for refining parameters.<br>
+      <br>
+      &nbsp; <i><span style="color: #333333;"><span style="font-family: Monaco,Bitstream Vera Sans Mono,Lucida Console,Terminal;">E</span></span><code>xample:<br>
+          ................<br>
+          !<br>
+          ! Lambda1&nbsp; Lambda2&nbsp;&nbsp;&nbsp; Ratio&nbsp;&nbsp;&nbsp;
+          Bkpos&nbsp;&nbsp;&nbsp; Wdt&nbsp;&nbsp;&nbsp;
+          Cthm&nbsp;&nbsp;&nbsp;&nbsp; muR&nbsp;&nbsp; AsyLim&nbsp;&nbsp;
+          Rpolarz -&gt;Patt# 1<br>
+          &nbsp;1.540560 1.544330&nbsp; 0.45002&nbsp;&nbsp; 25.000 15.0000&nbsp;
+          0.9100&nbsp; 0.0000&nbsp;&nbsp; 30.00&nbsp;&nbsp;&nbsp; 0.0000<br>
+          !<br>
+          &nbsp;VARY ratio&nbsp; back_4<br>
+          &nbsp;FIX&nbsp;&nbsp;&nbsp; Tau<br>
+          !<br>
+          !NCY&nbsp; Eps&nbsp; R_at&nbsp; R_an&nbsp; R_pr&nbsp;
+          R_gl&nbsp;&nbsp;&nbsp;&nbsp; Thmin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Step&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thmax&nbsp;&nbsp;&nbsp;
+          PSD&nbsp;&nbsp;&nbsp; Sent0<br>
+          &nbsp; 6&nbsp; 0.10&nbsp; 1.00&nbsp; 1.00&nbsp; 1.00&nbsp;
+          1.00&nbsp;&nbsp;&nbsp;&nbsp; 25.0000&nbsp;&nbsp; 0.025000&nbsp;&nbsp;
+          143.0000&nbsp;&nbsp; 0.000&nbsp;&nbsp; 0.000</code></i><br>
+      <br>
+      <br>
+      <section>
+        <h2> VARY/FIX </h2>
+        <p>Within an instruction VARY of an instruction FIX individual
+          parameters of selected atoms are allowed.<br>
+          The available structural parameters are: </p>
+        <ul>
+          <li>scale (scale factor)</li>
+          <li>cell(refine cell parameters of the current phase)</li>
+          <li>bov (overall b-factor)</li>
+          <li>uu (Caglioti U, Gaussian strain)</li>
+          <li>xx ( Lorentzian strain)</li>
+          <li>yy (Lorentzian isotropic size)</li>
+          <li>gsz (Gaussian isotropic size)</li>
+          <li>occ_AtmLabel</li>
+          <li>"x_AtmLabel", "y_AtmLabel", "z_AtmLabel", "xyz_AtmLabel"
+            (coordinate for the specific site)</li>
+          <li> "b_AtmLabel"</li>
+          <li>"xyz" allows to refine x, y and z coordinates of all atoms</li>
+          <li>"xyz 0.1"&nbsp; same as before but a multiplier 0.1 will be used
+            to limit the shift</li>
+        </ul>
+        <p> The names of the AtmLabel must be identical to those given in the
+          list of the asymmetric unit (The instructions are case sensitive). As
+          usual the instructions are applied as they appear. For instance a FIX
+          instruction after a VARY may suppress a refinement code.</p>
+        <p>In case of multiple patterns the instruction VARY keyword affect to
+          all the pattern sections of the particular phase, in which the
+          COMMANDS block is defined, providing&nbsp; independent codewords.<br>
+          For varying or fixing parameters for an individual pattern,&nbsp; the
+          suffix "_n" is appended to the keyword with "n" being the number of
+          the pattern. This last option has also been implemented for the
+          profile parameters of CW case.</p>
+        <address><code>!-------------------------------------------------------------------------------<br>
+            !&nbsp; Data for PHASE number:&nbsp;&nbsp; 1&nbsp; ==&gt; Current
+            R_Bragg for Pattern#&nbsp; 1:&nbsp;&nbsp;&nbsp;&nbsp; 0.23<br>
+!-------------------------------------------------------------------------------<br>
+            My Phase name<br>
+            COMMANDS</code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; VARY&nbsp; xyz_Fe&nbsp; xyz_O1</code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; VARY&nbsp; x_Mn1&nbsp;
+            z_O27&nbsp; y_Ho1 b_Al</code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; FIX&nbsp;&nbsp; b_Mn1 x_C23<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; VARY cell yy<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; VARY occ_Fe2<br>
+          </code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp; END COMMANDS</code></address>
+        <p>tells to the program that it should refine all positional parameters
+          of atoms Fe and O1, the "x" coordinate of Mn1, the "z" coordinate of
+          O27, the "y" coordinate of Ho1 and the temperature factor(s) of atom
+          Al. If Al is anisotropic all beta-parameters compatible with the site
+          symmetry are refined.The instruction FIX avoid the refinement of the
+          thermal parameters of Mn1 and the "x" coordinate of atom C23.</p>
+      </section>
+      <section>
+        <h2>FIX_SPC/SAME_Biso</h2>
+        FIX_SPC spc1 spc2 spc3 ... spcN<br>
+        SAME_Biso spc1 val1 spc2 val2 ... spcN valN<br>
+        <br>
+        Where spc"i" is the symbol used for the scattering power of the atom
+        (normally the chemical&nbsp;&nbsp; element symbol). the command FIX_SPC
+        means that all free parameters of a particular chemical&nbsp;
+        &nbsp;&nbsp;&nbsp; species are fixed. For instance, if one wants to fix
+        all hydrogen atoms of a structure the&nbsp;&nbsp; command "FIX_SPC H"
+        will fix all coordinates, occupation and displacement parameters of
+        H-atoms.<br>
+        The values val"i" correspond to the value of the isotropic temperature
+        factor to be&nbsp;&nbsp; assigned commonly to all atoms of species
+        spc"i". This value should be initially be given&nbsp; as negative. The
+        program will change that to positive and only when the negative
+        value&nbsp; appears in the PCR file the Biso already existing in the
+        file are replaced by those&nbsp;&nbsp; given in the SAME_Biso
+        instruction.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; Examples:<br>
+        <code>COMMANDS<br>
+          FIX&nbsp; O H<br>
+          SAME_Biso&nbsp; O -0.93&nbsp; F -0.98<br>
+          END_COMMANDS</code></section>
+      <section>
+        <h2>PEQU_pat/PEQU_pha</h2>
+        &nbsp;The Two new instructions have been introduced to make constraints
+        between profile parameters<br>
+        in mutipattern-multiphase cases. These instructions act as VARY but
+        assigning common&nbsp;&nbsp; codewords to a series of variables. <br>
+        Example:<br>
+        <code>COMMANDS<br>
+          PEQU_pat cell&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code>The
+        cell parameters of a particular phase are equal for all patterns<code><br>
+          PEQU_pha </code><code>uu&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp; </code>The U parameters for the different phases
+        and&nbsp; patterns have same codeword<code><br>
+          END_COMMANDS</code></section>
+      <section>
+        <section>
+          <h2>DLIM pat d_min</h2>
+          where pat is the number of the pattern and d_min the value of a
+          d-spacing. Only the reflections having a d-spacing greater than the
+          provided d_min value are used in the refinement of the data. <br>
+          <address>Example:</address>
+          <address>&nbsp;!--------------------------------------------- </address>
+          <address>My phase name DLIM 2 2.14 DLIM 3 1.5</address>
+          <address>&nbsp;!Nat Dis .... </address>
+          The reflections of pattern number 2 are limited to d-spacing greater
+          than d=2.14 angstroms and those of pattern number 3 to d-spacing
+          greater than 1.5 angstroms. This may be useful for magnetic structure
+          refinement when using a diffraction pattern going far in Q (for
+          instance in TOF case) </section>
+        <section>
+          <h2>LAYER_A, LAYER_B, LAYER_C</h2>
+          the keywords LAYER_A, LAYER_B and LAYER_C are used to tell the program
+          that the current phase will be treated as a single layer, so the
+          reflections (H00),(0K0) or (00L), respectively, will be suppressed<br>
+          and the atom coordinates will be given in angstroms along the
+          corresponding direction.<br>
+          Considering an artificial (quasi-empty) supercell cell with a very
+          long axis in the perpendicular direction to the layer, the 3D
+          diffraction pattern approach to that of the single layer diffraction
+          pattern without need of integrating the rods in reciprocal space. To
+          eliminate the ripples a long axis together with a special broadening
+          is enough. <br>
+          The method isbased in the idea developed by K. Ufer et al.(Z.
+          Kristallogr. 219, 519 (2004)) making the method perfectly compatible
+          with the Rietveld method.<br>
+          The keywords LAYER_A, LAYER_B and LAYER_C must be followed by the
+          order of the supercell used, as in:<br>
+          <address>&nbsp; COMMANDS</address>
+          <address>&nbsp;&nbsp;&nbsp; LAYER_C 15</address>
+          <address>&nbsp; END COMMANDS</address>
+          This means that corresponding supercell parameter (as given in the
+          unit cell line)&nbsp; is c=15*cs, being cs the c-parameter of the
+          subcell. This is needed to conserve the (0,0,l=L/15) reflections that
+          are treated separately.<br>
+          This option is still at a testing stage. A complete account will be
+          given as soon as possible.</section>
+        <footer> </footer>
+        <p>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+        <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+        <div id="891e4d5f-5780-4bac-b81c-28d040244c65-quickmenu"></div>
+        <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+      </section>
+    </div>
+  </body>
+</html>
