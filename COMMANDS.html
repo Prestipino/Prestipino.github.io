@@ -134,6 +134,54 @@
       <br>
       <br>
       <section>
+        <h2> EQUAL/MVARY/MFIX </h2>
+        <p>The keyword EQUAL appearing within a COMMANDS block allows to make
+          constraints between parameters belonging to different phases or
+          patterns. The format of the instruction EQUAL/MVARY/MFIX&nbsp; is the
+          following:<br>
+          EQUAL&nbsp; name_parent_parameter&nbsp;&nbsp; name1&nbsp;
+          mult1&nbsp;&nbsp; name2 mult2&nbsp; .... nameN multN<br>
+          The name of the parent parameter informs the program that this
+          parameter will be refined (implicit VARY) and the other parameters are
+          simultaneously refined using the same code but with other multipliers.<br>
+          An example is given below:<br>
+          EQUAL&nbsp; occ_Fe2_ph1&nbsp; occ_Mg2_ph1 -1.0&nbsp; occ_Fe3_ph1
+          -1.0&nbsp; occ_Mg3_ph1 1.0 <br>
+          This means that we are refining the distribution of Fe and Mg between
+          two sites<br>
+          maintaining full occupation of both sites and fixing the composition.
+          Remember that the EQUAL instruction means that the variations of the
+          initial parameters are constrained and not the values themselves. For
+          structural parameters it is not needed to explicit the number of the
+          pattern, however for some parameters it is needed to explicit this.<br>
+          Is is possible to make constraints between parameters of different
+          phase or different patterns. In principle the name of the parameters
+          are those appearing in the output files below the title: SYMBOLIC
+          NAMES AND INITIAL VALUES OF PARAMETERS TO BE VARIED.</p>
+        <p><code>COMMANDS<br>
+            VARY xyz b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&gt; This is
+            for refining all positions and thermal parameter<br>
+            FIX z_Ba1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&gt; This
+            is for fixing an atom coordinate because the space group is
+            non-centrosymmetric<br>
+            PEQU_pha uu vv ww&nbsp;&nbsp; &lt;---&gt; This tells to the program
+            that the U,V,W Caglioti parameters are the same for all phases <br>
+            VARY yy gsz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;---&gt; This makes to
+            refine the Lorentzian and Gaussian size parameters for the current
+            phase<br>
+            EQUAL occ_Si1_ph1 occ_Si2_ph1 -1.0 occ_Al1_ph1 -1.0 occ_Al2_ph1
+            1.0&nbsp; &lt;---&gt; Constraints of occupation factors in phase 1<br>
+            EQUAL Biso_Si1_ph1&nbsp;&nbsp; Biso_Si_ph2 1.0&nbsp;&nbsp;
+            &lt;---&gt; Atoms Si1 and Si of phases 1 and 2 respectively have the
+            same Biso<br>
+            EQUAL Biso_Al3_ph1&nbsp;&nbsp; Biso_Al1_ph2 1.0<br>
+            EQUAL Biso_Al4_ph1&nbsp;&nbsp; Biso_Al2_ph2 1.0<br>
+            EQUAL Asym1_ph1_pat1 Asym1_ph2_pat1 1.0&nbsp; &lt;---&gt; Asymmetry
+            parameter 1 of phase 1 and 2 are the same for pattern 1.<br>
+            EQUAL Asym2_ph1_pat1 Asym2_ph2_pat1 1.0<br>
+            END_COMMANDS</code></p>
+      </section>
+      <section>
         <h2> VARY/FIX </h2>
         <p>Within an instruction VARY of an instruction FIX individual
           parameters of selected atoms are allowed.<br>
