@@ -134,6 +134,64 @@
       <br>
       <br>
       <section>
+        <h2> VARY/FIX </h2>
+        <p>Within an instruction VARY of an instruction FIX individual
+          parameters of selected atoms are allowed.<br>
+          The available structural parameters are: </p>
+        <ul>
+          <li>scale (scale factor)</li>
+          <li>cell(refine cell parameters of the current phase)</li>
+          <li>bov (overall b-factor)</li>
+          <li>uu (Caglioti U, Gaussian strain)</li>
+          <li>xx ( Lorentzian strain)</li>
+          <li>yy (Lorentzian isotropic size)</li>
+          <li>gsz (Gaussian isotropic size)</li>
+          <li>occ_AtmLabel</li>
+          <li>"x_AtmLabel", "y_AtmLabel", "z_AtmLabel", "xyz_AtmLabel"
+            (coordinate for the specific site)</li>
+          <li> "b_AtmLabel""</li>
+          <li>"b" allows to refine b all atoms</li>
+          <li>"xyz" allows to refine x, y and z coordinates of all atoms</li>
+          <li>"xyz 0.1"&nbsp; same as before but a multiplier 0.1 will be used
+            to limit the shift</li>
+        </ul>
+        <p> The names of the AtmLabel must be identical to those given in the
+          list of the asymmetric unit (The instructions are case sensitive). As
+          usual the instructions are applied as they appear. For instance a FIX
+          instruction after a VARY may suppress a refinement code.</p>
+        <p>In case of multiple patterns the instruction VARY keyword affect to
+          all the pattern sections of the particular phase, in which the
+          COMMANDS block is defined, providing&nbsp; independent codewords.<br>
+          For varying or fixing parameters for an individual pattern,&nbsp; the
+          suffix "_n" is appended to the keyword with "n" being the number of
+          the pattern. This last option has also been implemented for the
+          profile parameters of CW case.</p>
+        <address><code>!-------------------------------------------------------------------------------<br>
+            !&nbsp; Data for PHASE number:&nbsp;&nbsp; 1&nbsp; ==&gt; Current
+            R_Bragg for Pattern#&nbsp; 1:&nbsp;&nbsp;&nbsp;&nbsp; 0.23<br>
+!-------------------------------------------------------------------------------<br>
+            My Phase name<br>
+            COMMANDS</code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; VARY&nbsp; xyz_Fe&nbsp; xyz_O1</code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; VARY&nbsp; x_Mn1&nbsp;
+            z_O27&nbsp; y_Ho1 b_Al</code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; FIX&nbsp;&nbsp; b_Mn1 x_C23<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; VARY cell yy<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; VARY occ_Fe2<br>
+          </code></address>
+        <code> </code>
+        <address><code>&nbsp;&nbsp; END COMMANDS</code></address>
+        <p>tells to the program that it should refine all positional parameters
+          of atoms Fe and O1, the "x" coordinate of Mn1, the "z" coordinate of
+          O27, the "y" coordinate of Ho1 and the temperature factor(s) of atom
+          Al. If Al is anisotropic all beta-parameters compatible with the site
+          symmetry are refined.The instruction FIX avoid the refinement of the
+          thermal parameters of Mn1 and the "x" coordinate of atom C23.</p>
+      </section>
+      <section>
         <h2> EQUAL/MVARY/MFIX </h2>
         <p>The keyword EQUAL appearing within a COMMANDS block allows to make
           constraints between parameters belonging to different phases or
@@ -180,63 +238,6 @@
             parameter 1 of phase 1 and 2 are the same for pattern 1.<br>
             EQUAL Asym2_ph1_pat1 Asym2_ph2_pat1 1.0<br>
             END_COMMANDS</code></p>
-      </section>
-      <section>
-        <h2> VARY/FIX </h2>
-        <p>Within an instruction VARY of an instruction FIX individual
-          parameters of selected atoms are allowed.<br>
-          The available structural parameters are: </p>
-        <ul>
-          <li>scale (scale factor)</li>
-          <li>cell(refine cell parameters of the current phase)</li>
-          <li>bov (overall b-factor)</li>
-          <li>uu (Caglioti U, Gaussian strain)</li>
-          <li>xx ( Lorentzian strain)</li>
-          <li>yy (Lorentzian isotropic size)</li>
-          <li>gsz (Gaussian isotropic size)</li>
-          <li>occ_AtmLabel</li>
-          <li>"x_AtmLabel", "y_AtmLabel", "z_AtmLabel", "xyz_AtmLabel"
-            (coordinate for the specific site)</li>
-          <li> "b_AtmLabel"</li>
-          <li>"xyz" allows to refine x, y and z coordinates of all atoms</li>
-          <li>"xyz 0.1"&nbsp; same as before but a multiplier 0.1 will be used
-            to limit the shift</li>
-        </ul>
-        <p> The names of the AtmLabel must be identical to those given in the
-          list of the asymmetric unit (The instructions are case sensitive). As
-          usual the instructions are applied as they appear. For instance a FIX
-          instruction after a VARY may suppress a refinement code.</p>
-        <p>In case of multiple patterns the instruction VARY keyword affect to
-          all the pattern sections of the particular phase, in which the
-          COMMANDS block is defined, providing&nbsp; independent codewords.<br>
-          For varying or fixing parameters for an individual pattern,&nbsp; the
-          suffix "_n" is appended to the keyword with "n" being the number of
-          the pattern. This last option has also been implemented for the
-          profile parameters of CW case.</p>
-        <address><code>!-------------------------------------------------------------------------------<br>
-            !&nbsp; Data for PHASE number:&nbsp;&nbsp; 1&nbsp; ==&gt; Current
-            R_Bragg for Pattern#&nbsp; 1:&nbsp;&nbsp;&nbsp;&nbsp; 0.23<br>
-!-------------------------------------------------------------------------------<br>
-            My Phase name<br>
-            COMMANDS</code></address>
-        <code> </code>
-        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; VARY&nbsp; xyz_Fe&nbsp; xyz_O1</code></address>
-        <code> </code>
-        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; VARY&nbsp; x_Mn1&nbsp;
-            z_O27&nbsp; y_Ho1 b_Al</code></address>
-        <code> </code>
-        <address><code>&nbsp;&nbsp;&nbsp;&nbsp; FIX&nbsp;&nbsp; b_Mn1 x_C23<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; VARY cell yy<br>
-            &nbsp;&nbsp;&nbsp;&nbsp; VARY occ_Fe2<br>
-          </code></address>
-        <code> </code>
-        <address><code>&nbsp;&nbsp; END COMMANDS</code></address>
-        <p>tells to the program that it should refine all positional parameters
-          of atoms Fe and O1, the "x" coordinate of Mn1, the "z" coordinate of
-          O27, the "y" coordinate of Ho1 and the temperature factor(s) of atom
-          Al. If Al is anisotropic all beta-parameters compatible with the site
-          symmetry are refined.The instruction FIX avoid the refinement of the
-          thermal parameters of Mn1 and the "x" coordinate of atom C23.</p>
       </section>
       <section>
         <h2>FIX_SPC/SAME_Biso</h2>
