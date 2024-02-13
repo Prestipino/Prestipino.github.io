@@ -7435,7 +7435,7 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=60e2f23d-0bef-4a9e-b528-5c4681941209">
+<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=60e2f23d-0bef-4a9e-b528-5c4681941209">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7449,35 +7449,35 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>D:\Home\cprestip\Documents\pyXRD\pyXRD\transformations.py:1924: UserWarning: No module named 'pyXRD._transformations'
-  warnings.warn(str(exc))
-</pre>
-</div>
-</div>
-</div>
-</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=46588a82-4035-4d48-b6e9-98296d6c5ef8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">WT_dic</span><span class="p">(</span><span class="n">Mdict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Return the weight uma of a formula</span>
+<span class="sd">    input:</span>
+<span class="sd">    --------------------------------------</span>
+<span class="sd">        Mdict : dictionary with molecule stochio</span>
+<span class="sd">    """</span>
     <span class="n">wt</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">atom</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">Mdict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">wt</span><span class="o">+=</span> <span class="n">pt_p</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="s1">'At_w'</span><span class="p">)</span><span class="o">*</span><span class="n">num</span>
     <span class="k">return</span> <span class="n">wt</span>
  
-<span class="k">def</span> <span class="nf">find_NEle</span><span class="p">(</span><span class="n">Formula</span><span class="p">):</span>
+
+<span class="k">def</span> <span class="nf">find_NEle</span><span class="p">(</span><span class="n">Formula</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">"""Find Next element</span>
+<span class="sd">    function to find the numbers after a braket</span>
+<span class="sd">    input:</span>
+<span class="sd">        string with formula</span>
+<span class="sd">    output:</span>
+<span class="sd">    next_element (str), stochio (int/float), the rest of the string</span>
+<span class="sd">    </span>
+<span class="sd">    """</span>
     <span class="n">atom0</span><span class="o">=</span><span class="n">Formula</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">num0</span><span class="o">=</span><span class="s1">''</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Formula</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">+</span><span class="s1">'J'</span><span class="p">):</span>
@@ -7490,9 +7490,19 @@ a.anchor-link {
     <span class="k">if</span> <span class="n">num0</span><span class="o">==</span><span class="s1">''</span><span class="p">:</span>
         <span class="n">num0</span><span class="o">=</span><span class="s1">'1'</span>
     <span class="k">return</span> <span class="n">atom0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">num0</span><span class="p">),</span> <span class="n">Formula</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
-
     
 <span class="k">def</span> <span class="nf">Formula2Dict</span><span class="p">(</span><span class="n">Formula</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""conver a string with a formula to dictionary with stochiometry</span>
+<span class="sd">    input:</span>
+<span class="sd">         formula (string): formula of the molecule</span>
+<span class="sd">    output:</span>
+<span class="sd">         dictionary of the type stochiopmetry</span>
+<span class="sd">    ----------------------------------------------------------------------</span>
+<span class="sd">    ex :</span>
+<span class="sd">        Formula_parser_s(H2O)</span>
+<span class="sd">        &gt;&gt; {'H':2, 'O':2}    </span>
+<span class="sd">    </span>
+<span class="sd">    """</span>    
     <span class="n">FDict</span> <span class="o">=</span><span class="p">{}</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">Formula</span> <span class="o">==</span> <span class="s1">''</span><span class="p">:</span>
@@ -7504,14 +7514,37 @@ a.anchor-link {
             <span class="n">FDict</span><span class="p">[</span><span class="n">atom</span><span class="p">]</span> <span class="o">=</span> <span class="n">num</span>         
     <span class="k">return</span> <span class="n">FDict</span>
 
+
 <span class="k">def</span> <span class="nf">Dict2Formula</span><span class="p">(</span><span class="n">Fdict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""conver a dictionary to a formula</span>
+<span class="sd">    input:</span>
+<span class="sd">         dictionary of the type stochiopmetry</span>
+<span class="sd">    output:</span>
+<span class="sd">         string</span>
+<span class="sd">    ----------------------------------------------------------------------</span>
+<span class="sd">    ex :</span>
+<span class="sd">        Formula_parser_s(H2O)</span>
+<span class="sd">        &gt;&gt; {'H':2, 'O':2}    </span>
+<span class="sd">    </span>
+<span class="sd">    """</span>  
     <span class="n">out</span><span class="o">=</span><span class="s1">''</span>
     <span class="k">for</span> <span class="n">atom</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">Fdict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="n">out</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">atom</span><span class="si">}{</span><span class="n">num</span><span class="si">:</span><span class="s1">g</span><span class="si">}</span><span class="s1">'</span>
     <span class="k">return</span> <span class="n">out</span>
+   
 
-
-<span class="k">def</span> <span class="nf">Formual_parser</span><span class="p">(</span><span class="n">Formula</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">Formula_parser</span><span class="p">(</span><span class="n">Formula</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""conver a string with a formula to dictionary with stochiometry</span>
+<span class="sd">    with manage of braket</span>
+<span class="sd">    input:</span>
+<span class="sd">         formula (string): formula of the molecule</span>
+<span class="sd">    output:</span>
+<span class="sd">         dictionary of the type stochiopmetry</span>
+<span class="sd">    ----------------------------------------------------------------------</span>
+<span class="sd">    ex :</span>
+<span class="sd">        Formula_parser_s(H2O)</span>
+<span class="sd">        &gt;&gt; {'H':2, 'O':2}   </span>
+<span class="sd">    """</span>
     <span class="n">Formula</span><span class="o">=</span><span class="n">Formula</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'['</span><span class="p">,</span><span class="s1">'('</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">']'</span><span class="p">,</span> <span class="s1">')'</span><span class="p">)</span>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="n">start</span> <span class="o">=</span> <span class="n">Formula</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">'('</span><span class="p">)</span>
@@ -7533,10 +7566,21 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Formula_parser_s</span><span class="p">(</span><span class="n">formula</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""conver a string with a formula to dictionary with stochiometry</span>
+<span class="sd">    input:</span>
+<span class="sd">         formula (string): formula of the molecule</span>
+<span class="sd">    output:</span>
+<span class="sd">         dictionary of the type stochiopmetry</span>
+<span class="sd">    ----------------------------------------------------------------------</span>
+<span class="sd">    ex :</span>
+<span class="sd">        Formula_parser_s(H2O)</span>
+<span class="sd">        &gt;&gt; {'H':2, 'O':2}    </span>
+<span class="sd">    </span>
+<span class="sd">    """</span>
     <span class="n">FDict</span><span class="o">=</span><span class="p">{}</span>
     <span class="n">atom0</span><span class="o">=</span><span class="n">formula</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">num0</span><span class="o">=</span><span class="s1">''</span>
@@ -7554,10 +7598,15 @@ a.anchor-link {
             <span class="n">num0</span><span class="o">=</span><span class="s1">''</span>              
     <span class="k">return</span> <span class="n">FDict</span>
 
+
 <span class="k">def</span> <span class="nf">MW_dic</span><span class="p">(</span><span class="n">Mdict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""return molecular weight</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">pt_p</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="s1">'At_w'</span><span class="p">)</span><span class="o">*</span><span class="n">num</span> <span class="k">for</span> <span class="n">atom</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">Mdict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
 
 <span class="k">def</span> <span class="nf">WT_dic</span><span class="p">(</span><span class="n">Mdict</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">""" return molecular weight%</span>
+<span class="sd">    """</span>
     <span class="n">tweigh</span> <span class="o">=</span> <span class="n">MW_dic</span><span class="p">(</span><span class="n">Mdict</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">{</span><span class="n">atom</span><span class="p">:</span> <span class="n">pt_p</span><span class="p">(</span><span class="n">atom</span><span class="p">,</span> <span class="s1">'At_w'</span><span class="p">)</span> <span class="o">*</span> <span class="n">num</span> <span class="o">/</span><span class="n">tweigh</span> <span class="k">for</span> <span class="n">atom</span><span class="p">,</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">Mdict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 </pre></div>
@@ -7581,7 +7630,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">finalD</span><span class="o">=</span><span class="n">Formula_parser_s</span><span class="p">(</span><span class="s1">'Cu22Fe8Ge4S32'</span><span class="p">)</span>
