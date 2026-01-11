@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+    <title>PlotTxrd | Prestipino.github.io</title>
+    <meta name="generator" content="Jekyll v3.9.0">
+    <meta property="og:title" content="link to the graph of U V W X Y for fullprof">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="my page to dump few stuff">
+    <meta property="og:description" content="my page to dump few stuff">
+    <link rel="canonical" href="https://prestipino.github.io/">
+    <meta property="og:url" content="https://prestipino.github.io/">
+    <meta property="og:site_name" content="Prestipino.github.io">
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:title" content="link to the graph of U V W X Y for fullprof">
+    <script type="application/ld+json">
+{"description":"PlotTxrd","url":"https://prestipino.github.io/PlotTxrd.html","@type":"WebSite","headline":"PlotTxrd.html","name":"Prestipino.github.io","@context":"https://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+    <link rel="stylesheet" href="stylefiles/style.css">
+    <script src="stylefiles/scale.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+    <!-- Setup Google Analytics -->
+    <!-- You can set your favicon here -->
+    <!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+    <!-- end custom head snippets -->
+    <style data-emotion="css"></style>
+  </head>
+  <body data-new-gr-c-s-check-loaded="8.895.0" data-gr-ext-installed="">
+    <div class="wrapper">
+
+
+
+ <header>
+  <h1>PlotTxrd</h1>
+  <p><strong>Interactive X-ray Diffraction Data Visualizer</strong></p>
+</header>
+
+<main>
+  <section>
+    <h2>Origin and Motivation</h2>
+    <p>
+      During an experiment on the <strong>CRISTAL beamline at SOLEIL</strong> in summer 2025,
+      I experienced the difficulty of rapidly visualizing and evaluating diffraction diagrams in
+      real time, especially during thermodiffraction experiments with acquisition times of only
+      a few tens of seconds. Existing tools lacked the responsiveness needed to monitor the
+      evolution of diffraction features as the temperature changed.
+    </p>
+    <p>
+      To address this limitation, I developed <strong>PlotTxrd</strong> — a Python-based software
+      designed to efficiently manage and visualize large thermodiffraction datasets.
+      Since its initial version, I have continued to develop and extend it for
+      <strong>laboratory XRD applications</strong> as well as <strong>synchrotron environments</strong>.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>Main Features</h2>
+    <ul>
+      <li>Real-time visualization of large diffraction series with temperature tracking</li>
+      <li>Interactive <strong>2D and 1D plotting</strong> with customizable styles and scales</li>
+      <li>Automatic extraction and management of temperature metadata</li>
+      <li>Tools for background subtraction, integration, and maximum intensity analysis</li>
+      <li>Batch export to <strong>xye</strong>, <strong>FullProf</strong>, or <strong>JANA</strong> formats</li>
+      <li>Project save/load with full metadata and compression</li>
+      <li>Advanced toolbars for color map control, scaling, and interactive selection</li>
+    </ul>
+  </section>
+
+ <section>
+    <h2>Downloads</h2>
+    <p>The software is currently in pre-alpha and updated frequently. Below are the latest downloadable versions with brief notes on updates. :contentReference[oaicite:1]{index=1}</p>
+    <ul>
+    <li> <strong>PlotTxrd 0.0.13.Alpha </strong>(5/1/26) <a href="https://sdrive.cnrs.fr/s/BWn8oi3jdGdTtn9">Download</a>  </li>
+          <ul>
+            <li>- added x shift on 1d plot</li>
+            <li>- new GUI system manager</li>
+          </ul>
+          <li> <strong>PlotTxrd 0.0.12.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/QbNCFApc6pWgCW9">Download</a></li>
+          <ul>
+            <li>- If several multiscans file are open, the program merge the scan of each file</li>
+            <li>- in 1D plot toggle between linear sqrt and log intensity clicking on y label</li>
+          </ul>
+          <li> <strong>PlotTxrd 0.0.11.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/xrso24caoCMKsFK">Download</a></li>
+          <ul>
+            <li>- Bug xye/xy</li>
+          </ul>
+          <li> <strong>PlotTxrd 0.0.10.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/BapdytLz27geWCj">Download</a></li>
+          <ul>
+            <li>- Better management ILLdata</li>
+            <li>- UXD files</li>
+            <li>- ras file with Oxford_PheniX</li>
+          </ul>
+          <li> <strong>PlotTxrd 0.0.9.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/qrYGK6r9regxNs8">Download</a></li>
+          <ul>
+            <li>- Original Deposit</li>
+          </ul>
+    </ul>
+    <p>
+      For the latest updates and the full source code, visit the
+      <a href="https://github.com/Prestipino/PlotTxrd" target="_blank">PlotTxrd GitHub repository</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Development and Access</h2>
+    <p>
+      PlotTxrd is developed in <strong>Python</strong> using
+      <code>Tkinter</code>, <code>Matplotlib</code>, <code>ttkbootstrap</code>,
+      and <code>NumPy</code>. The interface has been optimized for
+      thermodiffraction experiments at the <strong>CRISTAL beamline (SOLEIL)</strong>.
+    </p>
+    <p>
+      The latest public version and source code are available on
+      <a href="https://github.com/Prestipino/PlotTxrd" target="_blank">GitHub</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Applications</h2>
+    <p>
+      PlotTxrd is currently used to manage diffraction data from temperature-dependent studies
+      on functional materials, enabling efficient visualization of peak evolution, phase
+      transitions, and structural modulations. Its modular design makes it adaptable for
+      other in-situ or time-resolved diffraction experiments.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 Carmelo Prestipino — Developed at CRISMAT | Optimized for Thermodiffraction at CRISTAL (SOLEIL)</p>
+</footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <div id="891e4d5f-5780-4bac-b81c-28d040244c65-quickmenu"></div>
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+  </body>
+</html>
