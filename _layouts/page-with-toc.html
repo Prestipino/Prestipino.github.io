@@ -1,32 +1,40 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-    
-    <!-- Debug CSS (only if page specifies it) -->
-    {% if page.extra_css %}
-    <link rel="stylesheet" href="{{ page.extra_css | relative_url }}">
-    {% endif %}
-</head>
-<body>
-    <div class="page-content">
-        <div class="wrapper">
-            <main class="main-content">
-                <h1>{{ page.title }}</h1>
-                
-                <!-- SIMPLE TOC TEST -->
-                <div class="page-toc" style="border:2px solid red;">
-                    <h3>📑 DEBUG Table of Contents</h3>
-                    {% include toc-simple.html %}
+<!-- In your _layouts/page-with-toc.html file -->
+
+<div class="page-content">
+    <div class="wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <!-- This should ONLY contain the navigation from sidebar.yml -->
+            <nav class="sidebar-nav">
+                {% for section in site.data.sidebar.sections %}
+                <div class="sidebar-section">
+                    <h3>{{ section.title }}</h3>
+                    <ul>
+                        {% for link in section.links %}
+                        <li>
+                            {% if link.icon %}{{ link.icon }}{% endif %}
+                            <a href="{{ link.url | relative_url }}" 
+                               {% if link.new_window %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                               {{ link.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
-                
-                <!-- Page Content -->
-                {{ content }}
-            </main>
-        </div>
+                {% endfor %}
+            </nav>
+        </aside>
+        
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- TOC goes here -->
+            <div class="page-toc">
+                <h3>📑 Page Contents</h3>
+                {% include toc-simple.html %}
+            </div>
+            
+            <!-- PAGE CONTENT goes here -->
+            {{ content }}
+        </main>
     </div>
-</body>
-</html>
+</div>
