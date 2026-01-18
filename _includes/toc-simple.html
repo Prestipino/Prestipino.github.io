@@ -1,13 +1,44 @@
 <nav class="toc-nav">
-  <div style="background: #e3f2fd; padding: 10px; margin: 10px 0; border: 2px solid #2196F3;">
-    <strong>DEBUG: toc-simple.html is loaded</strong>
-  </div>
-  
   <ul class="toc-list">
-    <!-- MANUAL TEST LINKS (temporary) -->
-    <li class="toc-h2"><a href="#section-one">TEST: Section One</a></li>
-    <li class="toc-h2"><a href="#section-two">TEST: Section Two</a></li>
-    <li class="toc-h3"><a href="#subsection-two-a">TEST: Subsection 2A</a></li>
-    <li class="toc-h2"><a href="#section-three">TEST: Section Three</a></li>
+    {% comment %} H2 headings {% endcomment %}
+    {% assign content_lower = content | downcase %}
+    {% assign h2_parts = content_lower | split: '<h2' %}
+    
+    {% for part in h2_parts %}
+      {% if part contains 'id=' %}
+        {% assign id_start = part | split: 'id="' | last %}
+        {% assign id = id_start | split: '"' | first %}
+        
+        {% assign after_bracket = part | split: '>' %}
+        {% if after_bracket.size > 1 %}
+          {% assign title_with_tag = after_bracket | last %}
+          {% assign title = title_with_tag | split: '</h2' | first %}
+          
+          <li class="toc-h2">
+            <a href="#{{ id }}">{{ title | strip }}</a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    
+    {% comment %} H3 headings {% endcomment %}
+    {% assign h3_parts = content_lower | split: '<h3' %}
+    
+    {% for part in h3_parts %}
+      {% if part contains 'id=' %}
+        {% assign id_start = part | split: 'id="' | last %}
+        {% assign id = id_start | split: '"' | first %}
+        
+        {% assign after_bracket = part | split: '>' %}
+        {% if after_bracket.size > 1 %}
+          {% assign title_with_tag = after_bracket | last %}
+          {% assign title = title_with_tag | split: '</h3' | first %}
+          
+          <li class="toc-h3">
+            <a href="#{{ id }}">{{ title | strip }}</a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </ul>
 </nav>
