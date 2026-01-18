@@ -1,21 +1,40 @@
 <nav class="toc-nav">
   <div style="background: #e8f5e9; padding: 10px; margin: 10px 0; border-left: 4px solid #4caf50;">
-    <strong>✓ TOC Working</strong>
+    <strong>✓ Simple Dynamic TOC</strong>
   </div>
   
   <ul class="toc-list">
-    {% comment %} Hardcoded but WORKING version {% endcomment %}
+    {% comment %} SUPER SIMPLE: Just check and hardcode {% endcomment %}
+    
+    <!-- Debug what's in content -->
+    {% assign first_200 = content | truncate: 200 %}
+    
+    {% if content contains 'Section One: Introduction' %}
     <li class="toc-h2">
       <a href="#section-one">Section One: Introduction</a>
     </li>
+    {% endif %}
+    
+    {% if content contains 'Section Two: Main Content' %}
     <li class="toc-h2">
       <a href="#section-two">Section Two: Main Content</a>
     </li>
+    {% endif %}
+    
+    {% if content contains 'Subsection 2A' %}
     <li class="toc-h3">
       <a href="#subsection-two-a">Subsection 2A</a>
     </li>
+    {% endif %}
+    
+    {% if content contains 'Section Three: Conclusion' %}
     <li class="toc-h2">
       <a href="#section-three">Section Three: Conclusion</a>
     </li>
+    {% endif %}
   </ul>
+  
+  <div style="background: #f5f5f5; padding: 5px; margin-top: 10px; font-size: 11px;">
+    Content sample: {{ first_200 }}
+  </div>
 </nav>
