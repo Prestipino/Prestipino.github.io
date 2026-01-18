@@ -5,7 +5,7 @@
     --color-primary: #2c3e50;    /* Dark blue/grey (for headers, accents) */
     --color-secondary: #3498db;  /* Bright blue (for links, highlights) */
     --color-accent: #1abc9c;     /* Teal (for hover effects, buttons) */
-    --color-background: #f8f9fa; /* Very light grey (for page background) */
+    --color-heder-back: #333; /* Very light grey (for page background) */
     --color-text: #333333;       /* Dark grey (for main text) */
     --color-light: #ecf0f1;      /* Light grey (for sidebars, boxes) */
 }
@@ -15,14 +15,14 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
     background-color: var(--color-background);
-    color: var(--color-text); /* Applies your --color-text variable */
+    color: white; /* Applies your --color-text variable */
     line-height: 1.6;
 }
 
 
 /* HEADER STYLES */
 .site-header {
-    background: #333;
+    background: var(--color-heder-back);
     color: white;
     padding: 1rem 0;
     position: sticky;
