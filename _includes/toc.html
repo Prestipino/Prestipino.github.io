@@ -1,24 +1,37 @@
 <nav class="toc-nav">
+  <h4>Debug: Raw Content Preview (first 200 chars)</h4>
+  <pre style="background:#f0f0f0;padding:10px;font-size:12px;">{{ content | truncate: 200 }}</pre>
+  
+  <h4>Extracted Headings:</h4>
   {% assign headings = content | split: '<h' %}
-  {% assign has_headings = false %}
-
   <ul class="toc-list">
   {% for heading in headings %}
-    {% if heading contains 'id=' %}
-      {% assign has_headings = true %}
-      {% assign level = heading | slice: 0 %}
-      {% assign id_start = heading | split: 'id="' | last %}
-      {% assign id = id_start | split: '"' | first %}
-      {% assign title = heading | split: '>' | last | split: '</h' | first %}
-
-      <li class="toc-h{{ level }}">
-        <a href="#{{ id }}">{{ title | strip_html | strip }}</a>
+    {% assign heading_trimmed = heading | strip %}
+    {% if heading_trimmed.size > 0 %}
+      <li>
+        <strong>Raw heading part {{ forloop.index }}:</strong><br>
+        <pre style="background:#f0f0f0;padding:5px;font-size:11px;">{{ heading_trimmed | escape }}</pre>
+        
+        {% if heading contains 'id=' %}
+          {% assign level = heading | slice: 0 %}
+          {% assign id_start = heading | split: 'id="' | last %}
+          {% assign id = id_start | split: '"' | first %}
+          {% assign title = heading | split: '>' | last | split: '</h' | first %}
+          
+          <div style="color:green;margin:5px 0;">
+            ✓ Found heading: Level={{ level }}, ID="{{ id }}", Title="{{ title | strip }}"
+          </div>
+          
+          <a href="#{{ id }}" class="toc-h{{ level }}">
+            {{ title | strip }}
+          </a>
+        {% else %}
+          <div style="color:red;margin:5px 0;">
+            ✗ No ID found in this heading part
+          </div>
+        {% endif %}
       </li>
     {% endif %}
   {% endfor %}
-
-  {% unless has_headings %}
-    <li class="toc-empty">No headings found in this page</li>
-  {% endunless %}
   </ul>
 </nav>
