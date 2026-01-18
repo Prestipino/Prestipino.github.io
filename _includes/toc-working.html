@@ -1,41 +1,62 @@
 <nav class="toc-nav">
   <div style="background: #e8f5e9; padding: 10px; margin: 10px 0; border-left: 4px solid #4caf50;">
-    <strong>✓ Dynamic TOC Test</strong>
+    <strong>✓ TOC Working</strong>
   </div>
   
   <ul class="toc-list">
-    {% comment %} 
-    SIMPLE APPROACH: Direct text matching
-    This checks if specific text exists in the content 
-    {% endcomment %}
+    {% comment %} Test if content has specific sections {% endcomment %}
+    {% capture test1 %}{{ content }}{% endcapture %}
+    {% assign has_section1 = false %}
+    {% assign has_section2 = false %}
+    {% assign has_subsection = false %}
+    {% assign has_section3 = false %}
     
-    {% if content contains 'id="section-one"' %}
+    {% if test1 contains 'id="section-one"' %}
+      {% assign has_section1 = true %}
+    {% endif %}
+    
+    {% if test1 contains 'id="section-two"' %}
+      {% assign has_section2 = true %}
+    {% endif %}
+    
+    {% if test1 contains 'id="subsection-two-a"' %}
+      {% assign has_subsection = true %}
+    {% endif %}
+    
+    {% if test1 contains 'id="section-three"' %}
+      {% assign has_section3 = true %}
+    {% endif %}
+    
+    {% if has_section1 %}
     <li class="toc-h2">
       <a href="#section-one">Section One: Introduction</a>
     </li>
     {% endif %}
     
-    {% if content contains 'id="section-two"' %}
+    {% if has_section2 %}
     <li class="toc-h2">
       <a href="#section-two">Section Two: Main Content</a>
     </li>
     {% endif %}
     
-    {% if content contains 'id="subsection-two-a"' %}
+    {% if has_subsection %}
     <li class="toc-h3">
       <a href="#subsection-two-a">Subsection 2A</a>
     </li>
     {% endif %}
     
-    {% if content contains 'id="section-three"' %}
+    {% if has_section3 %}
     <li class="toc-h2">
       <a href="#section-three">Section Three: Conclusion</a>
     </li>
     {% endif %}
   </ul>
   
-  <div style="background: #e3f2fd; padding: 5px; margin-top: 10px; font-size: 12px;">
-    Content contains "section-one": {{ content contains 'id="section-one"' }}<br>
-    Content contains "section-two": {{ content contains 'id="section-two"' }}
+  <div style="background: #e3f2fd; padding: 5px; margin-top: 10px; font-size: 12px; font-family: monospace;">
+    Debug: <br>
+    Has section1: {{ has_section1 }}<br>
+    Has section2: {{ has_section2 }}<br>
+    Has subsection: {{ has_subsection }}<br>
+    Has section3: {{ has_section3 }}
   </div>
 </nav>
