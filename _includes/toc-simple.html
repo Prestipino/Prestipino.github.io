@@ -1,52 +1,13 @@
 <nav class="toc-nav">
-  {% comment %} 
-  BULLETPROOF TOC EXTRACTION
-  This handles various HTML formats
-  {% endcomment %}
+  <div style="background: #e3f2fd; padding: 10px; margin: 10px 0; border: 2px solid #2196F3;">
+    <strong>DEBUG: toc-simple.html is loaded</strong>
+  </div>
   
   <ul class="toc-list">
-    {% comment %} Extract H2 headings {% endcomment %}
-    {% assign h2_parts = content | split: '<h2' %}
-    {% for part in h2_parts %}
-      {% if part contains 'id=' %}
-        {% assign id_section = part | split: 'id="' | last %}
-        {% assign id = id_section | split: '"' | first %}
-        
-        {% assign after_id = id_section | split: '"' | last %}
-        {% assign title_raw = after_id | split: '>' | last %}
-        {% assign title = title_raw | split: '</h2' | first | strip %}
-        
-        {% if title.size > 0 %}
-          <li class="toc-h2">
-            <a href="#{{ id }}">{{ title }}</a>
-          </li>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-    
-    {% comment %} Extract H3 headings {% endcomment %}
-    {% assign h3_parts = content | split: '<h3' %}
-    {% for part in h3_parts %}
-      {% if part contains 'id=' %}
-        {% assign id_section = part | split: 'id="' | last %}
-        {% assign id = id_section | split: '"' | first %}
-        
-        {% assign after_id = id_section | split: '"' | last %}
-        {% assign title_raw = after_id | split: '>' | last %}
-        {% assign title = title_raw | split: '</h3' | first | strip %}
-        
-        {% if title.size > 0 %}
-          <li class="toc-h3">
-            <a href="#{{ id }}">{{ title }}</a>
-          </li>
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+    <!-- MANUAL TEST LINKS (temporary) -->
+    <li class="toc-h2"><a href="#section-one">TEST: Section One</a></li>
+    <li class="toc-h2"><a href="#section-two">TEST: Section Two</a></li>
+    <li class="toc-h3"><a href="#subsection-two-a">TEST: Subsection 2A</a></li>
+    <li class="toc-h2"><a href="#section-three">TEST: Section Three</a></li>
   </ul>
-  
-  {% if content contains '<h2' or content contains '<h3' %}
-    {% comment %} Good - we have headings {% endcomment %}
-  {% else %}
-    <p class="toc-empty">No H2 or H3 headings found in this page.</p>
-  {% endif %}
 </nav>
