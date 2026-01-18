@@ -1,5 +1,15 @@
 /* assets/css/custom.css */
 
+:root {
+    /* Primary Colors - Adjust these hex codes to your preference */
+    --color-primary: #2c3e50;    /* Dark blue/grey (for headers, accents) */
+    --color-secondary: #3498db;  /* Bright blue (for links, highlights) */
+    --color-accent: #1abc9c;     /* Teal (for hover effects, buttons) */
+    --color-background: #f8f9fa; /* Very light grey (for page background) */
+    --color-text: #333333;       /* Dark grey (for main text) */
+    --color-light: #ecf0f1;      /* Light grey (for sidebars, boxes) */
+}
+
 /* HEADER STYLES */
 .site-header {
     background: #333;
@@ -20,7 +30,7 @@
 }
 
 .site-title {
-    color: white;
+    color: var(--color-primary);
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -38,7 +48,7 @@
 }
 
 .page-link:hover {
-    color: white;
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
