@@ -1,0 +1,12 @@
+<nav>
+{% assign headings = content | split: '<h' %}
+{% for heading in headings %}
+    {% if heading contains 'id=' %}
+        {% assign level = heading | slice: 0 %}
+        {% assign id_start = heading | split: 'id="' | last %}
+        {% assign id = id_start | split: '"' | first %}
+        {% assign title = heading | split: '>' | last | split: '</h' | first %}
+        <a href="#{{ id }}" class="toc-level-{{ level }}">{{ title }}</a>
+    {% endif %}
+{% endfor %}
+</nav>
