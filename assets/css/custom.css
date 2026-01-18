@@ -124,7 +124,7 @@ body {
 }
 
 .sidebar-section li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .sidebar-section li:last-child {
@@ -136,7 +136,7 @@ body {
     text-decoration: none;
     display: flex;  /* flex only for sidebar */
     align-items: center;
-    padding: 0.35rem 0.5rem;
+    padding: 0.2rem 0.5rem;
     border-left: 3px solid transparent;
     transition: all 0.2s ease;
     border-radius: 3px;
