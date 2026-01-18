@@ -51,10 +51,9 @@
                         <ul>
                             {% for link in section.links %}
                             <li>
-                                <!-- This line outputs the icon if it exists -->
-                                {% if link.icon %}{{ link.icon }}{% endif %}
                                 <a href="{{ link.url | relative_url }}"
                                    {% if link.new_window %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                                   {% if link.icon %}{{ link.icon }}{% endif %}
                                    {{ link.name }}
                                 </a>
                             </li>

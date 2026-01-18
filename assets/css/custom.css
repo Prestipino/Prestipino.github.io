@@ -1,33 +1,34 @@
 /* assets/css/custom.css */
-
 :root {
     /* Primary Colors - Adjust these hex codes to your preference */
     --color-primary: #2c3e50;    /* Dark blue/grey (for headers, accents) */
     --color-secondary: #3498db;  /* Bright blue (for links, highlights) */
     --color-accent: #1abc9c;     /* Teal (for hover effects, buttons) */
-    --color-heder-back: #333; /* Very light grey (for page background) */
+    --color-background: #f8f9fa; /* Very light grey (for page background) */
+    --color-header-back: #333;   /* Dark grey (for header background) */
     --color-text: #333333;       /* Dark grey (for main text) */
     --color-light: #ecf0f1;      /* Light grey (for sidebars, boxes) */
 }
 
-
 /* ===== BASE STYLES - Apply your theme variables ===== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--color-background);
-    color: white; /* Applies your --color-text variable */
+    color: var(--color-text);
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-
-/* HEADER STYLES */
+/* ===== HEADER STYLES ===== */
 .site-header {
-    background: var(--color-heder-back);
+    background-color: var(--color-header-back);
     color: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .site-header .wrapper {
@@ -40,10 +41,15 @@ body {
 }
 
 .site-title {
-    color: white;
+    color: white !important;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
+    margin: 0;
+}
+
+.site-title:hover {
+    color: var(--color-accent) !important;
 }
 
 .site-nav .trigger {
@@ -52,119 +58,248 @@ body {
 }
 
 .page-link {
-    color: #ddd;
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
 }
 
 .page-link:hover {
     color: white;
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
 }
 
-/* LAYOUT STRUCTURE */
+/* ===== LAYOUT STRUCTURE ===== */
+.page-content {
+    min-height: calc(100vh - 200px);
+}
+
 .page-content .wrapper {
     max-width: 1200px;
     margin: 2rem auto;
     display: grid;
     grid-template-columns: 250px 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
     padding: 0 20px;
 }
 
-/* SIDEBAR */
+/* ===== SIDEBAR ===== */
 .sidebar {
     position: sticky;
-    top: 100px; /* Below header */
+    top: 100px;
     align-self: start;
     max-height: calc(100vh - 120px);
     overflow-y: auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid var(--color-light);
 }
 
 .sidebar-section {
     margin-bottom: 2rem;
 }
 
+.sidebar-section:last-child {
+    margin-bottom: 0;
+}
+
 .sidebar-section h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-    border-bottom: 2px solid #007acc;
-    padding-bottom: 0.25rem;
+    margin: 0 0 0.75rem 0;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .sidebar-section ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
 .sidebar-section li {
     margin-bottom: 0.5rem;
 }
 
+.sidebar-section li:last-child {
+    margin-bottom: 0;
+}
+
 .sidebar-section a {
-    color: #555;
+    color: var(--color-text);
     text-decoration: none;
-    display: block;
-    padding: 0.25rem 0;
+    display: flex;  /* Change from 'block' to 'flex' */
+    align-items: center; /* Vertically centers icon and text */
+    padding: 0.35rem 0.5rem;
     border-left: 3px solid transparent;
-    padding-left: 0.5rem;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+}
+
+/* Make sure icons inside links don't have extra margin */
+.sidebar-section a img {
+    margin-right: 0.5rem; /* Space between icon and text */
+    vertical-align: middle;
 }
 
 .sidebar-section a:hover {
-    color: #007acc;
-    border-left-color: #007acc;
-    background: #f5f5f5;
+    color: var(--color-secondary);
+    border-left-color: var(--color-secondary);
+    background-color: rgba(52, 152, 219, 0.05);
 }
 
-/* MAIN CONTENT */
+/* ===== MAIN CONTENT ===== */
 .main-content {
-    background: white;
+    background-color: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid var(--color-light);
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .page-content .wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        position: static;
-        max-height: none;
-    }
-    
-    .site-nav .trigger {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .nav-trigger {
-        display: none;
-    }
-    
-    .nav-trigger:checked ~ .trigger {
-        display: flex;
-    }
-    
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5rem;
-    }
-    
-    .site-nav .trigger {
-        display: none;
-    }
+.main-content h1,
+.main-content h2,
+.main-content h3 {
+    color: var(--color-primary);
+    margin-top: 0;
 }
 
-/* FOOTER */
+.main-content h1 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.main-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.main-content a {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.main-content a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+.main-content p {
+    margin-bottom: 1rem;
+}
+
+.main-content ul,
+.main-content ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+/* ===== FOOTER ===== */
 .site-footer {
-    background: #f5f5f5;
+    background-color: var(--color-light);
     padding: 2rem 0;
     margin-top: 3rem;
     text-align: center;
     border-top: 1px solid #ddd;
+    color: var(--color-text);
+}
+
+.site-footer .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-footer a {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .page-content .wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+        top: auto;
+    }
+
+    .site-nav .trigger {
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        display: none;
+    }
+
+    .nav-trigger:checked ~ .trigger {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .nav-trigger {
+        display: none;
+    }
+
+    .main-content {
+        padding: 1.5rem;
+    }
+
+    .site-header .wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .site-header,
+    .sidebar,
+    .site-footer {
+        display: none;
+    }
+
+    .page-content .wrapper {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-content {
+        box-shadow: none;
+        padding: 0;
+    }
 }
