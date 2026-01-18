@@ -3,7 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | {{ site.title }}</title>
+    <!-- Main CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+    
+    <!-- Debug CSS (only if page specifies it) -->
+    {% if page.extra_css %}
+    <link rel="stylesheet" href="{{ page.extra_css | relative_url }}">
+    {% endif %}
 </head>
 <body>
     <div class="page-content">
