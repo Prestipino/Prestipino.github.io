@@ -11,14 +11,10 @@
 }
 
 
-/* ===== FIX FOR ANCHOR LINKS WITH FIXED HEADER ===== */
-/* This creates padding at the top of each section so it doesn't hide under the header */
-
-/* For ALL elements with IDs */
-[id] {
-    scroll-margin-top: 500px; /* Adjust this value based on your header height */
+/* ===== FIX 1: Use scroll-padding on html ===== */
+html {
+    scroll-padding-top: 120px; /* Slightly more than header height */
 }
-
 
 
 
