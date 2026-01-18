@@ -2,33 +2,49 @@
 sections:
   - title: "Bibliometry"
     links:
-      - name: "ORCID Profile"
+      - name: "ORCID: 0000-0002-8541-7766"
         url: "https://orcid.org/0000-0002-8541-7766"
         new_window: true
+        # The ORCID logo from your original page
+        icon: '<img src="https://orcid.org/sites/default/files/images/orcid_24x24.png" alt="ORCID" style="vertical-align: middle; height: 1.2em; margin-right: 0.5em;">'
+
       - name: "OpenAlex Profile"
         url: "https://openalex.org/works?page=1&filter=authorships.author.id:a5020426445"
         new_window: true
+        # The OpenAlex logo from your original page
+        icon: '<img src="https://openalex.org/img/tricon.a08e3fec.png" alt="OpenAlex" style="vertical-align: middle; height: 1.2em; width: 1.2em; margin-right: 0.5em;">'
+
       - name: "Contact Email"
         url: "mailto:carmelo.prestipino@ensicaen.fr"
+        # An emoji as a simple icon
+        icon: '📧 '
+
       - name: "Publications"
         url: "/List_Publications.html"
+        icon: '📚 '
+
       - name: "Talks/Seminars"
         url: "/List_Talks.html"
+        icon: '🎤 '
   
   - title: "Software Tools"
     links:
       - name: "PlotTxrd"
         url: "/PlotTxrd.html"
+
+  - title: "Profile powder Difraction"
+    links:
       - name: "Profile Graphs"
         url: "/Graphprofile.html"
       - name: "Microabsorption"
         url: "/MicroAbs.html"
-      - name: "COMMANDS Block"
-        url: "/COMMANDS.html"
+
   
   - title: "FullProf Inputs"
     links:
-      - name: "MOF.pcr"
+      - name: "COMMANDS Block"
+        url: "/COMMANDS.html"
+      - name: "oldFormat.pcr"
         url: "/PCR_MOF.html"
       - name: "multiP.pcr"
         url: "/pcr_D8.html"
