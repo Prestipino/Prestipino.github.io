@@ -1,37 +1,39 @@
 <nav class="toc-nav">
-  <h4>Debug: Raw Content Preview (first 200 chars)</h4>
-  <pre style="background:#f0f0f0;padding:10px;font-size:12px;">{{ content | truncate: 200 }}</pre>
-  
-  <h4>Extracted Headings:</h4>
   {% assign headings = content | split: '<h' %}
+  {% assign has_headings = false %}
+  
   <ul class="toc-list">
   {% for heading in headings %}
     {% assign heading_trimmed = heading | strip %}
     {% if heading_trimmed.size > 0 %}
-      <li>
-        <strong>Raw heading part {{ forloop.index }}:</strong><br>
-        <pre style="background:#f0f0f0;padding:5px;font-size:11px;">{{ heading_trimmed | escape }}</pre>
-        
+      {% assign first_char = heading_trimmed | slice: 0 %}
+      
+      <!-- Check if this starts with a number 1-6 (h1-h6) -->
+      {% if first_char >= '1' and first_char <= '6' %}
         {% if heading contains 'id=' %}
-          {% assign level = heading | slice: 0 %}
+          {% assign has_headings = true %}
+          
+          <!-- Extract ID -->
           {% assign id_start = heading | split: 'id="' | last %}
           {% assign id = id_start | split: '"' | first %}
-          {% assign title = heading | split: '>' | last | split: '</h' | first %}
           
-          <div style="color:green;margin:5px 0;">
-            ✓ Found heading: Level={{ level }}, ID="{{ id }}", Title="{{ title | strip }}"
-          </div>
+          <!-- Extract TITLE - FIXED METHOD -->
+          {% assign after_closing_bracket = heading | split: '>' | last %}
+          {% assign title = after_closing_bracket | split: '</h' | first %}
           
-          <a href="#{{ id }}" class="toc-h{{ level }}">
-            {{ title | strip }}
-          </a>
-        {% else %}
-          <div style="color:red;margin:5px 0;">
-            ✗ No ID found in this heading part
-          </div>
+          <!-- Clean up the title -->
+          {% assign clean_title = title | strip_html | strip %}
+          
+          <li class="toc-h{{ first_char }}">
+            <a href="#{{ id }}">{{ clean_title }}</a>
+          </li>
         {% endif %}
-      </li>
+      {% endif %}
     {% endif %}
   {% endfor %}
+  
+  {% unless has_headings %}
+    <li class="toc-empty">No headings with IDs found in this page.</li>
+  {% endunless %}
   </ul>
 </nav>
