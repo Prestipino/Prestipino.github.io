@@ -1,23 +1,41 @@
 <nav class="toc-nav">
-  {% comment %} SIMPLE TOC THAT DEFINITELY WORKS {% endcomment %}
-  
   <div style="background: #e8f5e9; padding: 10px; margin: 10px 0; border-left: 4px solid #4caf50;">
-    <strong>✓ TOC Include is working</strong>
+    <strong>✓ Dynamic TOC Test</strong>
   </div>
   
   <ul class="toc-list">
-    {% comment %} MANUAL EXTRACTION - NO FANCY LIQUID {% endcomment %}
+    {% comment %} 
+    SIMPLE APPROACH: Direct text matching
+    This checks if specific text exists in the content 
+    {% endcomment %}
+    
+    {% if content contains 'id="section-one"' %}
     <li class="toc-h2">
       <a href="#section-one">Section One: Introduction</a>
     </li>
+    {% endif %}
+    
+    {% if content contains 'id="section-two"' %}
     <li class="toc-h2">
       <a href="#section-two">Section Two: Main Content</a>
     </li>
+    {% endif %}
+    
+    {% if content contains 'id="subsection-two-a"' %}
     <li class="toc-h3">
       <a href="#subsection-two-a">Subsection 2A</a>
     </li>
+    {% endif %}
+    
+    {% if content contains 'id="section-three"' %}
     <li class="toc-h2">
       <a href="#section-three">Section Three: Conclusion</a>
     </li>
+    {% endif %}
   </ul>
+  
+  <div style="background: #e3f2fd; padding: 5px; margin-top: 10px; font-size: 12px;">
+    Content contains "section-one": {{ content contains 'id="section-one"' }}<br>
+    Content contains "section-two": {{ content contains 'id="section-two"' }}
+  </div>
 </nav>
