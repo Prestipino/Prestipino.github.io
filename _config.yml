@@ -1,0 +1,5 @@
+title: "link to the graph of U V W X Y for fullprof"
+description: "my page to dump few stuff"
+theme: jekyll-theme-dinky # This is likely the "orderedlist" theme
+# OR if that doesn't work, try:
+# remote_theme: orderedlist/minimal
