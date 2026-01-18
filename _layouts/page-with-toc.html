@@ -14,7 +14,7 @@
     {% endif %}
 </head>
 <body>
-    <!-- HEADER ONLY - NO SIDEBAR -->
+    <!-- HEADER -->
     <header class="site-header">
         <div class="wrapper">
             <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
@@ -36,17 +36,16 @@
 
     <div class="page-content">
         <div class="wrapper">
-            <!-- NO SIDEBAR HERE! -->
-            
-            <!-- MAIN CONTENT WITH TOC ONLY -->
-            <main class="main-content">
-                <!-- TOC Box -->
-                <div class="page-toc">
+            <!-- SIDEBAR WITH TOC (NOT site navigation) -->
+            <aside class="sidebar">
+                <nav class="sidebar-toc">
                     <h3>📑 Page Contents</h3>
                     {% include toc-simple.html %}
-                </div>
-                
-                <!-- Page Content -->
+                </nav>
+            </aside>
+            
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
                 {{ content }}
             </main>
         </div>
