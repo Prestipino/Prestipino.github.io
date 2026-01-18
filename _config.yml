@@ -1,5 +1,22 @@
-title: "link to the graph of U V W X Y for fullprof"
-description: "my page to dump few stuff"
-theme: jekyll-theme-dinky # This is likely the "orderedlist" theme
-# OR if that doesn't work, try:
-# remote_theme: orderedlist/minimal
+# Site Info
+title: "Prestipino.github.io"
+description: "my not webpage to dump few stuff"
+
+# Theme (keep your existing theme)
+theme: jekyll-theme-tactile
+
+# Header Navigation
+navigation:
+  - name: "Home"
+    link: "/"
+  - name: "PlotTxrd"
+    link: "/PlotTxrd.html"
+  - name: "Python Tutorials"
+    link: "/python_introduction/"
+  - name: "GitHub Repo"
+    link: "https://github.com/Prestipino/Prestipino.github.io"
+    new_window: true
+
+# Custom CSS for our layout
+custom_css:
+  - "/assets/css/custom.css"
