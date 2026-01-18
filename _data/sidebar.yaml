@@ -1,0 +1,53 @@
+# _data/sidebar.yml
+sections:
+  - title: "Bibliometry"
+    links:
+      - name: "ORCID Profile"
+        url: "https://orcid.org/0000-0002-8541-7766"
+        new_window: true
+      - name: "OpenAlex Profile"
+        url: "https://openalex.org/works?page=1&filter=authorships.author.id:a5020426445"
+        new_window: true
+      - name: "Contact Email"
+        url: "mailto:carmelo.prestipino@ensicaen.fr"
+      - name: "Publications"
+        url: "/List_Publications.html"
+      - name: "Talks/Seminars"
+        url: "/List_Talks.html"
+  
+  - title: "Software Tools"
+    links:
+      - name: "PlotTxrd"
+        url: "/PlotTxrd.html"
+      - name: "Profile Graphs"
+        url: "/Graphprofile.html"
+      - name: "Microabsorption"
+        url: "/MicroAbs.html"
+      - name: "COMMANDS Block"
+        url: "/COMMANDS.html"
+  
+  - title: "FullProf Inputs"
+    links:
+      - name: "MOF.pcr"
+        url: "/PCR_MOF.html"
+      - name: "multiP.pcr"
+        url: "/pcr_D8.html"
+      - name: "GEM.pcr"
+        url: "/GEM.html"
+      - name: "LiNiO2 Faults"
+        url: "/Faults.html"
+  
+  - title: "Python Tutorials"
+    links:
+      - name: "Lesson 1: What is Python"
+        url: "/python_introduction/Lesson%201%20what%20is%20Python.html"
+      - name: "Lesson 2: Structures"
+        url: "/python_introduction/Lesson%202%20Python%20Structures.html"
+      - name: "Lesson 3: Information Flow"
+        url: "/python_introduction/Lesson%203%20Programming%20is%20managing%20Information%20Flow.html"
+      - name: "Lesson 4: Num & Plotting"
+        url: "/python_introduction/Lesson%204%20num%20and%20plotting.html"
+      - name: "Exercises"
+        url: "/python_introduction/Exercise.html"
+      - name: "XRD Examples"
+        url: "/python_introduction/XRD.html"

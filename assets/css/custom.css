@@ -1,0 +1,150 @@
+/* assets/css/custom.css */
+
+/* HEADER STYLES */
+.site-header {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.site-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.site-nav .trigger {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.page-link {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.page-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* LAYOUT STRUCTURE */
+.page-content .wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    padding: 0 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: sticky;
+    top: 100px; /* Below header */
+    align-self: start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    margin-bottom: 2rem;
+}
+
+.sidebar-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 0.25rem;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-section li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-section a {
+    color: #555;
+    text-decoration: none;
+    display: block;
+    padding: 0.25rem 0;
+    border-left: 3px solid transparent;
+    padding-left: 0.5rem;
+}
+
+.sidebar-section a:hover {
+    color: #007acc;
+    border-left-color: #007acc;
+    background: #f5f5f5;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .page-content .wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+    
+    .site-nav .trigger {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .nav-trigger {
+        display: none;
+    }
+    
+    .nav-trigger:checked ~ .trigger {
+        display: flex;
+    }
+    
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+    
+    .site-nav .trigger {
+        display: none;
+    }
+}
+
+/* FOOTER */
+.site-footer {
+    background: #f5f5f5;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}

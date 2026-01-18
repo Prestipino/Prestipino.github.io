@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO & Page Info -->
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% elsif site.description %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Custom CSS (if any) -->
+    {% if site.custom_css %}
+        {% for css in site.custom_css %}
+        <link rel="stylesheet" href="{{ css | relative_url }}">
+        {% endfor %}
+    {% endif %}
+    
+    <!-- Your existing stylefiles -->
+    <link rel="stylesheet" href="{{ '/stylefiles/style.css' | relative_url }}">
+    <script src="{{ '/stylefiles/scale.js' | relative_url }}" defer></script>
+</head>
+
+<body>
+    <!-- HEADER BAR -->
+    <header class="site-header">
+        <div class="wrapper">
+            <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title | default: site.github.repository_name }}</a>
+            
+            <nav class="site-nav">
+                <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+                <label for="nav-trigger">
+                    <span class="menu-icon">☰</span>
+                </label>
+                
+                <div class="trigger">
+                    {% for item in site.navigation %}
+                    <a class="page-link" href="{{ item.link | relative_url }}">{{ item.name }}</a>
+                    {% endfor %}
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-content">
+        <div class="wrapper">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    {% for section in site.data.sidebar.sections %}
+                    <div class="sidebar-section">
+                        <h3>{{ section.title }}</h3>
+                        <ul>
+                            {% for link in section.links %}
+                            <li><a href="{{ link.url | relative_url }}" {% if link.new_window %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </nav>
+            </aside>
+            
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
+                {{ content }}
+            </main>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>Hosted on GitHub Pages — Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+        </div>
+    </footer>
+</body>
+</html>
