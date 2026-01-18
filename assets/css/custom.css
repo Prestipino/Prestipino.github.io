@@ -384,6 +384,51 @@ body {
     background-color: var(--color-accent);
 }
 
+
+/* ===== FIX FOR BROKEN TOC LINKS ===== */
+/* Add these rules to fix the empty TOC links in your rendered HTML */
+
+.toc-nav a {
+    display: block !important;
+    padding: 0.3rem 0.5rem !important;
+    color: var(--color-text) !important;
+    text-decoration: none !important;
+    font-size: 0.95rem;
+}
+
+.toc-nav a:hover {
+    color: var(--color-secondary) !important;
+    background-color: rgba(52, 152, 219, 0.1) !important;
+}
+
+/* Style different heading levels */
+.toc-h2 a {
+    font-weight: 600;
+    padding-left: 0 !important;
+    margin-top: 0.5rem;
+}
+
+.toc-h3 a {
+    font-weight: normal;
+    padding-left: 1rem !important;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* First item shouldn't have top margin */
+.toc-nav .toc-h2:first-child a {
+    margin-top: 0;
+}
+
+/* Fix for empty TOC (when no headings found) */
+.toc-nav:empty::after {
+    content: "No headings found in this page";
+    color: #666;
+    font-style: italic;
+    padding: 0.5rem;
+}
+
+
 /* Current section indicator in page */
 .main-content h2.active-section,
 .main-content h3.active-section {
@@ -391,6 +436,8 @@ body {
     padding-left: 1rem;
     transition: all 0.3s ease;
 }
+
+
 
 /* Responsive: Move TOC to sidebar on wider screens */
 @media (min-width: 1200px) {
@@ -414,6 +461,8 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
 
 /* Mobile optimization */
 @media (max-width: 768px) {
