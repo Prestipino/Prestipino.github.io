@@ -10,6 +10,28 @@
     --color-light: #ecf0f1;      /* Light grey (for sidebars, boxes) */
 }
 
+
+/* ===== FIX FOR ANCHOR LINKS WITH FIXED HEADER ===== */
+/* This creates padding at the top of each section so it doesn't hide under the header */
+
+/* For ALL elements with IDs */
+[id] {
+    scroll-margin-top: 100px; /* Adjust this value based on your header height */
+}
+
+/* Alternative: More specific targeting */
+h2[id],
+h3[id],
+h4[id] {
+    scroll-margin-top: 100px;
+}
+
+/* Or use scroll-padding on the entire page */
+html {
+    scroll-padding-top: 100px;
+}
+
+
 /* ===== BASE STYLES ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
