@@ -19,17 +19,7 @@
     scroll-margin-top: 500px; /* Adjust this value based on your header height */
 }
 
-/* Alternative: More specific targeting */
-h2[id],
-h3[id],
-h4[id] {
-    scroll-margin-top: 100px;
-}
 
-/* Or use scroll-padding on the entire page */
-html {
-    scroll-padding-top: 100px;
-}
 
 
 /* ===== BASE STYLES ===== */
