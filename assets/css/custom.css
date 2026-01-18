@@ -10,6 +10,7 @@
     --color-light: #ecf0f1;      /* Light grey (for sidebars, boxes) */
 }
 
+
 /* ===== BASE STYLES - Apply your theme variables ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
@@ -39,7 +40,7 @@ body {
 }
 
 .site-title {
-    color: var(--color-primary);
+    color: white;
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
@@ -57,7 +58,7 @@ body {
 }
 
 .page-link:hover {
-    color: var(--color-primary);
+    color: white;
     text-decoration: underline;
 }
 
@@ -102,7 +103,7 @@ body {
 }
 
 .sidebar-section a {
-    color: orangered;
+    color: #555;
     text-decoration: none;
     display: block;
     padding: 0.25rem 0;
