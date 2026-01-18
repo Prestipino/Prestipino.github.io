@@ -10,6 +10,15 @@
     --color-light: #ecf0f1;      /* Light grey (for sidebars, boxes) */
 }
 
+/* ===== BASE STYLES - Apply your theme variables ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
+    background-color: var(--color-background);
+    color: var(--color-text); /* Applies your --color-text variable */
+    line-height: 1.6;
+}
+
+
 /* HEADER STYLES */
 .site-header {
     background: #333;
@@ -30,7 +39,7 @@
 }
 
 .site-title {
-    color: white;
+    color: var(--color-primary);
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
