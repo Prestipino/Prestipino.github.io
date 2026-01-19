@@ -11,15 +11,7 @@
 }
 
 
-/* ===== FIX 2: Target specific heading elements ===== */
-h1[id],
-h2[id], 
-h3[id],
-h4[id] {
-    padding-top: 120px;
-    margin-top: -100px; /* Pulls the content back up */
-    display: inline-block; /* Needed for negative margin to work */
-}
+
 
 
 /* ===== BASE STYLES ===== */
@@ -311,6 +303,26 @@ body {
     color: var(--color-primary);
     text-decoration: underline;
 }
+
+
+#toc {
+    list-style: none;
+    padding: 0;
+}
+
+#toc li {
+    margin: 5px 0;
+}
+
+#toc a {
+    color: #069;
+    text-decoration: none;
+}
+
+#toc a:hover {
+    text-decoration: underline;
+}
+
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {

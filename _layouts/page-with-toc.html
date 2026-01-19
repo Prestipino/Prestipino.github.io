@@ -8,10 +8,6 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
     
-    <!-- Debug CSS (only if page specifies it) -->
-    {% if page.extra_css %}
-    <link rel="stylesheet" href="{{ page.extra_css | relative_url }}">
-    {% endif %}
 </head>
 <body>
     <!-- HEADER -->
@@ -40,7 +36,7 @@
             <aside class="sidebar">
                 <nav class="sidebar-toc">
                     <h3>TOC:</h3>
-                    {% include toc-universal.html %}
+                    {{ content | toc_only }}
                 </nav>
             </aside>
             
