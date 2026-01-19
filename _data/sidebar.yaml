@@ -31,16 +31,14 @@ sections:
     links:
       - name: "PlotTxrd"
         url: "/PlotTxrd.html"
-    links:
       - name: "TEMpcPlot"
         url: "https://prestipino.github.io/TEMpcPlot/"
+      - name: "PrestoPronto"
+        url: "https://soonready.github.io/PrestoPronto/"
+      - name: "Estra & FitEXA"
+        url: "https://estrafitexa.github.io/EstraFitEXA/"
 
-  - title: "Profile powder Difraction"
-    links:
-      - name: "Profile Graphs"
-        url: "/Graphprofile.html"
-      - name: "Microabsorption"
-        url: "/MicroAbs.html"
+
 
   
   - title: "FullProf"
@@ -49,6 +47,10 @@ sections:
         url: "/COMMANDS.html"
       - name: "Commented Fullprof/Faults input"
         url: "/interactive_input.html"
+      - name: "Profile Graphs"
+        url: "/Graphprofile.html"
+      - name: "Microabsorption"
+        url: "/MicroAbs.html"
 
   
   - title: "Python Tutorials"
