@@ -31,6 +31,9 @@ sections:
     links:
       - name: "PlotTxrd"
         url: "/PlotTxrd.html"
+    links:
+      - name: "TEMpcPlot"
+        url: "https://prestipino.github.io/TEMpcPlot/"
 
   - title: "Profile powder Difraction"
     links:
@@ -40,18 +43,13 @@ sections:
         url: "/MicroAbs.html"
 
   
-  - title: "FullProf Inputs"
+  - title: "FullProf"
     links:
       - name: "COMMANDS Block"
         url: "/COMMANDS.html"
-      - name: "oldFormat.pcr"
-        url: "/PCR_MOF.html"
-      - name: "multiP.pcr"
-        url: "/pcr_D8.html"
-      - name: "GEM.pcr"
-        url: "/GEM.html"
-      - name: "LiNiO2 Faults"
-        url: "/Faults.html"
+      - name: "Commented Fullprof/Faults input"
+        url: "/interactive_input.html"
+
   
   - title: "Python Tutorials"
     links:
