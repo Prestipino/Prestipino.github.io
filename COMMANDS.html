@@ -93,7 +93,7 @@ description: "COMMANDS for FullProf"
       <br>
       <br>
       <section>
-        <h2> VARY/FIX </h2>
+        <h2 id="VARY/FIX"> VARY/FIX </h2>
         <p>Within an instruction VARY of an instruction FIX individual
           parameters of selected atoms are allowed.<br>
           The available structural parameters are: </p>
@@ -151,7 +151,7 @@ description: "COMMANDS for FullProf"
           thermal parameters of Mn1 and the "x" coordinate of atom C23.</p>
       </section>
       <section>
-        <h2> EQUAL/MVARY/MFIX </h2>
+        <h2 id="VARY/FIX"> EQUAL/MVARY/MFIX </h2>
         <p>The keyword EQUAL appearing within a COMMANDS block allows to make
           constraints between parameters belonging to different phases or
           patterns. The format of the instruction EQUAL/MVARY/MFIX&nbsp; is the
@@ -199,7 +199,7 @@ description: "COMMANDS for FullProf"
             END_COMMANDS</code></p>
       </section>
       <section>
-        <h2>FIX_SPC/SAME_Biso</h2>
+        <h2 id="FIX_SPC/SAME_Biso">FIX_SPC/SAME_Biso</h2>
         FIX_SPC spc1 spc2 spc3 ... spcN<br>
         SAME_Biso spc1 val1 spc2 val2 ... spcN valN<br>
         <br>
@@ -223,7 +223,7 @@ description: "COMMANDS for FullProf"
           SAME_Biso&nbsp; O -0.93&nbsp; F -0.98<br>
           END_COMMANDS</code></section>
       <section>
-        <h2>PEQU_pat/PEQU_pha</h2>
+        <h2 id="PEQU_pat/PEQU_pha">PEQU_pat/PEQU_pha</h2>
         &nbsp;The Two new instructions have been introduced to make constraints
         between profile parameters<br>
         in mutipattern-multiphase cases. These instructions act as VARY but
@@ -238,7 +238,7 @@ description: "COMMANDS for FullProf"
           END_COMMANDS</code></section>
       <section>
         <section>
-          <h2>DLIM pat d_min</h2>
+          <h2 id="DLIM pat d_min">DLIM pat d_min</h2>
           where pat is the number of the pattern and d_min the value of a
           d-spacing. Only the reflections having a d-spacing greater than the
           provided d_min value are used in the refinement of the data. <br>
@@ -252,7 +252,7 @@ description: "COMMANDS for FullProf"
           refinement when using a diffraction pattern going far in Q (for
           instance in TOF case) </section>
         <section>
-          <h2>LAYER_A, LAYER_B, LAYER_C</h2>
+          <h2 id="LAYER_A, LAYER_B, LAYER_C">LAYER_A, LAYER_B, LAYER_C</h2>
           the keywords LAYER_A, LAYER_B and LAYER_C are used to tell the program
           that the current phase will be treated as a single layer, so the
           reflections (H00),(0K0) or (00L), respectively, will be suppressed<br>
