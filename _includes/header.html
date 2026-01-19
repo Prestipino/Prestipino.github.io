@@ -1,0 +1,19 @@
+<nav class="navbar">
+  {% for item in site.navigation %}
+    {% if item.sublinks %}
+      <div class="dropdown">
+        <button class="dropbtn">{{ item.name }}</button>
+        <div class="dropdown-content">
+          {% for sub in item.sublinks %}
+            <a href="{{ sub.link }}">{{ sub.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    {% else %}
+      <a href="{{ item.link }}"
+         {% if item.new_window %} target="_blank" rel="noopener" {% endif %}>
+        {{ item.name }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</nav>
