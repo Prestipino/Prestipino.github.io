@@ -11,12 +11,10 @@ navigation:
     link: "/"
   - name: "PlotTxrd"
     link: "/PlotTxrd.html"
-  - name: "Research links"
-    sublinks:
-      - name: "EXAFS"
-        link: "/EXAFS_link.html"
-      - name: "Diffraction"
-        link: "/Diffraction.html"
+  - name: "EXAFS"
+    link: "/EXAFS_link.html"
+  - name: "Diffraction"
+    link: "/Diffraction.html"
   - name: "GitHub Repo"
     link: "https://github.com/Prestipino/Prestipino.github.io"
     new_window: true
