@@ -55,15 +55,5 @@ sections:
   
   - title: "Python Tutorials"
     links:
-      - name: "Lesson 1: What is Python"
-        url: "/python_introduction/Lesson%201%20what%20is%20Python.html"
-      - name: "Lesson 2: Structures"
-        url: "/python_introduction/Lesson%202%20Python%20Structures.html"
-      - name: "Lesson 3: Information Flow"
-        url: "/python_introduction/Lesson%203%20Programming%20is%20managing%20Information%20Flow.html"
-      - name: "Lesson 4: Num & Plotting"
-        url: "/python_introduction/Lesson%204%20num%20and%20plotting.html"
-      - name: "Exercises"
-        url: "/python_introduction/Exercise.html"
-      - name: "XRD Examples"
-        url: "/python_introduction/XRD.html"
+      - name: "introduction to Python"
+        url: "/python_introduction/introPython_class.html"
