@@ -9,8 +9,6 @@ theme: jekyll-theme-tactile
 navigation:
   - name: "Home"
     link: "/"
-  - name: "PlotTxrd"
-    link: "/PlotTxrd.html"
   - name: "EXAFS"
     link: "/EXAFS_link.html"
   - name: "Diffraction"
