@@ -4,7 +4,6 @@ title: "PlotTxrd - Interactive X-ray Diffraction Data Visualizer"
 description: "PlotTxrd software page"
 ---
 
-<!-- Remove ALL HTML wrapper tags - keep only your content sections -->
 <h1 id="PlotTxrd"> PlotTxrd</h1>
 <section>
   <h2 id="origin-and-motivation">Origin and Motivation</h2>
@@ -21,6 +20,13 @@ description: "PlotTxrd software page"
     Since its initial version, I have continued to develop and extend it for
     <strong>laboratory XRD applications</strong> as well as <strong>synchrotron environments</strong>.
   </p>
+  <p>
+    Building on the same routines and visualization logic, I also implemented
+    <strong>XRDanalyzer</strong>, a companion tool intended for smaller datasets but with
+    a <strong>more global attention to metadata and data modification</strong>. XRDanalyzer allows users
+    to explore and manipulate individual patterns, edit experimental metadata, perform arithmetic
+    operations on curves, normalize data, and save projects with full HDF5 metadata support.
+  </p>
 </section>
 
 <section>
@@ -33,6 +39,14 @@ description: "PlotTxrd software page"
     <li>Batch export to <strong>xye</strong>, <strong>FullProf</strong>, or <strong>JANA</strong> formats</li>
     <li>Project save/load with full metadata and compression</li>
     <li>Advanced toolbars for color map control, scaling, and interactive selection</li>
+    <li>XRDanalyzer-specific features:</li>
+    <ul>
+      <li>Arithmetic operations on selected curves (add, multiply)</li>
+      <li>Normalization of curves to maximum or delta values</li>
+      <li>Editing and visualization of metadata for each pattern</li>
+      <li>Merge multiple scans with optional averaging</li>
+      <li>Distributed as a <strong>bundle</strong> including both PlotTxrd and XRDanalyzer</li>
+    </ul>
   </ul>
 </section>
 
@@ -42,37 +56,29 @@ description: "PlotTxrd software page"
   <ul>
      <li><strong>PlotTxrd 0.0.14.Alpha</strong> (19/1/26) <a href="https://sdrive.cnrs.fr/s/qxdngrEtgrqCBA6">Download</a>
       <ul>
-        <li>- added x shift on 1d plot</li>
+        <li>- added x shift on 1D plot</li>
         <li>- new GUI system manager</li>
       </ul>
     </li>
     <li><strong>PlotTxrd 0.0.13.Alpha</strong> (5/1/26) <a href="https://sdrive.cnrs.fr/s/BWn8oi3jdGdTtn9">Download</a>
       <ul>
-        <li>- added x shift on 1d plot</li>
+        <li>- added x shift on 1D plot</li>
         <li>- new GUI system manager</li>
       </ul>
     </li>
     <li><strong>PlotTxrd 0.0.12.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/QbNCFApc6pWgCW9">Download</a>
       <ul>
         <li>- If several multiscans file are open, the program merge the scan of each file</li>
-        <li>- in 1D plot toggle between linear sqrt and log intensity clicking on y label</li>
+        <li>- in 1D plot toggle between linear, sqrt and log intensity clicking on y label</li>
       </ul>
     </li>
-    <li><strong>PlotTxrd 0.0.11.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/xrso24caoCMKsFK">Download</a>
+    <li><strong>XRDanalyzer 0.0.1.alpha</strong> <a href="https://sdrive.cnrs.fr/s/your_new_link_here">Download</a>
       <ul>
-        <li>- Bug xye/xy</li>
-      </ul>
-    </li>
-    <li><strong>PlotTxrd 0.0.10.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/BapdytLz27geWCj">Download</a>
-      <ul>
-        <li>- Better management ILLdata</li>
-        <li>- UXD files</li>
-        <li>- ras file with Oxford_PheniX</li>
-      </ul>
-    </li>
-    <li><strong>PlotTxrd 0.0.9.Alpha</strong> <a href="https://sdrive.cnrs.fr/s/J7QcJwRDBg3DJtF">Download</a>
-      <ul>
-        <li>- Original Deposit</li>
+        <li>- Project save/load with full metadata (HDF5)</li>
+        <li>- Individual curve editing, arithmetic, and normalization</li>
+        <li>- Merge and average multiple scans</li>
+        <li>- Metadata visualization and editing</li>
+        <li>- Distributed together with PlotTxrd in a software bundle</li>
       </ul>
     </li>
   </ul>
@@ -85,9 +91,9 @@ description: "PlotTxrd software page"
 <section>
   <h2 id="development-and-access">Development and Access</h2>
   <p>
-    PlotTxrd is developed in <strong>Python</strong> using
+    PlotTxrd and XRDanalyzer are developed in <strong>Python</strong> using
     <code>Tkinter</code>, <code>Matplotlib</code>, <code>ttkbootstrap</code>,
-    and <code>NumPy</code>. The interface has been optimized for
+    and <code>NumPy</code>. The interfaces are optimized for
     thermodiffraction experiments at the <strong>CRISTAL beamline (SOLEIL)</strong>.
   </p>
   <p>
@@ -101,7 +107,8 @@ description: "PlotTxrd software page"
   <p>
     PlotTxrd is currently used to manage diffraction data from temperature-dependent studies
     on functional materials, enabling efficient visualization of peak evolution, phase
-    transitions, and structural modulations. Its modular design makes it adaptable for
-    other in-situ or time-resolved diffraction experiments.
+    transitions, and structural modulations. XRDanalyzer complements it by allowing detailed
+    exploration and modification of individual datasets, useful for laboratory tests or
+    smaller experiments where full metadata tracking and data manipulation is needed.
   </p>
 </section>
