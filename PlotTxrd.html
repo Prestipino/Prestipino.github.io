@@ -4,7 +4,7 @@ title: "PlotTxrd - Interactive X-ray Diffraction Data Visualizer"
 description: "PlotTxrd software page"
 ---
 
-<h1 id="PlotTxrd">XRDanalyzer & PlotTxrd</h1>
+<h1 id="PlotTxrd">XRDPlotter & PlotTxrd</h1>
 <section>
   <h2 id="origin-and-motivation">Origin and Motivation</h2>
   <p>
@@ -22,7 +22,7 @@ description: "PlotTxrd software page"
   </p>
   <p>
     Building on the same routines and visualization logic, I also implemented
-    <strong>XRDanalyzer</strong>, a companion tool intended for smaller datasets but with
+    <strong>XRDPlotter</strong>, a companion tool intended for smaller datasets but with
     a <strong>more global attention to metadata and data modification</strong>. XRDanalyzer allows users
     to explore and manipulate individual patterns, edit experimental metadata, perform arithmetic
     operations on curves, normalize data, and save projects with full HDF5 metadata support.
@@ -47,7 +47,7 @@ description: "PlotTxrd software page"
     <li>Advanced toolbars for color map control, scaling, and interactive
       selection</li>
   </ul>
-  <h3>XRDanalyzer</h3>
+  <h3>XRDPlotter</h3>
   <ul>
     <li>Arithmetic operations on selected curves (add, multiply)</li>
     <li>Creation of new curve as operation between curves</li>
@@ -59,6 +59,17 @@ description: "PlotTxrd software page"
     <li>Smooting</li>
     <li>Background management </li>
     <li>link to online phase search</li>
+  </ul>
+Both applications open a set of different format
+  <ul>
+      <li>3 columns, "*.xye *.dat"</li>
+      <li>2 columns, "*.xy"</li>
+      <li>FP simulation, "*.sim"</li>
+      <li>FP profile 1,3, "*.dat"</li>
+      <li>UXD, "*.uxd"</li>
+      <li>Bruker, "*.raw"</li>
+      <li>Rigaku, "*.raw *.ras *.rasx"</li>
+      <li>Panalytical, "*.XrdML"</li>
   </ul>
 </section>
 
