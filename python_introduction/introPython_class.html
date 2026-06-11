@@ -53,12 +53,13 @@ description: "A four-lesson course covering Python fundamentals, data structures
     <li><strong><a href="https://prestipino.github.io/python_introduction/Lesson%202%20Python%20Structures.html" target="_blank" rel="noopener noreferrer">Lesson 2: Python Structures</a></strong> - Core data types, objects, sequences, and mutability</li>
     <li><strong><a href="https://prestipino.github.io/python_introduction/Lesson%203%20Programming%20is%20managing%20Information%20Flow.html" target="_blank" rel="noopener noreferrer">Lesson 3: Programming is Managing Information Flow</a></strong> - Functions, conditionals, loops, and control structures</li>
     <li><strong><a href="https://prestipino.github.io/python_introduction/Lesson%204%20num%20and%20plotting.html" target="_blank" rel="noopener noreferrer">Lesson 4: NumPy and Plotting</a></strong> - Introduction to NumPy arrays and data visualization</li>
+    <li><strong><a href="https://prestipino.github.io/python_introduction/Lesson%204%20num%20and%20plotting.html" target="_blank" rel="noopener noreferrer">Exercise with solution</a></strong> </li>
   </ul>
   <p>All lessons open in a new tab for convenient reference while working through the course material.</p>
 
   <h4 id="dowload-data"> Data for exercise</h4>
   <a href="https://raw.githubusercontent.com/Prestipino/Prestipino.github.io/main/python_introduction/XRD_T.raw"
-           download="XRD_T.raw">Click here to download XRD_T.raw (5.24 MB) </a>
+           download="XRD_T.raw">Click here to download XRD_T.raw (5.24 MB) </a><br>
   <a href="https://raw.githubusercontent.com/Prestipino/Prestipino.github.io/main/python_introduction/TEM.7z"
            download="TEM.7z">Click here to download TEM.7z (6.98 MB) </a>
 
@@ -155,6 +156,130 @@ description: "A four-lesson course covering Python fundamentals, data structures
     <a href="https://prestipino.github.io/python_introduction/Lesson%204%20num%20and%20plotting.html" target="_blank" rel="noopener noreferrer">Access Lesson 4</a>
   </p>
 </section>
+
+
+
+<section>
+  <h2 id="exercises">📚 Exercises & Practical Labs</h2>
+  <p>
+    This section provides practical exercises specifically designed for the CRISMAT laboratory. 
+    The exercises cover topics ranging from basic physics and chemistry to synthesis analysis 
+    and crystallographic database queries. Each exercise includes downloadable materials 
+    and commented solutions.
+  </p>
+
+  <!-- Exercise 1: Introductory Jupyter Notebook -->
+  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 25px; border-left: 5px solid #2c7bb6;">
+    <h3 style="color: #2c7bb6; margin-top: 0;">📓 Exercise 1: Python Introduction for Physics and Chemistry</h3>
+    <p><strong>Objective:</strong> Become familiar with Python through 15 progressive exercises spanning basic calculations to real scientific applications.</p>
+    
+    <p><strong>Notebook Structure:</strong></p>
+    <ul>
+      <li><strong>Level 1 (Exercises 1-2):</strong> Basic Calculations - Moles to grams converter, density calculator</li>
+      <li><strong>Level 2 (Exercises 4-6):</strong> Temperature & States of Matter - Water state checker, Celsius to Kelvin, Boyle's Law</li>
+      <li><strong>Level 3 (Exercises 7-9):</strong> Energy & Motion - Kinetic energy, gravitational potential energy, free fall time</li>
+      <li><strong>Level 4 (Exercises 10-12):</strong> Chemistry & Solutions - pH checker, molarity calculator, dilution calculator</li>
+      <li><strong>Level 5 (Exercises 13-15):</strong> Loops & Real Applications - Radioactive decay, periodic table lookup, projectile motion</li>
+      <li><strong>Mini Project:</strong> Stoichiometry calculator (2H₂ + O₂ → 2H₂O)</li>
+      <li><strong>Challenge Exercises:</strong> Ideal gas law, weight on different planets</li>
+    </ul>
+    
+    <p><strong>Skills practiced:</strong> variables, user input, arithmetic operations, conditionals (if/elif/else), math module, dictionaries, loops, and formula implementation.</p>
+    
+    <p>
+      <a href="#" download="https://raw.githubusercontent.com/Prestipino/Prestipino.github.io/main/python_introduction/Python_Chemistry_Physics_Exercises_QUESTIONS.ipynb" style="background-color: #2c7bb6; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block;">⬇️ Download Notebook (Exercises)</a>
+      <span style="margin: 0 10px;">|</span>
+      <a href="#" download="https://raw.githubusercontent.com/Prestipino/Prestipino.github.io/main/python_introduction/Python_Chemistry_Physics_Exercises_ANSWERS.ipynb" style="background-color: #28a745; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block;">🔍 Download Solutions</a>
+    </p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 10px;"><em>Replace # links with actual .ipynb file paths</em></p>
+  </div>
+
+  <!-- Exercise 2: Functions for synthesis and weighing -->
+  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 25px; border-left: 5px solid #fdae61;">
+    <h3 style="color: #fdae61; margin-top: 0;">⚖️ Exercise 2: Stoichiometric Calculations for Synthesis</h3>
+    <p><strong>Objective:</strong> Develop Python functions to calculate precise quantities of elements needed for solid-state synthesis.</p>
+    
+    <p><strong>Tool Features:</strong></p>
+    <ul>
+      <li><code>Formula_parser()</code> / <code>Formula_parser_s()</code> - Convert chemical formula strings to dictionaries with stoichiometry</li>
+      <li><code>Formula_parser()</code> - Handles brackets/parentheses in formulas (e.g., "Cu(OH)₂")</li>
+      <li><code>WT_dic()</code> - Calculate weight percent of each element in a compound</li>
+      <li><code>MW_dic()</code> - Calculate molecular weight from a formula dictionary</li>
+      <li><code>find_NEle()</code> - Parse next element and its stoichiometric coefficient</li>
+      <li><code>Dict2Formula()</code> - Convert dictionary back to formula string</li>
+    </ul>
+    
+    <p><strong>Example usage - Synthesis of 5g Cu₂₂Fe₈Ge₄S₃₂:</strong></p>
+    <pre style="background-color: #e9ecef; padding: 10px; border-radius: 5px; font-size: 0.85em;">
+from pyXRD.pt_tables import pt_p
+
+# Parse formula to dictionary
+finalD = Formula_parser_s('Cu22Fe8Ge4S32')
+# Returns: {'Cu': 22.0, 'Fe': 8.0, 'Ge': 4.0, 'S': 32.0}
+
+# Calculate weight percentages
+finalwt = WT_dic(finalD)
+# Returns: {'Cu': 0.442, 'Fe': 0.141, 'Ge': 0.092, 'S': 0.325}
+
+# Calculate grams needed for 5g synthesis
+final_ele_w = {atom: val * 5 for atom, val in finalwt.items()}
+# Returns: {'Cu': 2.211g, 'Fe': 0.707g, 'Ge': 0.460g, 'S': 1.623g}</pre>
+    
+    <p><strong>Skills practiced:</strong> string parsing, dictionary manipulation, periodic table data integration, function design, and practical synthesis planning.</p>
+    
+    <p>
+      <a href="https://prestipino.github.io/python_introduction/Exercise_synthesis.html" target="_blank" style="background-color: #fdae61; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block;">🌐 Synthesis Helper Web App (interactive)</a>
+    </p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 10px;"><em>Replace # link with your actual web application URL</em></p>
+  </div>
+
+  <!-- Exercise 3: Querying the COD Database -->
+  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 10px; margin-bottom: 25px; border-left: 5px solid #d7191c;">
+    <h3 style="color: #d7191c; margin-top: 0;">💎 Exercise 3: Querying the Crystallographic Open Database (COD)</h3>
+    <p><strong>Objective:</strong> Learn how to query crystallographic databases to obtain structures, cell parameters, and symmetry information using the COD RESTful API.</p>
+    
+    <p><strong>Notebook Features:</strong></p>
+    <ul>
+      <li><strong>Section 1:</strong> Basic CIF file retrieval by COD ID</li>
+      <li><strong>Section 2:</strong> Advanced searching with multiple criteria (elements, space group, unit cell parameters, volume, Z, publication data, etc.)</li>
+      <li><strong>Section 3:</strong> Detailed entry information and CIF metadata parsing</li>
+      <li><strong>Section 4:</strong> Bulk operations - download multiple CIFs and search-and-download workflows</li>
+      <li><strong>Section 5:</strong> Data analysis functions - convert results to pandas DataFrame, analyze cell parameters, get statistics over time</li>
+    </ul>
+    
+    <p><strong>Example queries demonstrated:</strong></p>
+    <ul>
+      <li>Download CIF file for COD ID 9000137</li>
+      <li>Search for structures containing Sn, Cr, and S</li>
+      <li>Search for NaCl structures with year range filtering</li>
+      <li>Search by space group (F d -3 m) with volume range (500-1500 Å³)</li>
+      <li>Parse CIF metadata (cell parameters, space group, formula, journal, year)</li>
+      <li>Bulk download multiple CIF files</li>
+    </ul>
+    
+    <p><strong>Skills practiced:</strong> RESTful API interaction, JSON parsing, pandas DataFrames, crystallographic data analysis, batch processing, and working with scientific databases.</p>
+    
+    <p>
+      <a href="#" download="https://raw.githubusercontent.com/Prestipino/Prestipino.github.io/main/python_introduction/COD.ipynb" style="background-color: #d7191c; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; display: inline-block;">⬇️ Download Notebook (COD API Examples)</a>
+    </p>
+    <p style="font-size: 0.9em; color: #666; margin-top: 10px;"><em>Replace # link with your actual COD notebook path</em></p>
+  </div>
+
+  <!-- Additional exercises placeholder -->
+  <div style="margin-top: 30px; padding: 15px; background-color: #e9ecef; border-radius: 8px;">
+    <h3 style="margin-top: 0;">🔬 Additional Exercises (in development)</h3>
+    <p>Coming soon:</p>
+    <ul>
+      <li>XRD data analysis</li>
+      <li>EXAFS spectrum simulation</li>
+      <li>3D visualization of crystal structures</li>
+      </ul>
+  </div>
+</section>
+
+
+
+
 
 <section>
   <h2 id="practical-skills">Practical Skills You Will Gain</h2>
